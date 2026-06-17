@@ -1,6 +1,6 @@
-# LIBRERIAS NECESARIAS - INSTALAR AQUI TODAS LAS DEL PROYECTO
-# una lista de todas las librerías necesarias para el proyecto. 
-# Sirve para que cualquiera pueda instalarlas todas de golpe con un solo comando
+# LIBRERIAS NECESARIAS PROYECTO
+# Una lista de todas las librerías necesarias para el proyecto 
+# INSTALAR: pip install -r requirements.txt
 selenium
 beautifulsoup4
 requests
@@ -10,7 +10,7 @@ schedule
 # selenium - webscrapping
 # beautifulsoup4 - webscrapping
 # requests - opcional ?
-# webdriver-manager -ayudante de Selenium
-# schedule - Permite programar tareas automáticas en Python
-# Smtplib (ya viene con Python) - permite enviar emails desde Python
+# webdriver-manager - ayudante de Selenium
+# schedule - programar tareas automáticas en Python
+# Smtplib (ya viene con Python) - enviar emails desde Python
 # Json (ya viene con Python)
