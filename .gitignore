@@ -13,4 +13,4 @@ __pycache__/
 .env
 
 # Carpeta Pruebas Aura
-.pruebasAura/
+.pruebasAura/*.*
