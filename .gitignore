@@ -1,0 +1,13 @@
+# Entorno virtual
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Datos locales - cambiar en fc del nombre del archivo que creemos
+# expedientes.json
+
+# Credenciales
+.env
