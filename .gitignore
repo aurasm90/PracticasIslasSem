@@ -11,3 +11,6 @@ __pycache__/
 
 # Credenciales
 .env
+
+# Carpeta Pruebas Aura
+.pruebasAura/
