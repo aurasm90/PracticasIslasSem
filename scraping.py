@@ -37,6 +37,12 @@ def iniciar_navegador():
     driver = webdriver.Chrome(service=service, options=options)
     return driver
 
+def cerrar_navegador(mi_navegador):
+    input("Presiona ENTER para cerrar el navegador...")
+    # Cerrar nav
+    mi_navegador.quit()
+    print("Navegador cerrado.")
+
 
 # ------------------------------
 # PASO 2 - Obtener lista de Órganos de Canarias
@@ -68,23 +74,20 @@ try:
     print('Canarias escogido')
     print('Buscando botón FILTRAR...')
 
-    search_button = esperar.until(
+    buscar_boton = esperar.until(
         EC.element_to_be_clickable(
             (By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:botonbuscar")
         )
     )
-    search_button.click()
+    buscar_boton.click()
 
-    # Wait a moment
+    # esperar un momento
     time.sleep(3)
-    print("Filter applied! Browser will stay open for you to inspect.")
+    print("Filtro aplicado. Esperando...")
 
 
 finally:
-    input("Presiona ENTER para cerrar el navegador...")
-    # Cerrar nav
-    mi_navegador.quit()
-    print("Navegador cerrado.")
+
 
 # ------------------------------
 # PASO 2 - Obtener lista de Órganos de Canarias
