@@ -1,24 +1,36 @@
-def enviar_email(licitaciones):
+import json
 
-    print("Módulo de email funcionando")
 
-    if not licitaciones:
-        print("No hay licitaciones nuevas")
-        return
+def enviar_email_json(licitaciones_json):
+    print("Preparando email con licitaciones nuevas...\n")
 
-    print("Licitaciones recibidas:")
+    cuerpo = "Se han detectado nuevas licitaciones:\n\n"
 
-    for licitacion in licitaciones:
-        print(licitacion)
+    for licitacion in licitaciones_json:
+        cuerpo += f"""
+Expediente: {licitacion["expediente"]}
+Objeto: {licitacion["objeto"]}
+Fecha: {licitacion["fecha"]}
+URL: {licitacion["url"]}
+-------------------------
+"""
+
+    print(cuerpo)
 
 
 licitaciones_prueba = [
     {
         "expediente": "123/2026",
         "objeto": "Servicio de limpieza",
-        "fecha": "17/06/2026",
-        "url": "https://ejemplo.com"
+        "fecha": "18/06/2026",
+        "url": "https://ejemplo.com/licitacion/123"
+    },
+    {
+        "expediente": "124/2026",
+        "objeto": "Mantenimiento de jardines",
+        "fecha": "18/06/2026",
+        "url": "https://ejemplo.com/licitacion/124"
     }
 ]
 
-enviar_email(licitaciones_prueba)
+enviar_email_json(licitaciones_prueba)
