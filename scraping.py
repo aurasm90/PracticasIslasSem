@@ -66,15 +66,18 @@ try:
     lista.select_by_visible_text('Canarias')
 
     print('Canarias escogido')
-    print('Esperando que la página se recargue con filtro...')
-    time.sleep(3) #Esperar unos segundos
+    print('Buscando botón FILTRAR...')
 
-    esperar.until(
-        EC.presence_of_element_located(
-            (By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:menu111MAQ")
+    search_button = esperar.until(
+        EC.element_to_be_clickable(
+            (By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:botonbuscar")
         )
     )
-    print("Página cargada con filtro!")
+    search_button.click()
+
+    # Wait a moment
+    time.sleep(3)
+    print("Filter applied! Browser will stay open for you to inspect.")
 
 
 finally:
