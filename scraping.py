@@ -46,12 +46,43 @@ def iniciar_navegador():
 print('Inciando navegador...')
 mi_navegador = iniciar_navegador()
 
-url = 'https://contrataciondelestado.es/wps/portal/plataforma/perfil_contratante/lista_perfiles/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziHcNcAx09LY0N3IMCXA2MnILMzUzc_I0NDIz0w8EKTI2dTcK8wgLMgj3dDQw8PdxcfEINTQ3cjcz0o4jRb4ADOBoQpx-Pgij8xofrR-G3wgCqAJ8XCVlSkBsaGmGQ6QkATfmaFQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/'
+url = "https://contrataciondelestado.es/wps/portal/plataforma/perfil_contratante/lista_perfiles/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziHcNcAx09LY0N3IMCXA2MnILMzUzc_I0NDIz0w8EKTI2dTcK8wgLMgj3dDQw8PdxcfEINTQ3cjcz0o4jRb4ADOBoQpx-Pgij8xofrR-G3wgCqAJ8XCVlSkBsaGmGQ6QkATfmaFQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_AVEQAI930GRPE02BR764FO30G0=CZ6_AVEQAI930GRPE02BR764FO3002=LA0=Ecom.ibm.faces.portlet.VIEWID!QCPjspQCPlistPerfilesQCPAdminAFPListPerfPortletAppView.jsp==/#Z7_AVEQAI930GRPE02BR764FO30G0"
 print(f"Navegando a: {url}")
 mi_navegador.get(url)
 
-input("Presiona ENTER para cerrar el navegador...")
+# esperamos que la página cargue
+esperar = WebDriverWait(mi_navegador, 10)
+print('Página cargando...')
 
-# Cerrar nav
-mi_navegador.quit()
-print("Navegador cerrado.")
+try:
+    # Esperar el select
+    menu = esperar.until(EC.presence_of_element_located((By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:menu111MAQ")))
+    print("Select encontrado!")
+
+    # Creamos el objeto Select
+    lista = Select(menu)
+
+    print('Seleccionando Canarias...')
+    lista.select_by_visible_text('Canarias')
+
+    print('Canarias escogido')
+    print('Esperando que la página se recargue con filtro...')
+    time.sleep(3) #Esperar unos segundos
+
+    esperar.until(
+        EC.presence_of_element_located(
+            (By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:menu111MAQ")
+        )
+    )
+    print("Página cargada con filtro!")
+
+
+finally:
+    input("Presiona ENTER para cerrar el navegador...")
+    # Cerrar nav
+    mi_navegador.quit()
+    print("Navegador cerrado.")
+
+# ------------------------------
+# PASO 2 - Obtener lista de Órganos de Canarias
+# ------------------------------

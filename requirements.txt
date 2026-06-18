@@ -1,6 +1,6 @@
 # LIBRERIAS NECESARIAS PROYECTO
-# Una lista de todas las librerías necesarias para el proyecto 
 # INSTALAR: pip install -r requirements.txt
+
 selenium
 beautifulsoup4
 requests
