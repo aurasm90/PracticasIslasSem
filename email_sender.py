@@ -1,48 +1,38 @@
-def enviar_email(licitaciones):
+import json
 
-    print("Módulo de email funcionando")
 
-    if not licitaciones:
-        print("No hay licitaciones nuevas")
-        return
+def enviar_email_json(licitaciones_json):
+    print("Preparando email con licitaciones nuevas...\n")
 
-    print("Licitaciones recibidas:")
+    cuerpo = "Se han detectado nuevas licitaciones:\n\n"
 
-    for licitacion in licitaciones:
-        print(licitacion)
+    for licitacion in licitaciones_json:
+        cuerpo += f"""
+Expediente: {licitacion["expediente"]}
+Objeto: {licitacion["objeto"]}
+Fecha: {licitacion["fecha"]}
+URL: {licitacion["url"]}
+-------------------------
+"""
+
+    print(cuerpo)
 
 
 licitaciones_prueba = [
     {
         "expediente": "123/2026",
         "objeto": "Servicio de limpieza",
-        "fecha": "17/06/2026",
-        "url": "https://ejemplo.com"
+        "fecha": "18/06/2026",
+        "url": "https://ejemplo.com/licitacion/123"
+    },
+    {
+        "expediente": "124/2026",
+        "objeto": "Mantenimiento de jardines",
+        "fecha": "18/06/2026",
+        "url": "https://ejemplo.com/licitacion/124"
     }
 ]
 
-enviar_email(licitaciones_prueba)
 
-# Datos de prueba para probar el correo
-licitaciones_prueba = [
-    {
-        "numero": "FUE-55/2026",
-        "organo": "Ayuntamiento de ejemplo",
-        "tipo": "Servicios",
-        "objeto": "Mantenimiento edificios",
-        "estado": "Publicada",
-        "importe": "10.000",
-        "fecha_publicacion": "17/06/2026",
-        "url": "https://contrataciondelestado.es",
-    },
-    {
-        "numero": "FUE-56/2026",
-        "organo": "Otro ayuntamiento",
-        "tipo": "Obras",
-        "objeto": "Reforma parque municipal",
-        "estado": "Publicada",
-        "importe": "50.000",
-        "fecha_publicacion": "17/06/2026",
-        "url": "https://contrataciondelestado.es",
-    },
-]
+
+enviar_email_json(licitaciones_prueba)
