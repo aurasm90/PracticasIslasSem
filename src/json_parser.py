@@ -24,7 +24,7 @@ import os
 from src.config import ESTADO
 
 # Nombre del archivo que actúa como memoria del programa
-ARCHIVO_VISTOS = "expedientes_vistos.json"
+ARCHIVO_VISTOS = "../datos/expedientes_vistos.json"
 
 # Clave que identifica de forma única a cada licitación (para evitar duplicados)
 CLAVE_ID = "id"
