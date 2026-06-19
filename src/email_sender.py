@@ -3,7 +3,7 @@ import smtplib
 from email.message import EmailMessage
 from dotenv import load_dotenv
 
-from config import (
+from src.config import (
     EMAIL_REMITENTE,
     EMAIL_DESTINO,
     ASUNTO,

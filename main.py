@@ -2,27 +2,15 @@
 import schedule
 import time
 
-# Archivo principal que une todo
-# Llama al scraping
-# Recoge los resultados en JSON
-# Llama al email
-# Programa la ejecución automática diaria
-
-# Llamar a webscrapping
 from src.scraping import main_scraping
 from src.json_parser import procesar_licitaciones
 from src.email_sender import enviar_email_json
 
-def main():
-    print("=" * 60)
-    print("PROGRAMA DE SCRAPING - CONTRATACIÓN DEL ESTADO")
-    print("=" * 60)
-
-
-# from json_parser import procesar_licitaciones
-
-
 def ejecutar_programa():
+    
+    print("=" * 60)
+    print("PROGRAMA DE SCRAPING - CONTRATACIONES DEL ESTADO")
+    print("=" * 60)
     print("Iniciando revisión automática de licitaciones...")
     
     # 1. Ejecutar scraping

@@ -20,6 +20,7 @@ from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
+from datetime import datetime
 import json
 import os
 import time
@@ -44,6 +45,7 @@ ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18
 
 def iniciar_navegador():
 
+    print('Inciando navegador...')
     options = webdriver.ChromeOptions()
     # Evita que Chrome se cierre solo
     options.add_experimental_option("detach", True)
@@ -220,7 +222,6 @@ def obtener_licitaciones_organo(mi_navegador, organo):
         # esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
         # print("Licitaciones cargadas")
 
-
         try:
             esperar.until(
                 EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente"))
@@ -261,7 +262,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             # Objeto
             objeto = fila.find("td", class_="tdTipoContratoLicOC")
             objeto = objeto.text.strip() if objeto else ""
-            
+
             # Estado
             estado = fila.find("td", class_="tdEstado")
             estado = estado.text.strip() if estado else ""
@@ -299,12 +300,25 @@ def obtener_licitaciones_organo(mi_navegador, organo):
     return licitaciones
 
 
+def guardar_licitaciones_en_json(licitaciones):
+    """Guarda las licitaciones en un archivo JSON fijo"""
+
+    os.makedirs("datos", exist_ok=True)
+    nombre_archivo = "datos/licitaciones_extraidas.json"
+
+    with open(nombre_archivo, "w", encoding="utf-8") as f:
+        json.dump(licitaciones, f, ensure_ascii=False, indent=2)
+
+    print(f"Datos guardados en: {nombre_archivo}")
+    print(f"Total licitaciones: {len(licitaciones)}")
+
+
 # ------------------------------
 # GRUPO 3: MAIN
 # ------------------------------
 
 def main_scraping():
-    print('Inciando navegador...')
+    print("Iniciando scraping...")
     mi_navegador = iniciar_navegador()
     todas_licitaciones = []
 
@@ -314,7 +328,7 @@ def main_scraping():
         if resultado:
             print('Filtro aplicado correctamente, continuamos...')
             organos = obtener_organos_con_licitaciones(mi_navegador)
-            
+
             for organo in organos[:10]:
                 licitaciones = obtener_licitaciones_organo(mi_navegador, organo)
                 todas_licitaciones.extend(licitaciones)
@@ -323,7 +337,11 @@ def main_scraping():
                 print(f"Esperando {pausa:.1f} segundos...")
                 time.sleep(pausa)
 
-            print(f"\nTotal licitaciones publicadas: {len(todas_licitaciones)}")
+            # 1. Guardar en JSON (para que puedas ver los datos)
+            guardar_licitaciones_en_json(todas_licitaciones)
+        
+            # 2. Devolver los datos (para que main.py los use)
+            return todas_licitaciones
 
             # AQUI PASOS SIGUIENTES
         else:
