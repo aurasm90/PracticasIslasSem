@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 import json
 import os
 import time
+import random
 
 URL_BASE = "https://contrataciondelestado.es/wps/portal/plataforma/perfil_contratante/lista_perfiles/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziHcNcAx09LY0N3IMCXA2MnILMzUzc_I0NDIz0w8EKTI2dTcK8wgLMgj3dDQw8PdxcfEINTQ3cjcz0o4jRb4ADOBoQpx-Pgij8xofrR-G3wgCqAJ8XCVlSkBsaGmGQ6QkATfmaFQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_AVEQAI930GRPE02BR764FO30G0=CZ6_AVEQAI930GRPE02BR764FO3002=LA0=Ecom.ibm.faces.portlet.VIEWID!QCPjspQCPlistPerfilesQCPAdminAFPListPerfPortletAppView.jsp==/#Z7_AVEQAI930GRPE02BR764FO30G0"
 COMUNIDAD = "Canarias"
@@ -33,9 +34,9 @@ CLASE_RESULTADOS = "badge"
 ID_BOTON_SIGUIENTE = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:siguienteLink"
 ID_PESTANYA_LICITACIONES = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:textLinkLic"
 ID_FILTRO_ESTADO = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc11"
-ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18"
+ID_BOTON_LICITACIONES = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:perfilComp:linkPrepLic"
 ESTADO_PUBLICADA = "PUB"
-
+ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18"
 
 # ------------------------------
 # GRUPO 1 - Iniciar/Cerrar Navegador
@@ -46,6 +47,10 @@ def iniciar_navegador():
     options = webdriver.ChromeOptions()
     # Evita que Chrome se cierre solo
     options.add_experimental_option("detach", True)
+
+    # Español
+    options.add_argument("--lang=es")
+    options.add_experimental_option("prefs", {"intl.accept_languages": "es,es-ES"})
 
     # Hace que parezca un navegador normal
     options.add_argument("--disable-blink-features=AutomationControlled")
@@ -76,6 +81,7 @@ def cerrar_navegador(mi_navegador):
 # GRUPO 2 - Funciones de Navegación
 # ------------------------------
 
+# FC que abre filtra los órganos con licitaciones por Canarias
 def filtrar_pagina_canarias(mi_navegador):
     print(f"Navegando a: {URL_BASE}")
     mi_navegador.get(URL_BASE)
@@ -114,6 +120,8 @@ def filtrar_pagina_canarias(mi_navegador):
         print(f"Error: {e}")
         return False
 
+
+# FC que obtiene los órganos con licitaciones abiertas/activas > 0
 def obtener_organos_con_licitaciones(mi_navegador):
     print("Leyendo órganos de Canarias...")
     organos = []
@@ -171,6 +179,7 @@ def obtener_organos_con_licitaciones(mi_navegador):
     return organos
 
 
+# FC que entra en la pesataña 'Licitaciones' de cada órgano y filtra por <<Publicadas>>
 def obtener_licitaciones_organo(mi_navegador, organo):
     print(f"\nEntrando en: {organo['nombre']}")
     licitaciones = []
@@ -178,16 +187,20 @@ def obtener_licitaciones_organo(mi_navegador, organo):
     try:
         print("Navegando a URL...")
         mi_navegador.get(organo["url"])
-        time.sleep(2)  # ← pausa para que cargue
+        time.sleep(random.uniform(3, 6))  # ← pausa para que cargue
 
         print("Buscando pestaña...")
+
         esperar = WebDriverWait(mi_navegador, TIEMPO_ESPERA)
 
         # Hacemos clic en la pestaña Licitaciones
-        pestanya = esperar.until(
-            EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Licitaciones')]")))
-        pestanya.click()
-        print("Pestaña Licitaciones abierta")
+        print("Haciendo clic en Licitaciones...")
+        # Buscamos por value en lugar de ID
+        pestanya_lic = esperar.until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "input[value='Licitaciones']"))
+        )
+        pestanya_lic.click()
+        print("Clic en Licitaciones hecho")
 
         # Seleccionamos "Publicada" en el filtro de estado
         select_estado = esperar.until(
@@ -287,9 +300,14 @@ def main():
         if resultado:
             print('Filtro aplicado correctamente, continuamos...')
             organos = obtener_organos_con_licitaciones(mi_navegador)
-            for organo in organos[:1]:
+            
+            for organo in organos[:5]:
                 licitaciones = obtener_licitaciones_organo(mi_navegador, organo)
                 todas_licitaciones.extend(licitaciones)
+                # Pausa aleatoria entre órganos
+            pausa = random.uniform(2, 5)
+            print(f"⏳ Esperando {pausa:.1f} segundos...")
+            time.sleep(pausa)
 
             print(f"\nTotal licitaciones publicadas: {len(todas_licitaciones)}")
 
