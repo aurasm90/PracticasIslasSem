@@ -230,7 +230,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             if not expediente:
                 continue
 
-            numero = (
+            numero_exp = (
                 expediente.find("span").text.strip() if expediente.find("span") else ""
             )
 
@@ -244,7 +244,6 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             id_licitacion = (
                 url_licitacion.split("idEvl=")[-1] if url_licitacion else numero
             )
-
             # Tipo
             tipo = fila.find("td", class_="tdTipoContrato")
             tipo = tipo.text.strip() if tipo else ""
@@ -267,10 +266,10 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             licitaciones.append(
                 {
                     "id": id_licitacion,
-                    "numero": numero,
+                    "numero": numero_exp,
                     "organo": organo["nombre"],
-                    "tipo": tipo,
                     "objeto": objeto,
+                    "tipo": tipo,
                     "importe": importe,
                     "fecha": fecha,
                     "url": url_licitacion,
