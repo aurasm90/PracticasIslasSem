@@ -228,7 +228,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             )
             print("Licitaciones cargadas")
         except:
-            print(f"⚠️ Sin licitaciones publicadas en {organo['nombre']}")
+            print(f"Sin licitaciones publicadas en {organo['nombre']}")
             return licitaciones  # devuelve lista vacía y continúa
 
         # Extraemos los datos
@@ -315,12 +315,12 @@ def main_scraping():
             print('Filtro aplicado correctamente, continuamos...')
             organos = obtener_organos_con_licitaciones(mi_navegador)
             
-            for organo in organos[:5]:
+            for organo in organos[:10]:
                 licitaciones = obtener_licitaciones_organo(mi_navegador, organo)
                 todas_licitaciones.extend(licitaciones)
                 # Pausa aleatoria entre órganos
             pausa = random.uniform(2, 5)
-            print(f"⏳ Esperando {pausa:.1f} segundos...")
+            print(f"Esperando {pausa:.1f} segundos...")
             time.sleep(pausa)
 
             print(f"\nTotal licitaciones publicadas: {len(todas_licitaciones)}")
