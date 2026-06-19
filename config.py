@@ -16,6 +16,12 @@ FECHA = "19/07/2026"
 
 EXPEDIENTE = "EXP-2024-001"
 
+ORGANO = "Órgano de ejemplo"
+
+TIPO = "Servicios"
+
+IMPORTE = "10.000,00 €"
+
 SMTP_SERVER = "smtp.gmail.com"
 
 SMTP_PORT = 465
