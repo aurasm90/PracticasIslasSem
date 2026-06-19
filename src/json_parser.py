@@ -21,6 +21,8 @@
 import json
 import os
 
+from src.config import ESTADO
+
 # Nombre del archivo que actúa como memoria del programa
 ARCHIVO_VISTOS = "expedientes_vistos.json"
 
@@ -97,15 +99,16 @@ def procesar_licitaciones(licitaciones, ruta=ARCHIVO_VISTOS):
 if __name__ == "__main__":
     # Datos provisionales construidos a partir de config.py mientras el
     # scraper no está terminado.
-    from config import ASUNTO, EXPEDIENTE, FECHA, URL, ORGANO, TIPO, IMPORTE
+    from config import ID, EXPEDIENTE, FECHA, URL, ORGANO, OBJETO, TIPO, ESTADO, IMPORTE
 
     licitaciones_prueba = [
         {
-            "id": EXPEDIENTE,
+            "id": ID,
             "numero": EXPEDIENTE,
             "organo": ORGANO,
-            "objeto": ASUNTO,
+            "objeto": OBJETO,
             "tipo": TIPO,
+            "estado": ESTADO,
             "importe": IMPORTE,
             "fecha": FECHA,
             "url": URL,
