@@ -6,7 +6,7 @@
 # CONFIGURACIÓN EMAIL
 EMAIL_REMITENTE = "a127islassem@gmail.com"
 
-EMAIL_DESTINO = "a24islassem@gmail.com"
+EMAIL_DESTINO = "antonioislassem@gmail.com"
 
 ASUNTO = "Prueba Licitaciones Canarias"
 
