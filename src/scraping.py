@@ -280,10 +280,11 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             licitaciones.append(
                 {
                     "id": id_licitacion,
-                    "numero": numero_exp,
+                    "expediente": numero_exp,
                     "organo": organo["nombre"],
                     "objeto": objeto,
                     "tipo": tipo,
+                    "estado": "Publicada",
                     "importe": importe,
                     "fecha": fecha,
                     "url": url_licitacion,

@@ -10,7 +10,7 @@ import time
 
 # Llamar a webscrapping
 from src.scraping import main_scraping
-# from src.json_parser import main
+from src.json_parser import procesar_licitaciones
 from src.email_sender import enviar_email_json
 
 def main():
