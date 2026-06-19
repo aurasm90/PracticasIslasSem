@@ -23,13 +23,13 @@ def crear_cuerpo_email_html(licitaciones_json):
         estado = licitacion["estado"].lower()
 
         if "public" in estado:
-            color_estado = "#28a745"  # Verde
+            color_estado = "#28a745"
         elif "resuelta" in estado:
-            color_estado = "#6c757d"  # Gris
+            color_estado = "#6c757d"
         elif "cancel" in estado:
-            color_estado = "#dc3545"  # Rojo
+            color_estado = "#dc3545"
         else:
-            color_estado = "#fd7e14"  # Naranja
+            color_estado = "#fd7e14"
 
         tarjetas += f"""
         <div style="
@@ -55,10 +55,7 @@ def crear_cuerpo_email_html(licitaciones_json):
 
             <p><strong>Órgano:</strong> {licitacion["organo"]}</p>
 
-            <p>
-                <strong>Objeto:</strong><br>
-                {licitacion["objeto"]}
-            </p>
+            <p><strong>Objeto:</strong> {licitacion["objeto"]}</p>
 
             <p><strong>Tipo de contrato:</strong> {licitacion["tipo"]}</p>
 
@@ -183,27 +180,18 @@ def enviar_email_json(licitaciones_json):
     print("Email enviado correctamente")
 
 
-licitaciones_prueba = [
-    {
-        "organo": "Aena Dirección del Aeropuerto de Fuerteventura",
-        "expediente": "FUE-50/2026",
-        "tipo": "Suministros",
-        "objeto": "Cerramiento de puertas antirretorno norte",
-        "estado": "Publicada",
-        "importe": "5.752,00 €",
-        "fecha": "18/06/2026",
-        "url": "https://ejemplo.com/licitacion/123"
-    },
-    {
-        "organo": "Aena Dirección del Aeropuerto de Fuerteventura",
-        "expediente": "FUE-55/2026",
-        "tipo": "Servicios",
-        "objeto": "Impuesto al depósito de residuos en el Complejo Ambiental Zurita",
-        "estado": "Resuelta",
-        "importe": "963,40 €",
-        "fecha": "17/06/2026",
-        "url": "https://ejemplo.com/licitacion/124"
-    }
-]
+if __name__ == "__main__":
+    licitaciones_prueba = [
+        {
+            "organo": "Aena Dirección del Aeropuerto de Fuerteventura",
+            "expediente": "FUE-50/2026",
+            "tipo": "Suministros",
+            "objeto": "Cerramiento de puertas antirretorno norte",
+            "estado": "Publicada",
+            "importe": "5.752,00 €",
+            "fecha": "18/06/2026",
+            "url": "https://ejemplo.com/licitacion/123"
+        }
+    ]
 
-enviar_email_json(licitaciones_prueba)
+    enviar_email_json(licitaciones_prueba)
