@@ -16,3 +16,6 @@ __pycache__/
 .carpetaAura/
 pruebasAura.py
 /carpetaAura
+
+# JSON de expedientes
+expedientes_vistos.json
