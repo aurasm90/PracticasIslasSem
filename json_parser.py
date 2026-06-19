@@ -1,13 +1,22 @@
 # GESTIÓN DE LA "MEMORIA" DEL PROGRAMA
-# Este módulo se encarga de recordar qué expedientes ya han sido enviados por
+# Este módulo se encarga de recordar qué licitaciones ya han sido enviadas por
 # email para no enviar duplicados.
 #
-# El archivo 'expedientes_vistos.json' guarda una lista con los números de
-# expediente ya enviados. Ejemplo:
-#   ["EXP-2024-001", "EXP-2024-002", "EXP-2024-003"]
+# El archivo 'expedientes_vistos.json' guarda la lista completa de licitaciones
+# ya enviadas (no solo su número). Cada licitación es un objeto con esta forma:
+#   {
+#       "id": "...",          # identificador único (clave de comparación)
+#       "numero": "...",      # número de expediente
+#       "organo": "...",
+#       "objeto": "...",
+#       "tipo": "...",
+#       "importe": "...",
+#       "fecha": "...",
+#       "url": "...",
+#   }
 #
-# En cada ejecución se comparan las licitaciones nuevas con esta lista y solo
-# se devuelven (para enviar) las que todavía no estén guardadas.
+# En cada ejecución se comparan las licitaciones nuevas con las ya guardadas
+# (por su "id") y solo se devuelven las que todavía no estén en el archivo.
 
 import json
 import os
@@ -15,50 +24,47 @@ import os
 # Nombre del archivo que actúa como memoria del programa
 ARCHIVO_VISTOS = "expedientes_vistos.json"
 
-# Clave del diccionario de licitación que identifica al expediente.
-# email_sender.py usa "expediente", así que mantenemos el mismo nombre.
-CLAVE_EXPEDIENTE = "expediente"
+# Clave que identifica de forma única a cada licitación (para evitar duplicados)
+CLAVE_ID = "id"
 
 
-def cargar_vistos(ruta=ARCHIVO_VISTOS):
-    """Lee el JSON y devuelve un conjunto con los expedientes ya enviados.
+def cargar_vistas(ruta=ARCHIVO_VISTOS):
+    """Lee el JSON y devuelve la lista de licitaciones ya enviadas.
 
     Si el archivo no existe todavía (primera ejecución) o está corrupto,
-    devuelve un conjunto vacío en lugar de fallar.
+    devuelve una lista vacía en lugar de fallar.
     """
     if not os.path.exists(ruta):
-        return set()
+        return []
 
     try:
         with open(ruta, "r", encoding="utf-8") as f:
-            datos = json.load(f)
-            # Usamos un set para que la comprobación "está visto?" sea rápida
-            return set(datos)
+            return json.load(f)
     except (json.JSONDecodeError, ValueError):
         print(f"Aviso: '{ruta}' no es un JSON válido. Empezando de cero.")
-        return set()
+        return []
 
 
-def guardar_vistos(vistos, ruta=ARCHIVO_VISTOS):
-    """Guarda en el JSON el conjunto de expedientes ya enviados.
-
-    Se guarda como lista ordenada para que el archivo sea legible y estable.
-    """
+def guardar_vistas(licitaciones, ruta=ARCHIVO_VISTOS):
+    """Guarda en el JSON la lista completa de licitaciones ya enviadas."""
     with open(ruta, "w", encoding="utf-8") as f:
-        json.dump(sorted(vistos), f, ensure_ascii=False, indent=2)
+        json.dump(licitaciones, f, ensure_ascii=False, indent=2)
 
 
-def filtrar_nuevas(licitaciones, vistos):
-    """Devuelve solo las licitaciones cuyo expediente no esté en 'vistos'."""
+def filtrar_nuevas(licitaciones, vistas):
+    """Devuelve solo las licitaciones cuyo 'id' no esté ya en 'vistas'."""
+    # Conjunto de ids ya vistos para que la comprobación sea rápida (O(1))
+    ids_vistos = {lic.get(CLAVE_ID) for lic in vistas}
+
     nuevas = []
     for licitacion in licitaciones:
-        expediente = licitacion.get(CLAVE_EXPEDIENTE)
+        id_licitacion = licitacion.get(CLAVE_ID)
 
-        # Si la licitación no trae expediente, la ignoramos (no se puede comparar)
-        if not expediente:
+        # Si la licitación no trae id, la ignoramos (no se puede comparar)
+        if not id_licitacion:
             continue
 
-        if expediente not in vistos:
+        if id_licitacion not in ids_vistos:
             nuevas.append(licitacion)
 
     return nuevas
@@ -67,18 +73,17 @@ def filtrar_nuevas(licitaciones, vistos):
 def procesar_licitaciones(licitaciones, ruta=ARCHIVO_VISTOS):
     """Flujo completo de la "memoria" del programa.
 
-    1. Carga los expedientes ya enviados.
-    2. Filtra las licitaciones para quedarse solo con las nuevas.
+    1. Carga las licitaciones ya enviadas.
+    2. Filtra para quedarse solo con las nuevas (por 'id').
     3. Añade las nuevas a la memoria y la guarda en disco.
     4. Devuelve la lista de licitaciones nuevas (para enviarlas por email).
     """
-    vistos = cargar_vistos(ruta)
-    nuevas = filtrar_nuevas(licitaciones, vistos)
+    vistas = cargar_vistas(ruta)
+    nuevas = filtrar_nuevas(licitaciones, vistas)
 
     if nuevas:
-        for licitacion in nuevas:
-            vistos.add(licitacion[CLAVE_EXPEDIENTE])
-        guardar_vistos(vistos, ruta)
+        vistas.extend(nuevas)
+        guardar_vistas(vistas, ruta)
         print(f"{len(nuevas)} licitaciones nuevas guardadas en '{ruta}'")
     else:
         print("No hay licitaciones nuevas")
@@ -92,21 +97,25 @@ def procesar_licitaciones(licitaciones, ruta=ARCHIVO_VISTOS):
 if __name__ == "__main__":
     # Datos provisionales construidos a partir de config.py mientras el
     # scraper no está terminado.
-    from config import ASUNTO, EXPEDIENTE, FECHA, URL
+    from config import ASUNTO, EXPEDIENTE, FECHA, URL, ORGANO, TIPO, IMPORTE
 
     licitaciones_prueba = [
         {
-            "expediente": EXPEDIENTE,
+            "id": EXPEDIENTE,
+            "numero": EXPEDIENTE,
+            "organo": ORGANO,
             "objeto": ASUNTO,
+            "tipo": TIPO,
+            "importe": IMPORTE,
             "fecha": FECHA,
             "url": URL,
         },
     ]
 
-    # Primera ejecución: ambas son nuevas
+    # Primera ejecución: la licitación es nueva
     nuevas = procesar_licitaciones(licitaciones_prueba)
-    print("Nuevas (1ª ejecución):", [l["expediente"] for l in nuevas])
+    print("Nuevas (1ª ejecución):", [lic["id"] for lic in nuevas])
 
     # Segunda ejecución con los mismos datos: ya no hay nuevas
     nuevas = procesar_licitaciones(licitaciones_prueba)
-    print("Nuevas (2ª ejecución):", [l["expediente"] for l in nuevas])
+    print("Nuevas (2ª ejecución):", [lic["id"] for lic in nuevas])
