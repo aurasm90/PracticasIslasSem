@@ -1,4 +1,4 @@
-# CONFIGURACIÓN
+# CONFIGURACIÓN EMAIL
 # se guardan todos los datos de configuración
 
 # --> Los emails de destino

@@ -2,6 +2,7 @@
 import json
 import os
 
+# Archivo donde se guardan los datos que enviaremos por email
 ARCHIVO_JSON = "expedientes_nuevos.json"
 
 
@@ -32,6 +33,8 @@ licitaciones_prueba = [
 ]
 
 # EJEMPLO FUNCIONES NECESARIAS PARA MANEJAR LOS DATOS JSON:
+# (Añadir las necesarias)
+
 # cargar_vistos()
 #   --> Lee el JSON
 #   --> Devuelve lista de IDs ya vistos
