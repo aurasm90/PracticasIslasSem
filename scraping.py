@@ -289,7 +289,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
 # GRUPO 3: MAIN
 # ------------------------------
 
-def main():
+def main_scraping():
     print('Inciando navegador...')
     mi_navegador = iniciar_navegador()
     todas_licitaciones = []
@@ -324,4 +324,4 @@ def main():
 # GRUPO 4: PUNTO DE ENTRADA
 # ------------------------------
 if __name__ == "__main__":
-    main()
+    main_scraping()
