@@ -149,7 +149,6 @@ def obtener_organos_con_licitaciones(mi_navegador):
 
             # Cogemos la URL directa
             enlace = fila.find("a", href=lambda h: h and "perfilContratante" in str(h))
-
             if nombre and enlace:
                 organos.append(
                     {
