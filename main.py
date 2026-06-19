@@ -19,7 +19,6 @@ from scraping import (
 from json_parser import procesar_licitaciones
 from email_sender import enviar_email_json
 
-# Llamar a webscrapping
 
 def obtener_licitaciones_publicadas():
     print("Iniciando navegador...")
@@ -79,4 +78,3 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(60)
-

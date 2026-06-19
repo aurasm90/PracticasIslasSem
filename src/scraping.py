@@ -149,7 +149,6 @@ def obtener_organos_con_licitaciones(mi_navegador):
 
             # Cogemos la URL directa
             enlace = fila.find("a", href=lambda h: h and "perfilContratante" in str(h))
-
             if nombre and enlace:
                 organos.append(
                     {
@@ -187,7 +186,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
     try:
         print("Navegando a URL...")
         mi_navegador.get(organo["url"])
-        time.sleep(random.uniform(3, 6))  # ← pausa para que cargue
+        time.sleep(random.uniform(3, 7))  # ← pausa para que cargue
 
         print("Buscando pestaña...")
 
@@ -320,9 +319,9 @@ def main_scraping():
                 licitaciones = obtener_licitaciones_organo(mi_navegador, organo)
                 todas_licitaciones.extend(licitaciones)
                 # Pausa aleatoria entre órganos
-            pausa = random.uniform(2, 5)
-            print(f"Esperando {pausa:.1f} segundos...")
-            time.sleep(pausa)
+                pausa = random.uniform(2, 5)
+                print(f"Esperando {pausa:.1f} segundos...")
+                time.sleep(pausa)
 
             print(f"\nTotal licitaciones publicadas: {len(todas_licitaciones)}")
 
