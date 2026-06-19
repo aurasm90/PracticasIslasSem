@@ -215,10 +215,21 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR_LIC))
         )
         boton_buscar.click()
+        time.sleep(2)
 
         # Esperamos que carguen los resultados
-        esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
-        print("Licitaciones cargadas")
+        # esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
+        # print("Licitaciones cargadas")
+
+
+        try:
+            esperar.until(
+                EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente"))
+            )
+            print("Licitaciones cargadas")
+        except:
+            print(f"⚠️ Sin licitaciones publicadas en {organo['nombre']}")
+            return licitaciones  # devuelve lista vacía y continúa
 
         # Extraemos los datos
         soup = BeautifulSoup(mi_navegador.page_source, "html.parser")
@@ -242,7 +253,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
 
             # ID único
             id_licitacion = (
-                url_licitacion.split("idEvl=")[-1] if url_licitacion else numero
+                url_licitacion.split("idEvl=")[-1] if url_licitacion else numero_exp
             )
             # Tipo
             tipo = fila.find("td", class_="tdTipoContrato")
@@ -251,6 +262,10 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             # Objeto
             objeto = fila.find("td", class_="tdTipoContratoLicOC")
             objeto = objeto.text.strip() if objeto else ""
+            
+            # Estado
+            estado = fila.find("td", class_="tdEstado")
+            estado = estado.text.strip() if estado else ""
 
             # Importe
             importe = fila.find("td", class_="tdImporte")
