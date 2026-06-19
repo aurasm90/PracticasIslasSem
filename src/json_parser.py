@@ -6,7 +6,7 @@
 # ya enviadas (no solo su número). Cada licitación es un objeto con esta forma:
 #   {
 #       "id": "...",          # identificador único (clave de comparación)
-#       "numero": "...",      # número de expediente
+#       "expediente": "...",      # número de expediente
 #       "organo": "...",
 #       "objeto": "...",
 #       "tipo": "...",
@@ -24,7 +24,7 @@ import os
 from src.config import ESTADO
 
 # Nombre del archivo que actúa como memoria del programa
-ARCHIVO_VISTOS = "../datos/expedientes_vistos.json"
+ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
 
 # Clave que identifica de forma única a cada licitación (para evitar duplicados)
 CLAVE_ID = "id"
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     licitaciones_prueba = [
         {
             "id": ID,
-            "numero": EXPEDIENTE,
+            "expediente": EXPEDIENTE,
             "organo": ORGANO,
             "objeto": OBJETO,
             "tipo": TIPO,

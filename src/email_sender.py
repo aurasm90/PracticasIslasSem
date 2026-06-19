@@ -1,18 +1,18 @@
 import os
 import smtplib
+import sys
 from email.message import EmailMessage
 from dotenv import load_dotenv
+from pathlib import Path
 
-from src.config import (
-    EMAIL_REMITENTE,
-    EMAIL_DESTINO,
-    ASUNTO,
-    SMTP_SERVER,
-    SMTP_PORT
-)
+# FORMA CORRECTA - DESDE MAIN.py no funciona el metodo que teniamos: Buscar .env desde la raíz del proyecto
+# Esto funciona tanto desde main.py como desde email_sender.py directamente
+# Esto permite importar src.config desde cualquier lugar
+sys.path.append(str(Path(__file__).parent.parent))
+env_path = Path(__file__).parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
-load_dotenv()
-
+from src.config import EMAIL_REMITENTE, EMAIL_DESTINO, ASUNTO, SMTP_SERVER, SMTP_PORT
 
 def crear_cuerpo_email_html(licitaciones_json):
 
@@ -163,9 +163,20 @@ def enviar_email_json(licitaciones_json):
 
     password = os.getenv("EMAIL_PASSWORD")
 
+    if not password:
+        print("ERROR: No se encontró EMAIL_PASSWORD en .env")
+        return
+
+    if not licitaciones_json:
+        print("No hay licitaciones para enviar")
+        return
+
+    # Convertir lista de destinatarios a string para el header
+    destinatarios_str = ", ".join(EMAIL_DESTINO)
+
     mensaje = EmailMessage()
     mensaje["From"] = EMAIL_REMITENTE
-    mensaje["To"] = EMAIL_DESTINO
+    mensaje["To"] = destinatarios_str
     mensaje["Subject"] = ASUNTO
 
     mensaje.add_alternative(
@@ -173,11 +184,13 @@ def enviar_email_json(licitaciones_json):
         subtype="html"
     )
 
-    with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as smtp:
-        smtp.login(EMAIL_REMITENTE, password)
-        smtp.send_message(mensaje)
-
-    print("Email enviado correctamente")
+    try:
+        with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as smtp:
+            smtp.login(EMAIL_REMITENTE, password)
+            smtp.send_message(mensaje)
+        print("Email enviado correctamente")
+    except Exception as e:
+        print(f"Error al enviar email: {e}")
 
 
 if __name__ == "__main__":
