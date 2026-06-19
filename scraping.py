@@ -215,10 +215,21 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR_LIC))
         )
         boton_buscar.click()
+        time.sleep(2)
 
         # Esperamos que carguen los resultados
-        esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
-        print("Licitaciones cargadas")
+        # esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
+        # print("Licitaciones cargadas")
+
+
+        try:
+            esperar.until(
+                EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente"))
+            )
+            print("Licitaciones cargadas")
+        except:
+            print(f"Sin licitaciones publicadas en {organo['nombre']}")
+            return licitaciones  # devuelve lista vacía y continúa
 
         # Extraemos los datos
         soup = BeautifulSoup(mi_navegador.page_source, "html.parser")
@@ -230,7 +241,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             if not expediente:
                 continue
 
-            numero = (
+            numero_exp = (
                 expediente.find("span").text.strip() if expediente.find("span") else ""
             )
 
@@ -242,9 +253,8 @@ def obtener_licitaciones_organo(mi_navegador, organo):
 
             # ID único
             id_licitacion = (
-                url_licitacion.split("idEvl=")[-1] if url_licitacion else numero
+                url_licitacion.split("idEvl=")[-1] if url_licitacion else numero_exp
             )
-
             # Tipo
             tipo = fila.find("td", class_="tdTipoContrato")
             tipo = tipo.text.strip() if tipo else ""
@@ -252,6 +262,10 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             # Objeto
             objeto = fila.find("td", class_="tdTipoContratoLicOC")
             objeto = objeto.text.strip() if objeto else ""
+            
+            # Estado
+            estado = fila.find("td", class_="tdEstado")
+            estado = estado.text.strip() if estado else ""
 
             # Importe
             importe = fila.find("td", class_="tdImporte")
@@ -267,10 +281,10 @@ def obtener_licitaciones_organo(mi_navegador, organo):
             licitaciones.append(
                 {
                     "id": id_licitacion,
-                    "expediente": numero,
+                    "expediente": numero_exp,
                     "organo": organo["nombre"],
-                    "tipo": tipo,
                     "objeto": objeto,
+                    "tipo": tipo,
                     "estado": "Publicada",
                     "importe": importe,
                     "fecha": fecha,
@@ -290,7 +304,7 @@ def obtener_licitaciones_organo(mi_navegador, organo):
 # GRUPO 3: MAIN
 # ------------------------------
 
-def main():
+def main_scraping():
     print('Inciando navegador...')
     mi_navegador = iniciar_navegador()
     todas_licitaciones = []
@@ -302,12 +316,12 @@ def main():
             print('Filtro aplicado correctamente, continuamos...')
             organos = obtener_organos_con_licitaciones(mi_navegador)
             
-            for organo in organos[:5]:
+            for organo in organos[:10]:
                 licitaciones = obtener_licitaciones_organo(mi_navegador, organo)
                 todas_licitaciones.extend(licitaciones)
                 # Pausa aleatoria entre órganos
             pausa = random.uniform(2, 5)
-            print(f"⏳ Esperando {pausa:.1f} segundos...")
+            print(f"Esperando {pausa:.1f} segundos...")
             time.sleep(pausa)
 
             print(f"\nTotal licitaciones publicadas: {len(todas_licitaciones)}")
@@ -325,4 +339,4 @@ def main():
 # GRUPO 4: PUNTO DE ENTRADA
 # ------------------------------
 if __name__ == "__main__":
-    main()
+    main_scraping()
