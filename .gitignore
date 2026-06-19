@@ -12,10 +12,5 @@ __pycache__/
 # Credenciales
 .env
 
-# Carpeta Pruebas Aura
-.carpetaAura/
-pruebasAura.py
-/carpetaAura
-
 # JSON de expedientes
 expedientes_vistos.json
