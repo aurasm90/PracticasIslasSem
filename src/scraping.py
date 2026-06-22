@@ -362,6 +362,8 @@ def main_scraping():
 
         if resultado:
             print('Filtro aplicado correctamente, continuamos...')
+            print("\nEstabilizando página antes de procesar órganos...")
+            time.sleep(3)
             organos = obtener_organos_con_licitaciones(driver)
 
             for organo in organos[:11]:
