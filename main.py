@@ -33,7 +33,6 @@ def ejecutar_programa():
         # 3. Enviar email
         print("\nPASO 3: Enviando email...")
         enviar_email_json(licitaciones_nuevas)
-        print("Email enviado con las licitaciones nuevas.")
     else:
         print("No hay licitaciones nuevas para enviar.")
 
