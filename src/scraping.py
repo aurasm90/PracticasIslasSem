@@ -364,7 +364,7 @@ def main_scraping():
             print('Filtro aplicado correctamente, continuamos...')
             organos = obtener_organos_con_licitaciones(driver)
 
-            for organo in organos[:10]:
+            for organo in organos[:11]:
                 licitaciones = obtener_licitaciones_organo(driver, organo)
                 todas_licitaciones.extend(licitaciones)
                 # Pausa aleatoria entre órganos

@@ -1,5 +1,14 @@
 # CONFIGURACIÓN - CONSTANTES
 
+# -----------------------------------------
+# CONFIGURACIÓN DEL JSON_parser
+# -----------------------------------------
+# Nombre del archivo que actúa como memoria del programa
+ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
+
+# Clave que identifica de forma única a cada licitación (para evitar duplicados)
+CLAVE_ID = "id"
+
 
 # -----------------------------------------
 # CONFIGURACIÓN DEl EMAIL

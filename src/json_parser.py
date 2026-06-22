@@ -20,19 +20,10 @@
 
 import json
 import os
-
-from src.config import ESTADO
-
-# Nombre del archivo que actúa como memoria del programa
-ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
-
-# Clave que identifica de forma única a cada licitación (para evitar duplicados)
-CLAVE_ID = "id"
-
+from src.config import ARCHIVO_VISTOS, CLAVE_ID
 
 def cargar_vistas(ruta=ARCHIVO_VISTOS):
-    """Lee el JSON y devuelve la lista de licitaciones ya enviadas.
-
+    """Lee el JSON y devuelve la lista de licitaciones ya enviadas
     Si el archivo no existe todavía (primera ejecución) o está corrupto,
     devuelve una lista vacía en lugar de fallar.
     """
@@ -99,7 +90,7 @@ def procesar_licitaciones(licitaciones, ruta=ARCHIVO_VISTOS):
 if __name__ == "__main__":
     # Datos provisionales construidos a partir de config.py mientras el
     # scraper no está terminado.
-    from config import ID, EXPEDIENTE, FECHA, URL, ORGANO, OBJETO, TIPO, ESTADO, IMPORTE
+    from src.config import ID, EXPEDIENTE, FECHA, URL, ORGANO, OBJETO, TIPO, ESTADO, IMPORTE
 
     licitaciones_prueba = [
         {
