@@ -181,6 +181,8 @@ def navegar_a_organo(driver, url):
 def hacer_clic_pestanya_licitaciones(driver):
     """Busca la pestaña Licitaciones y hace clic"""
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+    # Pequeña pausa para estabilizar el DOM después de cargar
+    time.sleep(2)
 
     try:
         # Esperar a que el botón esté disponible y clickeable
