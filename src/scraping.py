@@ -1,16 +1,11 @@
-# PASOS:
-# 1 - Entrar en la web
-# 2 - Filtrar por Canarias
-# 3 - Leer TODAS las páginas de resultados
-# 4 - Para cada órgano con licitaciones > 0 entrar y extraer las licitaciones
-# 5 - Comparar con las ya vistas en JSON
-# 6 - Si hay nuevas → ENVIAR por email
-# 7 - Guardar las nuevas en JSON
+"""
+Módulo de scraping para la contratación pública del estado
 
+"""
 
-# ------------------------------
-# GRUPO 0 - Importamos librerías necesarias para Webscrapping + CONSTANTES
-# ------------------------------
+# -----------------------------------------------
+# GRUPO 0 - Importamos librerías necesarias para Webscrapping & CONSTANTES
+# -----------------------------------------------
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,31 +15,29 @@ from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
-from datetime import datetime
 import json
 import os
 import time
 import random
 
-URL_BASE = "https://contrataciondelestado.es/wps/portal/plataforma/perfil_contratante/lista_perfiles/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziHcNcAx09LY0N3IMCXA2MnILMzUzc_I0NDIz0w8EKTI2dTcK8wgLMgj3dDQw8PdxcfEINTQ3cjcz0o4jRb4ADOBoQpx-Pgij8xofrR-G3wgCqAJ8XCVlSkBsaGmGQ6QkATfmaFQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/p0/IZ7_AVEQAI930GRPE02BR764FO30G0=CZ6_AVEQAI930GRPE02BR764FO3002=LA0=Ecom.ibm.faces.portlet.VIEWID!QCPjspQCPlistPerfilesQCPAdminAFPListPerfPortletAppView.jsp==/#Z7_AVEQAI930GRPE02BR764FO30G0"
-COMUNIDAD = "Canarias"
-TIEMPO_ESPERA = 10  # segundos para WebDriverWait
-ID_SELECT_COMUNIDAD = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:menu111MAQ"
-ID_BOTON_BUSCAR = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:botonbuscar"
-CLASE_RESULTADOS = "badge"
-ID_BOTON_SIGUIENTE = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:siguienteLink"
-ID_PESTANYA_LICITACIONES = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:textLinkLic"
-ID_FILTRO_ESTADO = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc11"
-ID_BOTON_LICITACIONES = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:perfilComp:linkPrepLic"
-ESTADO_PUBLICADA = "PUB"
-ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18"
+from src.config import (
+    URL_BASE,
+    COMUNIDAD,
+    TIEMPO_ESPERA,
+    ID_SELECT_COMUNIDAD,
+    ID_BOTON_BUSCAR,
+    CLASE_RESULTADOS,
+    ID_BOTON_SIGUIENTE,
+    ID_FILTRO_ESTADO,
+    ESTADO_PUBLICADA,
+    ID_BOTON_BUSCAR_LIC,
+)
 
-# ------------------------------
+# -----------------------------------------------
 # GRUPO 1 - Iniciar/Cerrar Navegador
-# ------------------------------
+# -----------------------------------------------
 
 def iniciar_navegador():
-
     print('Inciando navegador...')
     options = webdriver.ChromeOptions()
     # Evita que Chrome se cierre solo
@@ -62,7 +55,6 @@ def iniciar_navegador():
     # Evita errores de memoria después de muchas páginas
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
 
@@ -72,45 +64,41 @@ def iniciar_navegador():
     )
     return driver
 
+
 def cerrar_navegador(driver):
     driver.quit()
     print("Navegador cerrado")
 
 
-# ------------------------------
+# -----------------------------------------------
 # GRUPO 2 - Funciones de Navegación
-# ------------------------------
+# -----------------------------------------------
 
-# FC que abre filtra los órganos con licitaciones por Canarias
 def filtrar_pagina_canarias(driver):
+    """
+    Navega hasta la página de <<perfil contratantes>> y filtra los órganos por Canarias
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver
+
+    Returns:
+        bool: True si el filtro se aplicó correctamente, False en caso de error
+    """
+    
     print(f"Navegando a: {URL_BASE}")
     driver.get(URL_BASE)
-
-    # esperamos que la página cargue
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-    print('Página cargando...')
 
     try:
-        # Esperar el select
         menu = esperar.until(
             EC.presence_of_element_located((By.ID, ID_SELECT_COMUNIDAD))
         )
-        print("Select encontrado!")
-
-        # Creamos el objeto Select
         lista = Select(menu)
-
-        print('Seleccionando Canarias...')
         lista.select_by_visible_text(COMUNIDAD)
-
-        print('Canarias escogido')
-        print('Buscando botón FILTRAR...')
-
         buscar_boton = esperar.until(
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR))
         )
         buscar_boton.click()
-        # Esperamos a que aparezca algún badge de licitaciones
         esperar.until(
             EC.presence_of_element_located((By.CLASS_NAME, CLASE_RESULTADOS))
         )
@@ -121,8 +109,17 @@ def filtrar_pagina_canarias(driver):
         return False
 
 
-# FC que obtiene los órganos con licitaciones abiertas/activas > 0
 def obtener_organos_con_licitaciones(driver):
+    """
+    Obtiene la lista de órganos con un número > 0 de licitaciones abiertas en Canarias 
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver.
+
+    Returns:
+        list: Lista de diccionarios con los datos de cada órgano.
+    """
+
     print("Leyendo órganos de Canarias...")
     organos = []
     pagina = 1
@@ -139,15 +136,12 @@ def obtener_organos_con_licitaciones(driver):
             if not badge_licitaciones:
                 continue
 
-            # Convertimos a número y filtramos los que tienen 0
             num_licitaciones = int(badge_licitaciones.text.strip())
             if num_licitaciones == 0:
                 continue
 
-            # Cogemos el nombre del órgano
             nombre = fila.find("span", id=lambda i: i and "textoEnlace" in str(i))
 
-            # Cogemos la URL directa
             enlace = fila.find("a", href=lambda h: h and "perfilContratante" in str(h))
             if nombre and enlace:
                 organos.append(
@@ -203,9 +197,9 @@ def obtener_licitaciones_organo(driver, organo):
         return []
 
 
-# ============================================
+# -----------------------------------------------
 # 1. Navegar al órgano
-# ============================================
+# -----------------------------------------------
 
 
 def navegar_a_organo(driver, url):
@@ -216,9 +210,9 @@ def navegar_a_organo(driver, url):
     print(" URL cargada")
 
 
-# ============================================
+# -----------------------------------------------
 # 2. Buscar y hacer clic en pestaña Licitaciones
-# ============================================
+# -----------------------------------------------
 
 
 def hacer_clic_pestanya_licitaciones(driver):
@@ -258,7 +252,7 @@ def aplicar_filtro_publicada(driver):
         EC.presence_of_element_located((By.ID, ID_FILTRO_ESTADO))
     )
     lista_estados = Select(select_estado)
-    lista_estados.select_by_value("PUB")
+    lista_estados.select_by_value(ESTADO_PUBLICADA)
     print("Filtro Publicada seleccionado")
 
     # Hacer clic en Buscar
@@ -300,9 +294,9 @@ def extraer_licitaciones_pagina(driver, nombre_organo):
     return licitaciones
 
 
-# ============================================
+# -----------------------------------------------
 # 5. Extraer una sola fila de licitación
-# ============================================
+# -----------------------------------------------
 
 
 def extraer_licitacion_fila(fila, nombre_organo):
@@ -373,9 +367,9 @@ def guardar_licitaciones_en_json(licitaciones):
     print(f"Total licitaciones: {len(licitaciones)}")
 
 
-# ------------------------------
+# -----------------------------------------------
 # GRUPO 3: MAIN
-# ------------------------------
+# -----------------------------------------------
 
 def main_scraping():
     print("Iniciando scraping...")
@@ -410,8 +404,8 @@ def main_scraping():
     finally:
         cerrar_navegador(driver)
 
-# ------------------------------
+# -----------------------------------------------
 # GRUPO 4: PUNTO DE ENTRADA
-# ------------------------------
+# -----------------------------------------------
 if __name__ == "__main__":
     main_scraping()
