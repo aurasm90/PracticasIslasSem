@@ -88,17 +88,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=zsSeIT5ywLKFlFRHfEzEaw%3D%3D"
   },
   {
-    "id": "aJxJNX6SvMqAAM7L03kM8A%3D%3D",
-    "expediente": "TFN-22/2026",
-    "organo": "Aena. Dirección del Aeropuerto de Tenerife Norte",
-    "objeto": "Servicio De Retirada, Gestión Y Valorización De Los Residuos",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "149,902.36",
-    "fecha": "19/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=aJxJNX6SvMqAAM7L03kM8A%3D%3D"
-  },
-  {
     "id": "x0%2BAO6Vnx9Z%2BF6L2uCfUWg%3D%3D",
     "expediente": "TFS-53/2026",
     "organo": "Aena. Dirección del Aeropuerto de Tenerife Sur",
@@ -240,5 +229,27 @@
     "importe": "259,127.89",
     "fecha": "30/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=GfNGVkZ3pTxq1DdmE7eaXg%3D%3D"
+  },
+  {
+    "id": "CS%2Bvr2h45zAeIBJRHQiPkQ%3D%3D",
+    "expediente": "1302/2026",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Implantación y Coordinación de Actividades Deportivas Verano 2026-2029",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "12,149.53",
+    "fecha": "07/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=CS%2Bvr2h45zAeIBJRHQiPkQ%3D%3D"
+  },
+  {
+    "id": "koZQmfv2ax2ExvMJXBMHHQ%3D%3D",
+    "expediente": "985/2026",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Desbroce y limpieza de los márgenes de carreteras, así como acondicionamiento de zonas ajardinadas de competencia municipal, TM La Frontera",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "22,387.00",
+    "fecha": "26/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=koZQmfv2ax2ExvMJXBMHHQ%3D%3D"
   }
 ]

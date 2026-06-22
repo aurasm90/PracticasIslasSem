@@ -131,7 +131,6 @@ def obtener_organos_con_licitaciones(driver):
 
         for fila in filas:
 
-            # Buscamos el número de licitaciones abiertas
             badge_licitaciones = fila.find("p", class_="badge info m-0")
             if not badge_licitaciones:
                 continue
@@ -153,94 +152,52 @@ def obtener_organos_con_licitaciones(driver):
                 )
                 print(f"{nombre.text.strip()} - {num_licitaciones} licitaciones")
 
-        # Comprobamos si hay página siguiente
         try:
             boton_siguiente = driver.find_element(By.ID, ID_BOTON_SIGUIENTE)
             boton_siguiente.click()
-
-            # Esperamos que cargue la siguiente página
             esperar = WebDriverWait(driver, TIEMPO_ESPERA)
             esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "badge")))
             pagina += 1
 
         except:
             # No hay botón siguiente, hemos llegado al final
-            print(f"\nTotal páginas leídas: {pagina}")
-            print(f"Total órganos con licitaciones > 0: {len(organos)}")
+            print(f"\nTotal leídos: {len(organos)} órganos en {pagina} páginas")
             break
 
     return organos
 
 
-# FC que entra en la pesataña 'Licitaciones' de cada órgano y filtra por <<Publicadas>>
-def obtener_licitaciones_organo(driver, organo):
-    print(f"\nEntrando en: {organo['nombre']}")
-    licitaciones = []
-
-    try:
-        # 1. Navegar a la URL
-        navegar_a_organo(driver, organo["url"])
-
-        # 2. Hacer clic en pestaña Licitaciones
-        if not hacer_clic_pestanya_licitaciones(driver):
-            print(f"No se encontró pestaña en {organo['nombre']}")
-            return []
-
-        # 3. Aplicar filtro "Publicada"
-        aplicar_filtro_publicada(driver)
-
-        # 4. Buscar licitaciones
-        return extraer_licitaciones_pagina(driver, organo["nombre"])
-
-    except Exception as e:
-        print(f"Error en {organo['nombre']}: {e}")
-        return []
-
-
 # -----------------------------------------------
-# 1. Navegar al órgano
+# FUNCIONES AUXILIARES A 'obtener_licitaciones_organo'
 # -----------------------------------------------
-
 
 def navegar_a_organo(driver, url):
     """Navega a la URL del órgano"""
     print("  Navegando a URL...")
     driver.get(url)
     time.sleep(random.uniform(3, 6))
-    print(" URL cargada")
-
-
-# -----------------------------------------------
-# 2. Buscar y hacer clic en pestaña Licitaciones
-# -----------------------------------------------
 
 
 def hacer_clic_pestanya_licitaciones(driver):
     """Busca la pestaña Licitaciones y hace clic"""
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-
-    # Esperar a que la página se estabilice
+    # Pequeña pausa para estabilizar el DOM después de cargar
     time.sleep(2)
 
     try:
-        # Buscar el botón por su ID exacto
+        # Esperar a que el botón esté disponible y clickeable
         pestanya = esperar.until(
             EC.element_to_be_clickable(
                 (By.ID, "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:perfilComp:linkPrepLic")
             )
         )
-        # Hacer clic con JavaScript (más fiable)
+        # JavaScript evita el error de 'element not clickable'
         driver.execute_script("arguments[0].click();", pestanya)
         print("Pestaña Licitaciones clickeada")
         return True
     except Exception as e:
-        print(f"Error al hacer clic: {e}")
+        print(f"Error al hacer clic en pestaña: {e}")
         return False
-
-
-# ============================================
-# 3. Aplicar filtro "Publicada"
-# ============================================
 
 
 def aplicar_filtro_publicada(driver):
@@ -255,7 +212,6 @@ def aplicar_filtro_publicada(driver):
     lista_estados.select_by_value(ESTADO_PUBLICADA)
     print("Filtro Publicada seleccionado")
 
-    # Hacer clic en Buscar
     print("  Buscando botón Buscar...")
     boton_buscar = esperar.until(
         EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR_LIC))
@@ -263,7 +219,6 @@ def aplicar_filtro_publicada(driver):
     boton_buscar.click()
     time.sleep(2)
 
-    # Esperar resultados
     try:
         esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
         print("Licitaciones cargadas")
@@ -271,11 +226,6 @@ def aplicar_filtro_publicada(driver):
     except:
         print("Sin licitaciones publicadas")
         return False
-
-
-# ============================================
-# 4. Extraer licitaciones de la página
-# ============================================
 
 
 def extraer_licitaciones_pagina(driver, nombre_organo):
@@ -294,8 +244,39 @@ def extraer_licitaciones_pagina(driver, nombre_organo):
     return licitaciones
 
 
+def obtener_licitaciones_organo(driver, organo):
+    """
+    Obtiene todas las licitaciones publicadas de un órgano específico
+    Llama a 4 funciones auxiliares del grupo
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver.
+        organo (dict): Diccionario con los datos del órgano.
+
+    Returns:
+        list: Lista de licitaciones publicadas del órgano.
+    """
+
+    print(f"\nEntrando en: {organo['nombre']}")
+    licitaciones = []
+
+    try:
+        navegar_a_organo(driver, organo["url"])
+
+        if not hacer_clic_pestanya_licitaciones(driver):
+            print(f"No se encontró pestaña en {organo['nombre']}")
+            return []
+
+        aplicar_filtro_publicada(driver)
+        return extraer_licitaciones_pagina(driver, organo["nombre"])
+
+    except Exception as e:
+        print(f"Error en {organo['nombre']}: {e}")
+        return []
+
+
 # -----------------------------------------------
-# 5. Extraer una sola fila de licitación
+# GRUPO 3 - Extraer datos & Guardarlos en JSON
 # -----------------------------------------------
 
 
@@ -368,7 +349,7 @@ def guardar_licitaciones_en_json(licitaciones):
 
 
 # -----------------------------------------------
-# GRUPO 3: MAIN
+# GRUPO 4 - MAIN
 # -----------------------------------------------
 
 def main_scraping():
@@ -405,7 +386,7 @@ def main_scraping():
         cerrar_navegador(driver)
 
 # -----------------------------------------------
-# GRUPO 4: PUNTO DE ENTRADA
+# GRUPO 5 - PUNTO DE ENTRADA
 # -----------------------------------------------
 if __name__ == "__main__":
     main_scraping()
