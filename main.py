@@ -1,80 +1,56 @@
 # PAGINA PRINCIPAL PROGRAMA
+# import schedule
+# import time
 
-# Archivo principal que une todo
-# Llama al scraping
-# Recoge los resultados en JSON
-# Llama al email
-# Programa la ejecución automática diaria
-import schedule
-import time
-
-from scraping import (
-    iniciar_navegador,
-    cerrar_navegador,
-    filtrar_pagina_canarias,
-    obtener_organos_con_licitaciones,
-    obtener_licitaciones_organo,
-)
-
-from json_parser import procesar_licitaciones
-from email_sender import enviar_email_json
-
-
-def obtener_licitaciones_publicadas():
-    print("Iniciando navegador...")
-    navegador = iniciar_navegador()
-    todas_licitaciones = []
-
-    try:
-        resultado = filtrar_pagina_canarias(navegador)
-
-        if not resultado:
-            print("No se pudo aplicar el filtro de Canarias.")
-            return []
-
-        print("Filtro aplicado correctamente.")
-        organos = obtener_organos_con_licitaciones(navegador)
-
-        for organo in organos[:5]:
-            licitaciones = obtener_licitaciones_organo(navegador, organo)
-            todas_licitaciones.extend(licitaciones)
-
-        print(f"Total licitaciones publicadas encontradas: {len(todas_licitaciones)}")
-        return todas_licitaciones
-
-    except Exception as e:
-        print(f"Error durante el scraping: {e}")
-        return []
-
-    finally:
-        cerrar_navegador(navegador)
-
+from src.scraping import main_scraping
+from src.json_parser import procesar_licitaciones
+from src.email_sender import enviar_email_json
 
 def ejecutar_programa():
-    print("Iniciando revisión automática de licitaciones...")
+    """Función principal que orquesta todo el proceso"""
+    print("=" * 60)
+    print("PROGRAMA DE SCRAPING - CONTRATACIONES DEL ESTADO")
+    print("=" * 60)
 
-    licitaciones = obtener_licitaciones_publicadas()
+    print("\nIniciando revisión automática de licitaciones...")
+
+    # 1. Ejecutar scraping
+    print("\nPASO 1: Extrayendo licitaciones de la web...")
+    licitaciones = main_scraping()
 
     if not licitaciones:
-        print("No se han encontrado licitaciones publicadas.")
+        print("No se han encontrado licitaciones")
         return
 
+    print(f"Extraídas {len(licitaciones)} licitaciones")
+
+    # 2. Procesar licitaciones nuevas
+    print("\nPASO 2: Filtrando licitaciones nuevas...")
     licitaciones_nuevas = procesar_licitaciones(licitaciones)
 
     if licitaciones_nuevas:
+        print(f"Licitaciones nuevas: {len(licitaciones_nuevas)}")
+        # 3. Enviar email
+        print("\nPASO 3: Enviando email...")
         enviar_email_json(licitaciones_nuevas)
         print("Email enviado con las licitaciones nuevas.")
     else:
         print("No hay licitaciones nuevas para enviar.")
 
+    print("\n" + "=" * 60)
+    print("PROGRAMA COMPLETADO")
+    print("=" * 60)
+
 
 if __name__ == "__main__":
     ejecutar_programa()
 
-    schedule.every().day.at("09:00").do(ejecutar_programa)
+    # schedule.every().day.at("09:00").do(ejecutar_programa)
 
-    print("Automatización activada. El programa revisará licitaciones cada día a las 09:00.")
+    # print(
+    #     "Automatización activada. El programa revisará licitaciones cada día a las 09:00."
+    # )
 
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(60)

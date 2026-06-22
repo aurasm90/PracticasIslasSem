@@ -1,16 +1,23 @@
-# CONFIGURACIÓN EMAIL
+# CONFIGURACIÓN
 # se guardan todos los datos de configuración
 
-# --> Los emails de destino
-# --> La hora de ejecución automática
-# CONFIGURACIÓN EMAIL
+# ============================================
+# CONFIGURACIÓN DEl EMAIL
+# ============================================
 EMAIL_REMITENTE = "a127islassem@gmail.com"
 
-EMAIL_DESTINO = "antonioislassem@gmail.com"
+EMAIL_DESTINO = [
+    "antonioislassem@gmail.com",
+    "a127islassem@email.com",
+]
 
 ASUNTO = "Prueba Licitaciones Canarias"
 
-URL = "https//:contrataciondelestado.es/"
+# ============================================
+# CONFIGURACIÓN DEL SCRAPING
+# ============================================
+
+URL = "https://contrataciondelestado.es/"
 
 FECHA = "19/06/2026"
 
@@ -27,6 +34,10 @@ TIPO = "Servicios"
 ESTADO = "Publicada"
 
 IMPORTE = "10.000,00 €"
+
+# ============================================
+# CONFIGURACIÓN DE SMTP
+# ============================================
 
 SMTP_SERVER = "smtp.gmail.com"
 

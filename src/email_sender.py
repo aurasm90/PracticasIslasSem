@@ -1,24 +1,27 @@
 import os
+import sys
 import smtplib
+from pathlib import Path
 from email.message import EmailMessage
+
 from dotenv import load_dotenv
 
-from config import (
-    EMAIL_REMITENTE,
-    EMAIL_DESTINO,
-    ASUNTO,
-    SMTP_SERVER,
-    SMTP_PORT
-)
+# Buscar .env desde la raíz del proyecto.
+# Así funciona tanto si ejecutamos main.py como si ejecutamos email_sender.py directamente.
+sys.path.append(str(Path(__file__).parent.parent))
+env_path = Path(__file__).parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
-# Carga la contraseña del correo desde el archivo .env
-load_dotenv()
+from src.config import EMAIL_REMITENTE, EMAIL_DESTINO, ASUNTO, SMTP_SERVER, SMTP_PORT
 
 
 def acortar_texto(texto, limite=120):
     """
     Acorta textos largos para que el email no sea demasiado extenso.
     """
+    if not texto:
+        return ""
+
     if len(texto) <= limite:
         return texto
 
@@ -28,7 +31,7 @@ def acortar_texto(texto, limite=120):
 def crear_cuerpo_email_html(licitaciones_json):
     """
     Crea el cuerpo del email en formato HTML.
-    Cada licitación se muestra de forma compacta.
+    Las licitaciones se muestran en formato compacto.
     """
 
     filas = ""
@@ -128,7 +131,7 @@ def crear_cuerpo_email_html(licitaciones_json):
 
 def enviar_email_json(licitaciones_json):
     """
-    Envía por email la lista de licitaciones recibidas en formato JSON.
+    Envía por email la lista de licitaciones recibidas.
     """
 
     password = os.getenv("EMAIL_PASSWORD")
