@@ -45,13 +45,24 @@ def crear_cuerpo_email_html(licitaciones_json):
         fecha = licitacion.get("fecha", "")
         url = licitacion.get("url", "#")
 
+        if importe and "€" not in importe:
+            importe += " €"
+
         filas += f"""
         <tr>
             <td style="padding:12px; border-bottom:1px solid #e0e0e0;">
                 <strong style="color:#0d47a1;">{expediente}</strong><br>
-                <span style="color:#333333;">{objeto}</span><br>
+
+                <span style="color:#333333;">
+                    {objeto}
+                </span><br>
+
                 <span style="font-size:12px; color:#666666;">
-                    {organo} | {tipo} | {importe} | {fecha}
+                    {organo} | {tipo} |
+                    <strong style="color:#198754;">
+                        {importe}
+                    </strong>
+                    | {fecha}
                 </span>
             </td>
 
@@ -161,7 +172,7 @@ if __name__ == "__main__":
             "tipo": "Suministros",
             "objeto": "Cerramiento de puertas antirretorno norte para mejorar el acceso y seguridad del aeropuerto",
             "estado": "Publicada",
-            "importe": "5.752,00 €",
+            "importe": "5.752,00",
             "fecha": "18/06/2026",
             "url": "https://ejemplo.com/licitacion/123"
         }
