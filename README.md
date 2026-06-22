@@ -1,17 +1,35 @@
 # PracticasIslasSem
 
-Proyectos de prácticas de IslasSem
+Proyecto de prácticas de IslasSem
+
+# Scraping de Licitaciones - Contratación del Estado (Canarias)
+
+Sistema automatizado para la extracción y seguimiento de licitaciones públicas de la comunidad autónoma de Canarias, publicado en la Plataforma de Contratación del Estado.
+
+## Descripción
+
+Este script realiza scraping de la página de contratación del estado, filtrando exclusivamente los órganos de Canarias. Extrae las licitaciones publicadas de cada órgano, las compara con las ya enviadas (para evitar duplicados) y envía un correo electrónico con las nuevas licitaciones detectadas.
 
 # README.md - Instrucciones para el administrador
 
 ## Instalación
 
-1. Instalar dependencias: `pip install -r requirements.txt`
+1. Clonar el repositorio
+
 2. Configurar variables de entorno (si las hay)
 
-## Ejecución manual
+# En Linux/Mac
 
-`python main.py`
+python3 -m venv venv
+source venv/bin/activate
+
+# En Windows
+
+python -m venv venv
+venv\Scripts\activate
+
+3. Instalar dependencias
+   pip install -r requirements.txt
 
 ## Programar ejecución diaria
 
