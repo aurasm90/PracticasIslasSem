@@ -274,7 +274,7 @@ def obtener_licitaciones_organo(driver, organo):
 
 
 # -----------------------------------------------
-# 5. Extraer una sola fila de licitación
+# GRUPO 3 - Extraer datos & Guardarlos en JSON
 # -----------------------------------------------
 
 
@@ -347,7 +347,7 @@ def guardar_licitaciones_en_json(licitaciones):
 
 
 # -----------------------------------------------
-# GRUPO 3: MAIN
+# GRUPO 4 - MAIN
 # -----------------------------------------------
 
 def main_scraping():
@@ -384,7 +384,7 @@ def main_scraping():
         cerrar_navegador(driver)
 
 # -----------------------------------------------
-# GRUPO 4: PUNTO DE ENTRADA
+# GRUPO 5 - PUNTO DE ENTRADA
 # -----------------------------------------------
 if __name__ == "__main__":
     main_scraping()
