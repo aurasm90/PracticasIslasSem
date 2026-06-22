@@ -124,7 +124,7 @@ def obtener_organos_con_licitaciones(driver):
     organos = []
     pagina = 1
 
-    while pagina <=1:
+    while pagina <=2:
         print(f"\nLeyendo página {pagina}...")
         soup = BeautifulSoup(driver.page_source, "html.parser")
         filas = soup.find_all("tr")
@@ -154,12 +154,14 @@ def obtener_organos_con_licitaciones(driver):
 
         try:
             boton_siguiente = driver.find_element(By.ID, ID_BOTON_SIGUIENTE)
+            print(f"Botón siguiente encontrado")
             boton_siguiente.click()
             esperar = WebDriverWait(driver, TIEMPO_ESPERA)
             esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "badge")))
             pagina += 1
 
-        except:
+        except Exception as e:
+            print(f"Botón siguiente NO encontrado: {e}")
             # No hay botón siguiente, hemos llegado al final
             print(f"\nTotal leídos: {len(organos)} órganos en {pagina} páginas")
             break
@@ -366,7 +368,7 @@ def main_scraping():
             time.sleep(3)
             organos = obtener_organos_con_licitaciones(driver)
 
-            for organo in organos[:11]:
+            for organo in organos[:20]:
                 licitaciones = obtener_licitaciones_organo(driver, organo)
                 todas_licitaciones.extend(licitaciones)
                 # Pausa aleatoria entre órganos
