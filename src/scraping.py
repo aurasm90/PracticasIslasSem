@@ -24,9 +24,10 @@ from src.config import (
     URL_BASE,
     COMUNIDAD,
     TIEMPO_ESPERA,
+    TIEMPO_ESPERA_LARGO,
     ID_SELECT_COMUNIDAD,
     ID_BOTON_BUSCAR,
-    ID_BOTON_LIMPIAR,
+    ID_CAMPO_NIF,
     CLASE_RESULTADOS,
     ID_BOTON_SIGUIENTE,
     ID_FILTRO_ESTADO,
@@ -88,7 +89,7 @@ def filtrar_pagina_canarias(driver):
 
     print(f"Navegando a: {URL_BASE}")
     driver.get(URL_BASE)
-    esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+    esperar = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
 
     try:
         menu = esperar.until(
@@ -143,8 +144,12 @@ def filtrar_por_nif(driver, nif):
 
         # 5. Verificar si hay resultados
         try:
-            driver.find_element(By.CLASS_NAME, CLASE_RESULTADOS)
-            print(f"Resultados encontrados para NIF: {nif}")
+            esperar.until(
+                lambda d: d.find_elements(By.CLASS_NAME, CLASE_RESULTADOS) or
+                        d.find_elements(By.CSS_SELECTOR, "p.badge.info.m-0") or
+                        d.find_elements(By.CLASS_NAME, "tablaPrincipalDefault")
+            )
+            print(f"Página cargada para NIF: {nif}")
             return True
         except:
             print(f"No se encontraron órganos con NIF: {nif}")
@@ -191,8 +196,19 @@ def obtener_organos_con_licitaciones(driver):
     organos = []
     pagina = 1
 
-    while pagina <=2:
+    while True:
         print(f"\nLeyendo página {pagina}...")
+        # Esperar a que los badges de licitaciones estén en el DOM
+        try:
+            WebDriverWait(driver, TIEMPO_ESPERA_LARGO).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "p.badge.info.m-0"))
+            )
+            time.sleep(1)
+        except:
+            # No hay badges = no hay órganos con licitaciones abiertas
+            print("  Sin órganos con licitaciones abiertas")
+            break
+        
         soup = BeautifulSoup(driver.page_source, "html.parser")
         filas = soup.find_all("tr")
 
@@ -424,30 +440,20 @@ def main_scraping():
     try: 
         from src.config import cargar_cifs_permitidos
         cifs_permitidos = cargar_cifs_permitidos()
+        cifs_permitidos = sorted(cifs_permitidos)
 
         if not cifs_permitidos:
             print("No hay CIFs. Asegúrate de que el archivo existe y contiene CIFs")
             return []
 
-        # 🔧 PRUEBA: Procesar SOLO los primeros 10 CIFs
-        cifs_prueba = list(cifs_permitidos)[:10]  # ← Convertir a lista y coger 10
-        print(
-            f"\n🧪 [MODO PRUEBA] Procesando {len(cifs_prueba)} CIFs de {len(cifs_permitidos)} totales"
-        )
+        print(f"\nProcesando {len(cifs_permitidos)} CIFs...")
+        for i, cif in enumerate(cifs_permitidos, 1):
+            print(f"\n🔍 [{i}/{len(cifs_permitidos)}] Buscando CIF: {cif}")
 
-        for i, cif in enumerate(cifs_prueba, 1):
-            print(f"\n🔍 [{i}/{len(cifs_prueba)}] Buscando CIF: {cif}")
-
-            # # Procesar SOLO los CIFs de la lista
-            # print(f"\nProcesando {len(cifs_permitidos)} CIFs...")
-
-            # for i, cif in enumerate(cifs_permitidos, 1):
-            #     print(f"\n[{i}/{len(cifs_permitidos)}] Buscando CIF: {cif}")
-
-            # 🔧 Pausa ANTES de buscar (para estabilizar)
+            # Pausa ANTES de buscar (para estabilizar)
             time.sleep(random.uniform(2, 4))
 
-            # 🔧 Limpiar y aplicar Canarias ANTES de cada búsqueda
+            # Limpiar y aplicar Canarias ANTES de cada búsqueda
             if not resetear_pagina(driver):
                 print("Error al resetear la página")
                 try:
