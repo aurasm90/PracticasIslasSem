@@ -64,7 +64,7 @@ def iniciar_navegador():
 def cerrar_navegador(driver):
     driver.quit()
     print("Navegador cerrado")
-    
+
 
 def filtrar_pagina_canarias(driver):
     """
@@ -99,7 +99,7 @@ def filtrar_pagina_canarias(driver):
     except Exception as e:
         print(f"Error al filtrar por Canarias: {e}")
         return False
-    
+
 def obtener_organos_canarias_con_licitaciones(driver):
     """Recorre todas las páginas de Canarias y devuelve órganos con badge > 0"""
     organos = []
@@ -165,7 +165,7 @@ def obtener_cif_organo(driver, url):
     except Exception as e:
         print(f"  ❌ Error al leer CIF: {e}")
         return None
-    
+
 def hacer_clic_pestanya_licitaciones(driver):
     """Busca la pestaña Licitaciones y hace clic"""
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
@@ -186,7 +186,7 @@ def hacer_clic_pestanya_licitaciones(driver):
     except Exception as e:
         print(f"Error al hacer clic en pestaña: {e}")
         return False
-    
+
 def aplicar_filtro_publicada(driver):
     """Selecciona Publicada en el filtro de estado"""
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
@@ -215,7 +215,7 @@ def aplicar_filtro_publicada(driver):
         return False
 
 
-def extraer_licitaciones_pagina(driver, nombre_organo):
+def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
     """Extrae todas las licitaciones de la página actual"""
     licitaciones = []
 
@@ -223,14 +223,15 @@ def extraer_licitaciones_pagina(driver, nombre_organo):
     filas = soup.find_all("tr", class_=lambda c: c in ["par", "impar"])
 
     for fila in filas:
-        licitacion = extraer_licitacion_fila(fila, nombre_organo)
+        licitacion = extraer_licitacion_fila(fila, nombre_organo, cif_organo)
         if licitacion:
             licitaciones.append(licitacion)
 
     print(f"{len(licitaciones)} licitaciones publicadas encontradas")
     return licitaciones
 
-def extraer_licitacion_fila(fila, nombre_organo):
+
+def extraer_licitacion_fila(fila, nombre_organo, cif_organo=""):
     """Extrae los datos de una sola fila de licitación"""
 
     expediente = fila.find("td", class_="tdExpediente")
@@ -275,6 +276,7 @@ def extraer_licitacion_fila(fila, nombre_organo):
     return {
         "id": id_licitacion,
         "expediente": numero_exp,
+        "cif": cif_organo,
         "organo": nombre_organo,
         "objeto": objeto,
         "tipo": tipo,
@@ -283,8 +285,8 @@ def extraer_licitacion_fila(fila, nombre_organo):
         "fecha": fecha,
         "url": url_licitacion,
     }
-    
-    
+
+
 def main_scraping_v2():
     print("Iniciando scraping v2...")
     driver = iniciar_navegador()
@@ -324,18 +326,24 @@ def main_scraping_v2():
                 print(f"  ❌ No se encontró pestaña licitaciones")
                 continue
 
-            if aplicar_filtro_publicada(driver):
-                licitaciones = extraer_licitaciones_pagina(driver, organo["nombre"])
-                todas_licitaciones.extend(licitaciones)
+            try:
+                if aplicar_filtro_publicada(driver):
+                    licitaciones = extraer_licitaciones_pagina(driver, organo["nombre"], cif)
+                    todas_licitaciones.extend(licitaciones)
+                    # ← Guardar dentro del try, justo después de extraer
+                    os.makedirs("datos", exist_ok=True)
+                    with open("datos/licitaciones_v2.json", "w", encoding="utf-8") as f:
+                        json.dump(todas_licitaciones, f, ensure_ascii=False, indent=2)
+                    print(
+                        f"  💾 Progreso guardado: {len(todas_licitaciones)} licitaciones"
+                    )
+            except Exception as e:
+                print(f"  ❌ Error extrayendo licitaciones de {organo['nombre']}: {e}")
+                continue
 
             time.sleep(random.uniform(2, 4))
-
+            
         print(f"\n✅ Total licitaciones extraídas: {len(todas_licitaciones)}")
-        # Guardar en JSON para comparar
-        os.makedirs("datos", exist_ok=True)
-        with open("datos/licitaciones_v2.json", "w", encoding="utf-8") as f:
-            json.dump(todas_licitaciones, f, ensure_ascii=False, indent=2)
-        print(f"💾 Guardadas en datos/licitaciones_v2.json")
         return todas_licitaciones
 
     except Exception as e:
