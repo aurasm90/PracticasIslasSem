@@ -66,6 +66,7 @@ def iniciar_navegador():
     # Evita errores de memoria después de muchas páginas
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--headless=new") # Para azure
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
 

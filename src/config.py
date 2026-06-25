@@ -37,6 +37,7 @@ ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
 # -----------------------------------------
 # CONFIGURACIÓN DEl EMAIL
 # -----------------------------------------
+
 EMAIL_REMITENTE = "a127islassem@gmail.com"
 
 EMAIL_DESTINO = [
@@ -89,5 +90,5 @@ def cargar_cifs_permitidos():
 if __name__ == "__main__":
     cifs = cargar_cifs_permitidos()
     if cifs:
-        print(f"📋 Total: {len(cifs)} CIFs")
-        print(f"📋 Primeros 5: {list(cifs)[:5]}")
+        print(f"Total: {len(cifs)} CIFs")
+        print(f"Primeros 5: {list(cifs)[:5]}")
