@@ -48,22 +48,15 @@ def guardar_json(datos, ruta):
 def obtener_ids_vistos(expedientes_vistos):
     """
     Obtiene un conjunto con los IDs ya enviados.
-
-    El archivo expedientes_vistos.json puede contener:
-    - una lista de strings: ["ID1", "ID2"]
-    - o una lista de diccionarios: [{"id": "ID1"}, {"id": "ID2"}]
-
-    Esta función soporta ambos formatos.
     """
+
     ids_vistos = set()
 
-    for elemento in expedientes_vistos:
-        if isinstance(elemento, dict):
-            id_licitacion = elemento.get(CLAVE_ID)
-            if id_licitacion:
-                ids_vistos.add(id_licitacion)
-        elif isinstance(elemento, str):
-            ids_vistos.add(elemento)
+    for licitacion in expedientes_vistos:
+        id_licitacion = licitacion.get(CLAVE_ID)
+
+        if id_licitacion:
+            ids_vistos.add(id_licitacion)
 
     return ids_vistos
 
