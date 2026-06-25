@@ -6,11 +6,3 @@ beautifulsoup4
 requests
 webdriver-manager
 schedule
-
-# selenium - webscrapping
-# beautifulsoup4 - webscrapping
-# requests - opcional ?
-# webdriver-manager - ayudante de Selenium
-# schedule - programar tareas automáticas en Python
-# Smtplib (ya viene con Python) - enviar emails desde Python
-# Json (ya viene con Python)

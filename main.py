@@ -8,9 +8,10 @@ from src.email_sender import enviar_email_json
 
 def ejecutar_programa():
     """Función principal que orquesta todo el proceso"""
-    print("=" * 60)
+    
+    print("-" * 50)
     print("PROGRAMA DE SCRAPING - CONTRATACIONES DEL ESTADO")
-    print("=" * 60)
+    print("-" * 50)
 
     print("\nIniciando revisión automática de licitaciones...")
 
@@ -19,7 +20,6 @@ def ejecutar_programa():
     licitaciones = main_scraping()
 
     if not licitaciones:
-        print("No se han encontrado licitaciones")
         return
 
     print(f"Extraídas {len(licitaciones)} licitaciones")
@@ -29,16 +29,15 @@ def ejecutar_programa():
     licitaciones_nuevas = procesar_licitaciones(licitaciones)
 
     if licitaciones_nuevas:
-        print(f"Licitaciones nuevas: {len(licitaciones_nuevas)}")
         # 3. Enviar email
         print("\nPASO 3: Enviando email...")
         enviar_email_json(licitaciones_nuevas)
     else:
         print("No hay licitaciones nuevas para enviar.")
 
-    print("\n" + "=" * 60)
+    print("\n" + "-" * 50)
     print("PROGRAMA COMPLETADO")
-    print("=" * 60)
+    print("-" * 50)
 
 
 if __name__ == "__main__":
