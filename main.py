@@ -1,4 +1,18 @@
-# PAGINA PRINCIPAL PROGRAMA
+"""
+Punto de entrada principal del programa de seguimiento de licitaciones.
+
+Flujo principal:
+    1. Ejecuta el scraping de la Plataforma de Contratación del Sector Público
+       y guarda todas las licitaciones encontradas en datos/licitaciones_hoy.json
+    2. Compara las licitaciones de hoy con el histórico y detecta las nuevas,
+       guardándolas en datos/licitaciones_nuevas.json
+    3. Envía por email las licitaciones nuevas al destinatario configurado
+
+Automatización (pendiente de activar):
+    El programa puede programarse para ejecutarse diariamente a las 09:00 (a escoger)
+    dependiendo del servidor que tiene el programa - ver cual y como al final de las pruebas
+"""
+
 # import schedule
 # import time
 

@@ -1,3 +1,20 @@
+"""
+Módulo de envío de email con las licitaciones nuevas detectadas.
+
+Flujo principal:
+    1. Recibe la lista de licitaciones nuevas desde el módulo json_parser
+    2. Genera un email en formato HTML con las licitaciones en formato compacto,
+       mostrando expediente, objeto, órgano, CIF, tipo, importe, fecha y enlace
+    3. Envía el email al destinatario configurado en config.py
+       usando las credenciales del archivo .env
+
+Configuración necesaria en .env:
+    - EMAIL_PASSWORD: contraseña de la cuenta de envío
+
+Configuración necesaria en config.py:
+    - EMAIL_REMITENTE, EMAIL_DESTINO, ASUNTO, SMTP_SERVER, SMTP_PORT
+"""
+
 import os
 import sys
 import smtplib

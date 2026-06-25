@@ -1,11 +1,21 @@
-# GESTIÓN DE LA MEMORIA DEL PROGRAMA
-# Este módulo compara las licitaciones encontradas hoy con el histórico
-# de expedientes ya enviados por email.
+"""
+Módulo de gestión de la memoria del programa.
 
-# Archivos usados:
-# - datos/licitaciones_hoy.json: contiene todas las licitaciones encontradas hoy.
-# - datos/expedientes_vistos.json: histórico acumulado de licitaciones ya enviadas.
-# - datos/licitaciones_nuevas.json: licitaciones nuevas detectadas en la ejecución actual.
+Flujo principal:
+    1. Carga las licitaciones de hoy desde datos/licitaciones_hoy.json,
+       generado por el módulo de scraping
+    2. Carga el histórico de licitaciones ya enviadas desde
+       datos/expedientes_vistos.json
+    3. Compara por ID para detectar licitaciones nuevas
+    4. Guarda las nuevas en datos/licitaciones_nuevas.json para enviar por email
+    5. Actualiza el histórico añadiendo los datos completos de las nuevas
+       licitaciones para que no se vuelvan a enviar al día siguiente
+
+Archivos usados:
+    - datos/licitaciones_hoy.json: licitaciones encontradas en la ejecución actual
+    - datos/expedientes_vistos.json: histórico acumulado de licitaciones ya enviadas
+    - datos/licitaciones_nuevas.json: licitaciones nuevas a enviar por email
+"""
 
 import json
 import os
