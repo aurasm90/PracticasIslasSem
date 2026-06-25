@@ -4,7 +4,7 @@ Módulo de scraping para la contratación pública del estado
 """
 
 # -----------------------------------------------
-# GRUPO 0 - Importamos librerías necesarias para Webscrapping & CONSTANTES
+# GRUPO 0 - Librerías necesarias para Webscrapping & CONSTANTES
 # -----------------------------------------------
 
 from selenium import webdriver
@@ -15,8 +15,6 @@ from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
-import json
-import os
 import time
 import random
 
@@ -87,7 +85,7 @@ def filtrar_pagina_canarias(driver):
         bool: True si el filtro se aplicó correctamente, False en caso de error
     """
 
-    print(f"Navegando a: {URL_BASE}")
+    print(f"Aplicando filtro de Canarias...")
     driver.get(URL_BASE)
     esperar = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
 
@@ -107,7 +105,7 @@ def filtrar_pagina_canarias(driver):
         return True
 
     except Exception as e:
-        print(f"Error al filtrar por Canarias: {e}")
+        print(f"Error al filtrar por Canarias: {type(e).__name__}")
         return False
 
 
@@ -120,12 +118,7 @@ def filtrar_por_nif(driver, nif):
     try:
         # 1. Buscar el campo de NIF
         campo_nif = esperar.until(
-            EC.presence_of_element_located(
-                (
-                    By.ID,
-                    "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:listaperfiles:inputTextNif",
-                )
-            )
+            EC.presence_of_element_located((By.ID, ID_CAMPO_NIF))
         )
 
         # 2. Limpiar y escribir el NIF
