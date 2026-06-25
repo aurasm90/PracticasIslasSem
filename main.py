@@ -17,14 +17,13 @@ def ejecutar_programa():
 
     # 1. Ejecutar scraping
     print("\nPASO 1: Extrayendo licitaciones de la web...")
-    licitaciones = main_scraping()
-
-    if not licitaciones:
+    scraping_ok = main_scraping()
+    if not scraping_ok:
         return
 
     # 2. Procesar licitaciones nuevas
     print("\nPASO 2: Filtrando licitaciones nuevas...")
-    licitaciones_nuevas = procesar_licitaciones(licitaciones)
+    licitaciones_nuevas = procesar_licitaciones()
 
     if licitaciones_nuevas:
         # 3. Enviar email

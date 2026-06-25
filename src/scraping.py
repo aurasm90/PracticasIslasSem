@@ -436,7 +436,7 @@ def main_scraping():
         print(
             f"\nSCRAPPING COMPLETADO — {len(todas_licitaciones)} licitaciones extraídas"
         )
-        return todas_licitaciones
+        return True
 
     except Exception as e:
         print(f"Error en scraping: {type(e).__name__}: {e}")
