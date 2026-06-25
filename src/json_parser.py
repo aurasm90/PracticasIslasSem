@@ -141,6 +141,7 @@ if __name__ == "__main__":
         {
             "id": "ABC123",
             "expediente": "EXP-2024-001",
+            "cif": "P3803700H",
             "organo": "Órgano de ejemplo",
             "objeto": "Objeto de ejemplo",
             "tipo": "Servicios",

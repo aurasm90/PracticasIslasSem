@@ -40,6 +40,7 @@ def crear_cuerpo_email_html(licitaciones_json):
         expediente = licitacion.get("expediente", "")
         organo = licitacion.get("organo", "")
         tipo = licitacion.get("tipo", "")
+        cif = licitacion.get("cif", "")
         objeto = acortar_texto(licitacion.get("objeto", ""))
         importe = licitacion.get("importe", "")
         fecha = licitacion.get("fecha", "")
@@ -58,7 +59,7 @@ def crear_cuerpo_email_html(licitaciones_json):
                 </span><br>
 
                 <span style="font-size:12px; color:#666666;">
-                    {organo} | {tipo} |
+                    {organo} | CIF: {cif} | {tipo} 
                     <strong style="color:#198754;">
                         {importe}
                     </strong>
@@ -169,6 +170,7 @@ if __name__ == "__main__":
         {
             "organo": "Aena Dirección del Aeropuerto de Fuerteventura",
             "expediente": "FUE-50/2026",
+            "cif": "A86212420",
             "tipo": "Suministros",
             "objeto": "Cerramiento de puertas antirretorno norte para mejorar el acceso y seguridad del aeropuerto",
             "estado": "Publicada",
