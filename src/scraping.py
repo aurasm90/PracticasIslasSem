@@ -1,6 +1,16 @@
 """
-Módulo de scraping v2 - Flujo por Canarias sin filtro CIF previo
+Módulo de scraping para la Plataforma de Contratación del Sector Público.
+
+Flujo principal:
+    1. Filtra los perfiles de contratantes por Comunidad Autónoma (Canarias)
+    2. Recorre todas las páginas de resultados y recopila los órganos
+       que tienen licitaciones abiertas (badge > 0)
+    3. Por cada órgano, navega a su perfil y lee su CIF
+    4. Si el CIF está en la lista de organismos permitidos, extrae
+       todas sus licitaciones en estado 'Publicada'
+    5. Guarda los resultados progresivamente en datos/licitaciones_hoy.json
 """
+
 # -----------------------------------------------
 # GRUPO 0 - Librerías necesarias para Webscrapping & CONSTANTES
 # -----------------------------------------------
