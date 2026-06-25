@@ -1,7 +1,7 @@
 # GESTIÓN DE LA MEMORIA DEL PROGRAMA
 # Este módulo compara las licitaciones encontradas hoy con el histórico
 # de expedientes ya enviados por email.
-#
+
 # Archivos usados:
 # - datos/licitaciones_hoy.json: contiene todas las licitaciones encontradas hoy.
 # - datos/expedientes_vistos.json: histórico acumulado de licitaciones ya enviadas.
@@ -98,11 +98,11 @@ def actualizar_expedientes_vistos(expedientes_vistos, licitaciones_nuevas):
     return expedientes_vistos
 
 
-def procesar_licitaciones(licitaciones_hoy):
+def procesar_licitaciones():
     """
     Flujo completo del JSON parser:
 
-    1. Guarda todas las licitaciones encontradas en licitaciones_hoy.json.
+    1. Carga las licitaciones de hoy desde licitaciones_hoy.json (generado por el scraping).
     2. Carga el histórico expedientes_vistos.json.
     3. Compara por ID para detectar licitaciones nuevas.
     4. Guarda las nuevas en licitaciones_nuevas.json.
@@ -110,15 +110,23 @@ def procesar_licitaciones(licitaciones_hoy):
     6. Devuelve las licitaciones nuevas para enviarlas por email.
     """
 
-    guardar_json(licitaciones_hoy, ARCHIVO_HOY)
+    # 1. Cargar licitaciones de hoy generadas por el scraping
+    licitaciones_hoy = cargar_json(ARCHIVO_HOY)
+    if not licitaciones_hoy:
+        print("No hay licitaciones de hoy para procesar.")
+        return []
 
+    # 2. Cargar histórico
     expedientes_vistos = cargar_json(ARCHIVO_VISTOS)
     ids_vistos = obtener_ids_vistos(expedientes_vistos)
 
+    # 3. Filtrar nuevas
     licitaciones_nuevas = filtrar_nuevas(licitaciones_hoy, ids_vistos)
 
+    # 4. Guardar nuevas para el email
     guardar_json(licitaciones_nuevas, ARCHIVO_NUEVAS)
 
+    # 5. Actualizar histórico
     if licitaciones_nuevas:
         expedientes_vistos = actualizar_expedientes_vistos(
             expedientes_vistos,
@@ -133,20 +141,19 @@ def procesar_licitaciones(licitaciones_hoy):
 
 
 if __name__ == "__main__":
-    licitaciones_prueba = [
-        {
-            "id": "ABC123",
-            "expediente": "EXP-2024-001",
-            "cif": "P3803700H",
-            "organo": "Órgano de ejemplo",
-            "objeto": "Objeto de ejemplo",
-            "tipo": "Servicios",
-            "estado": "Publicada",
-            "importe": "10.000,00 €",
-            "fecha": "19/06/2026",
-            "url": "https://contrataciondelestado.es/",
-        }
-    ]
+    # licitaciones_prueba = [
+    #     {
+    #         "id": "ABC123",
+    #         "expediente": "EXP-2024-001",
+    #         "cif": "P3803700H",
+    #         "organo": "Órgano de ejemplo",
+    #         "objeto": "Objeto de ejemplo",
+    #         "tipo": "Servicios",
+    #         "estado": "Publicada",
+    #         "importe": "10.000,00 €",
+    #         "fecha": "19/06/2026",
+    #         "url": "https://contrataciondelestado.es/",
+    #     }
+    # ]
 
-    nuevas = procesar_licitaciones(licitaciones_prueba)
-    print("Licitaciones nuevas:", nuevas)
+    procesar_licitaciones()

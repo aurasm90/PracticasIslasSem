@@ -23,10 +23,16 @@ ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18
 # -----------------------------------------
 # CONFIGURACIÓN DEL JSON_parser
 # -----------------------------------------
-# Nombre del archivo que actúa como memoria del programa
-ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
+
 # Clave que identifica de forma única a cada licitación (para evitar duplicados)
 CLAVE_ID = "id"
+
+ARCHIVO_HOY = "datos/licitaciones_hoy.json"
+
+ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
+
+ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
+
 
 # -----------------------------------------
 # CONFIGURACIÓN DEl EMAIL
@@ -79,42 +85,9 @@ def cargar_cifs_permitidos():
         return None
 
 
-# -----------------------------------------
-# Constantes para las pruebas
-# -----------------------------------------
-
-URL = "https://contrataciondelestado.es/"
-
-FECHA = "19/06/2026"
-
-ID = "ABC123"
-
-EXPEDIENTE = "EXP-2024-001"
-
-ORGANO = "Órgano de ejemplo"
-
-OBJETO = "Cerramiento de puertas antirretorno norte"
-
-TIPO = "Servicios"
-
-ESTADO = "Publicada"
-
-IMPORTE = "10.000,00 €"
-
 # Prueba rápida de carga de CIFs
 if __name__ == "__main__":
     cifs = cargar_cifs_permitidos()
     if cifs:
         print(f"📋 Total: {len(cifs)} CIFs")
         print(f"📋 Primeros 5: {list(cifs)[:5]}")
-# -----------------------------------------
-# CONFIGURACIÓN DEL JSON PARSER
-# -----------------------------------------
-
-ARCHIVO_HOY = "datos/licitaciones_hoy.json"
-
-ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
-
-ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
-
-CLAVE_ID = "id"
