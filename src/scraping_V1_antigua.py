@@ -411,6 +411,7 @@ def extraer_licitacion_fila(fila, nombre_organo):
     return {
         "id": id_licitacion,
         "expediente": numero_exp,
+        "cif":"",
         "organo": nombre_organo,
         "objeto": objeto,
         "tipo": tipo,
