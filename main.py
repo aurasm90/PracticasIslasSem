@@ -22,8 +22,6 @@ def ejecutar_programa():
     if not licitaciones:
         return
 
-    print(f"Extraídas {len(licitaciones)} licitaciones")
-
     # 2. Procesar licitaciones nuevas
     print("\nPASO 2: Filtrando licitaciones nuevas...")
     licitaciones_nuevas = procesar_licitaciones(licitaciones)
