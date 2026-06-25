@@ -4,7 +4,7 @@
 #
 # Archivos usados:
 # - datos/licitaciones_hoy.json: contiene todas las licitaciones encontradas hoy.
-# - datos/expedientes_vistos.json: histórico acumulado de IDs ya enviados.
+# - datos/expedientes_vistos.json: histórico acumulado de licitaciones ya enviadas.
 # - datos/licitaciones_nuevas.json: licitaciones nuevas detectadas en la ejecución actual.
 
 import json
@@ -88,7 +88,10 @@ def filtrar_nuevas(licitaciones_hoy, ids_vistos):
 
 def actualizar_expedientes_vistos(expedientes_vistos, licitaciones_nuevas):
     """
-    Añade al histórico los IDs de las licitaciones nuevas.
+    Añade al histórico las licitaciones nuevas completas.
+
+    Antes solo se guardaba el ID, pero ahora se guarda el diccionario completo
+    de cada licitación para mantener un histórico con todos sus datos.
     """
     ids_vistos = obtener_ids_vistos(expedientes_vistos)
 
@@ -96,7 +99,7 @@ def actualizar_expedientes_vistos(expedientes_vistos, licitaciones_nuevas):
         id_licitacion = licitacion.get(CLAVE_ID)
 
         if id_licitacion and id_licitacion not in ids_vistos:
-            expedientes_vistos.append(id_licitacion)
+            expedientes_vistos.append(licitacion)
             ids_vistos.add(id_licitacion)
 
     return expedientes_vistos
@@ -110,7 +113,7 @@ def procesar_licitaciones(licitaciones_hoy):
     2. Carga el histórico expedientes_vistos.json.
     3. Compara por ID para detectar licitaciones nuevas.
     4. Guarda las nuevas en licitaciones_nuevas.json.
-    5. Actualiza expedientes_vistos.json añadiendo los nuevos IDs.
+    5. Actualiza expedientes_vistos.json añadiendo las licitaciones completas.
     6. Devuelve las licitaciones nuevas para enviarlas por email.
     """
 
