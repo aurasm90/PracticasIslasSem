@@ -10,12 +10,12 @@
 import json
 import os
 
-
-ARCHIVO_HOY = "datos/licitaciones_hoy.json"
-ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
-ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
-
-CLAVE_ID = "id"
+from src.config import (
+    ARCHIVO_HOY,
+    ARCHIVO_VISTOS,
+    ARCHIVO_NUEVAS,
+    CLAVE_ID,
+)
 
 
 def cargar_json(ruta):

@@ -108,3 +108,14 @@ if __name__ == "__main__":
     if cifs:
         print(f"📋 Total: {len(cifs)} CIFs")
         print(f"📋 Primeros 5: {list(cifs)[:5]}")
+# -----------------------------------------
+# CONFIGURACIÓN DEL JSON PARSER
+# -----------------------------------------
+
+ARCHIVO_HOY = "datos/licitaciones_hoy.json"
+
+ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
+
+ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
+
+CLAVE_ID = "id"
