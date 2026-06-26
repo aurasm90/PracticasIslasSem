@@ -41,4 +41,4 @@ Añadir al crontab: 0 9 \* \* \* cd /ruta/al/proyecto && python main.py
 
 1. Abrir Programador de tareas
 2. Crear tarea que ejecute: `python C:\ruta\main.py`
-3. Programar para las 09:00 diario
+3. Programar para las 06:00 diario
