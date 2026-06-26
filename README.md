@@ -35,7 +35,7 @@ venv\Scripts\activate
 
 ### En Linux (cron)
 
-Añadir al crontab: 0 9 \* \* \* cd /ruta/al/proyecto && python main.py
+Añadir al crontab: 0 6 \* \* \* cd /ruta/al/proyecto && python main.py
 
 ### En Windows (Programador de tareas)
 
