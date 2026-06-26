@@ -42,7 +42,9 @@ EMAIL_REMITENTE = "a127islassem@gmail.com"
 
 EMAIL_DESTINO = [
     "antonioislassem@gmail.com",
-    "a127islassem@email.com",
+    "a127islassem@gmail.com",
+    "violetaislassem@gmail.com",
+    "marketing@islassem.com",
 ]
 
 ASUNTO = "Prueba Licitaciones Canarias"
