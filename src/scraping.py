@@ -421,7 +421,7 @@ def main_scraping():
 
             print(f"CIF {cif} está en la lista, extrayendo licitaciones...")
 
-            # PASO 3: Extraer licitaciones
+            # PASO 3: Extraer licitaciones + guardar en JSON
             if not hacer_clic_pestanya_licitaciones(driver):
                 print(f"No se encontró pestaña licitaciones")
                 continue
