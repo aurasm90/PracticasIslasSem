@@ -59,6 +59,8 @@ SMTP_PORT = 465
 # CONFIGURACIÓN DE CIFS
 # -----------------------------------------
 
+RUTA_ORIGINAL = Path("datos/cifs_lista_original.txt")
+RUTA_LIMPIO = Path("datos/cifs_permitidos.txt")
 # Ruta al archivo con la lista de CIFs permitidos
 RUTA_CIFS = Path(__file__).parent.parent / "datos" / "cifs_permitidos.txt"
 
