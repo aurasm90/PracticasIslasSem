@@ -181,7 +181,7 @@ def obtener_organos_canarias_con_licitaciones(driver):
                 EC.presence_of_element_located((By.CSS_SELECTOR, "p.badge.info.m-0"))
             )
             pagina += 1
-            time.sleep(random.uniform(2, 4))
+            time.sleep(random.uniform(5, 8))
         except:
             print(f"No hay más páginas — total páginas leídas: {pagina}")
             break
@@ -203,7 +203,7 @@ def obtener_cif_organo(driver, url):
     """
 
     driver.get(url)
-    time.sleep(random.uniform(2, 4))
+    time.sleep(random.uniform(4, 7))
 
     try:
         esperar = WebDriverWait(driver, TIEMPO_ESPERA)
@@ -442,7 +442,7 @@ def main_scraping():
                 )
                 continue
 
-            time.sleep(random.uniform(2, 4))
+            time.sleep(random.uniform(5, 10))
 
         print(
             f"\nSCRAPPING COMPLETADO — {len(todas_licitaciones)} licitaciones extraídas"
