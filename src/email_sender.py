@@ -31,7 +31,7 @@ from src.config import (
 )
 
 env_path = BASE_DIR / ".env"
-load_dotenv(dotenv_path=env_path)
+load_dotenv("/home/adminlicitaciones/PracticasIslasSem/.env")
 
 
 def acortar_texto(texto, limite=120):
@@ -166,6 +166,11 @@ def enviar_email_json(licitaciones_json):
     """
 
     password = os.getenv("EMAIL_PASSWORD")
+    logger.info(f"Password cargada: {bool(password)}")
+    
+    if not password:
+        logger.error("EMAIL_PASSWORD no cargado desde .env")
+        return
 
     mensaje = EmailMessage()
     mensaje["From"] = EMAIL_REMITENTE
