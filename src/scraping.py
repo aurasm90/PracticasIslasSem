@@ -416,6 +416,7 @@ def obtener_organos(driver):
 def procesar_organos(driver, organos):
     """
     Función global 2 de main_scraping()
+    
     Por cada órgano, lee su CIF y compara con la lista permitida
     Si el CIF está en la lista, extrae sus licitaciones publicadas
     """
@@ -480,7 +481,9 @@ def procesar_organos(driver, organos):
 
 
 def guardar_resultados_scraping(licitaciones):
-    """Guarda licitaciones en JSON"""
+    """
+    Función global 2 de main_scraping()
+    Guarda licitaciones en JSON"""
 
     with open(ARCHIVO_HOY, "w", encoding="utf-8") as f:
         json.dump(licitaciones, f, ensure_ascii=False, indent=2)

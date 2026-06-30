@@ -8,6 +8,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "datos"
 
+LOG_DIR = BASE_DIR / "logs"
+LOG_FILE = LOG_DIR / "licitaciones.log"
+
 
 # -----------------------------------------
 # CONFIGURACIÓN DEL SCRAPING
@@ -101,4 +104,3 @@ def cargar_cifs_permitidos():
     except Exception as e:
         print(f"Error al leer el archivo de CIFs: {e}")
         return None
-

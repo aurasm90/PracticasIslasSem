@@ -8,43 +8,58 @@ Flujo principal:
        guardándolas en datos/licitaciones_nuevas.json
     3. Envía por email las licitaciones nuevas al destinatario configurado
 
-Automatización (pendiente de activar):
-    El programa puede programarse para ejecutarse diariamente a las 09:00 (a escoger)
-    dependiendo del servidor que tiene el programa - ver cual y como al final de las pruebas
+Automatización:
+    El programa puede programarse para ejecutarse diariamente a las 06:00am con un cron en el servidor
 """
 from src.scraping import main_scraping
 from src.json_parser import procesar_licitaciones
 from src.email_sender import enviar_email_json
+from src.logger_config import logger
 
 def ejecutar_programa():
     """Función principal que orquesta todo el proceso"""
-    
-    print("-" * 50)
-    print("PROGRAMA DE SCRAPING - CONTRATACIONES DEL ESTADO")
-    print("-" * 50)
 
-    print("\nIniciando revisión automática de licitaciones...")
+    try:
 
-    # 1. Ejecutar scraping
-    print("\nPASO 1: Extrayendo licitaciones de la web...")
-    scraping_ok = main_scraping()
-    if not scraping_ok:
+        logger.info("-" * 50)
+        logger.info("PROGRAMA DE SCRAPING - CONTRATACIONES DEL ESTADO")
+        logger.info("-" * 50)
+
+        logger.info("Iniciando revisión automática de licitaciones...")
+
+        # 1. Ejecutar scraping
+        logger.info("PASO 1: Extrayendo licitaciones de la web...")
+
+        scraping_ok = main_scraping()
+
+        if not scraping_ok:
+            logger.error(
+                "El scraping no finalizó correctamente. Se detiene la ejecución."
+            )
+            return
+
+        # 2. Procesar licitaciones nuevas
+        logger.info("PASO 2: Filtrando licitaciones nuevas...")
+
+        licitaciones_nuevas = procesar_licitaciones()
+
+        if licitaciones_nuevas:
+            # 3. Enviar email
+            logger.info("PASO 3: Enviando email...")
+            enviar_email_json(licitaciones_nuevas)
+        else:
+            logger.info("No hay licitaciones nuevas para enviar.")
+
+        logger.info("-" * 50)
+        logger.info("PROGRAMA COMPLETADO")
+        logger.info("-" * 50)
+
+    except KeyboardInterrupt:
+        logger.warning("Programa interrumpido por el usuario")
         return
 
-    # 2. Procesar licitaciones nuevas
-    print("\nPASO 2: Filtrando licitaciones nuevas...")
-    licitaciones_nuevas = procesar_licitaciones()
-
-    if licitaciones_nuevas:
-        # 3. Enviar email
-        print("\nPASO 3: Enviando email...")
-        enviar_email_json(licitaciones_nuevas)
-    else:
-        print("No hay licitaciones nuevas para enviar.")
-
-    print("\n" + "-" * 50)
-    print("PROGRAMA COMPLETADO")
-    print("-" * 50)
+    except Exception:
+        logger.exception(f"Error inesperado")
 
 
 if __name__ == "__main__":
