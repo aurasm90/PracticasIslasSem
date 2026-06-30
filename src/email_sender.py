@@ -30,8 +30,7 @@ from src.config import (
     SMTP_PORT,
 )
 
-env_path = BASE_DIR / ".env"
-load_dotenv("/home/adminlicitaciones/PracticasIslasSem/.env")
+load_dotenv(BASE_DIR / ".env")
 
 
 def acortar_texto(texto, limite=120):
