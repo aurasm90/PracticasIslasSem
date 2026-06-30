@@ -48,18 +48,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=iwHdOZFy5rjmnwcj%2BxbdTg%3D%3D"
   },
   {
-    "id": "c36X01OMJUB9PLkba5eRog%3D%3D",
-    "expediente": "2026000043",
-    "cif": "P3801700J",
-    "organo": "Alcaldia del Ayuntamiento de Granadilla de Abona",
-    "objeto": "Suministro e instalación de cámaras de videovigilancia de tráfico conectadas en la Zona Comercial Abierta (ZCA) de San Isidro",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "32,242.99",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=c36X01OMJUB9PLkba5eRog%3D%3D"
-  },
-  {
     "id": "ne7l4g3d%2BIucTfjQf3USOg%3D%3D",
     "expediente": "3432/2026",
     "cif": "P3501300B",
@@ -126,10 +114,106 @@
     "organo": "Alcaldia del Ayuntamiento de la Frontera",
     "objeto": "Desbroce y limpieza de los márgenes de carreteras, así como acondicionamiento de zonas ajardinadas de competencia municipal, TM La Frontera",
     "tipo": "Servicios",
-    "estado": "Publicada",
+    "estado": "Evaluación",
     "importe": "22,387.00",
     "fecha": "26/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=koZQmfv2ax2ExvMJXBMHHQ%3D%3D"
+  },
+  {
+    "id": "9N3aidQhLwG2gkLQ8TeYKA%3D%3D",
+    "expediente": "587/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Limpieza zonas de baño en la época de verano y semana santa",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "19,800.00",
+    "fecha": "04/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9N3aidQhLwG2gkLQ8TeYKA%3D%3D"
+  },
+  {
+    "id": "w5Df74JJxA94zIRvjBVCSw%3D%3D",
+    "expediente": "3349/2025",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Adquisición de papeleras para facilitar la separación de residuos, destinada a espacios públicos del municipio de La Frontera.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "64,262.22",
+    "fecha": "27/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=w5Df74JJxA94zIRvjBVCSw%3D%3D"
+  },
+  {
+    "id": "E1J2Q7U1xf7i0Kd8%2Brcp6w%3D%3D",
+    "expediente": "1060/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Renovación de equipos de filtrado y desinfección e impermeabilización de los vasos de las piscinas del Complejo Cascadas del Mar",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "141,443.48",
+    "fecha": "27/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=E1J2Q7U1xf7i0Kd8%2Brcp6w%3D%3D"
+  },
+  {
+    "id": "1WbhtNUNeXzVGIpKDxgsAQ%3D%3D",
+    "expediente": "769/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Actuaciones en la red de saneamiento tramo Merese, T.M. La Frontera",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "428,606.56",
+    "fecha": "27/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1WbhtNUNeXzVGIpKDxgsAQ%3D%3D"
+  },
+  {
+    "id": "Sm3017otRkaKeVWTb9Scog%3D%3D",
+    "expediente": "376/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Redes de Abastecimiento y Saneamiento núcleo de los Mocanes T.M de La Frontera.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "476,023.67",
+    "fecha": "27/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Sm3017otRkaKeVWTb9Scog%3D%3D"
+  },
+  {
+    "id": "XNyn%2Bf7fOJSS81gZFETWmA%3D%3D",
+    "expediente": "72/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Desarrollo de la campaña de educación ambiental \"La Frontera más limpia contigo\", subvencionada por el Cabildo Insular,  para la realización de campañas de concienciación.",
+    "tipo": "Suministros",
+    "estado": "Parcialmente Resuelta",
+    "importe": "135,135.00",
+    "fecha": "24/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=XNyn%2Bf7fOJSS81gZFETWmA%3D%3D"
+  },
+  {
+    "id": "3kCB0j3F00IaF6cS8TCh%2FA%3D%3D",
+    "expediente": "71/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Suministro de vasos reutilizables, copas de metacrilato y menaje biodegradable de un solo uso para eventos municipales (por lotes)",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "74,350.00",
+    "fecha": "01/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3kCB0j3F00IaF6cS8TCh%2FA%3D%3D"
+  },
+  {
+    "id": "Rin%2FyWG%2FMhJeKgd8LfVV9g%3D%3D",
+    "expediente": "70/2026",
+    "cif": "P3801300I",
+    "organo": "Alcaldia del Ayuntamiento de la Frontera",
+    "objeto": "Adquisición de bolsas para residuos, a cargo de la subvención del Cabildo Insular, al objeto de la realización de campañas de concienciación.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "24,700.00",
+    "fecha": "01/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Rin%2FyWG%2FMhJeKgd8LfVV9g%3D%3D"
   },
   {
     "id": "bc64iJUMwRU3vLk2DU2Ddg%3D%3D",
@@ -154,18 +238,6 @@
     "importe": "265,533.18",
     "fecha": "30/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=aJL4Kd97P%2FFQFSeKCRun4Q%3D%3D"
-  },
-  {
-    "id": "a%2FA2cis5U4A36J9Lctlsuw%3D%3D",
-    "expediente": "598-2026",
-    "cif": "P3500100G",
-    "organo": "Alcaldía del Ayuntamiento de Agaete (Las Palmas)",
-    "objeto": "servicio de socorrismo temporada 2026",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "40,186.91",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=a%2FA2cis5U4A36J9Lctlsuw%3D%3D"
   },
   {
     "id": "ZIbrwgveuKAQyBAnWzHfCg%3D%3D",
@@ -240,64 +312,124 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jOuC%2BJuBiW96nTs9LZ9RhQ%3D%3D"
   },
   {
-    "id": "hiooSvoOmzjs%2BnLj3vAg5A%3D%3D",
-    "expediente": "5N26– 1818/2026",
-    "cif": "P3804100J",
-    "organo": "Alcaldía del Ayuntamiento de El Sauzal",
-    "objeto": "Contrato privado para la celebración de las actuaciones musicales de las fiestas mayores El Sauzal - Concierto José Vélez",
-    "tipo": "Privado",
-    "estado": "Publicada",
-    "importe": "48,148.26",
-    "fecha": "30/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hiooSvoOmzjs%2BnLj3vAg5A%3D%3D"
-  },
-  {
-    "id": "yFTq7NunPCP%2B3JAijKO%2Bkg%3D%3D",
-    "expediente": "408/2023. Categoría 4: Productos de limpieza",
-    "cif": "P3804100J",
-    "organo": "Alcaldía del Ayuntamiento de El Sauzal",
-    "objeto": "Adquisición de suministros de uso corriente de productos disponibles en el mercado y cuyas características generales se adecúan a las necesidades del Ilustre Ayuntamiento de El Sauzal",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "16,175.87",
-    "fecha": "28/12/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=yFTq7NunPCP%2B3JAijKO%2Bkg%3D%3D"
-  },
-  {
-    "id": "dWus2VvUBDgzjChw4z%2FXvw%3D%3D",
-    "expediente": "408/2023. Categoría 3: Artículos de oficina",
-    "cif": "P3804100J",
-    "organo": "Alcaldía del Ayuntamiento de El Sauzal",
-    "objeto": "Adquisición de suministros de uso corriente de productos disponibles en el mercado y cuyas características generales se adecúan a las necesidades del Ilustre Ayuntamiento de El Sauzal",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "24,645.39",
-    "fecha": "29/12/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=dWus2VvUBDgzjChw4z%2FXvw%3D%3D"
-  },
-  {
     "id": "SqGbqLUkq%2B3zAq95uGTrDQ%3D%3D",
     "expediente": "1996/2025",
     "cif": "P3804400D",
     "organo": "Alcaldía del Ayuntamiento de El Tanque",
     "objeto": "Proyecto de ejecución de la mejora de la red de distribución de aguas de la Calle Alcalde Santiago Álvarez Martel del Sector Cruz Grande",
     "tipo": "Obras",
-    "estado": "Publicada",
+    "estado": "Evaluación",
     "importe": "99,484.24",
     "fecha": "29/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SqGbqLUkq%2B3zAq95uGTrDQ%3D%3D"
   },
   {
-    "id": "eXQovBqutowuf4aBO%2BvQlQ%3D%3D",
-    "expediente": "3234/2019",
+    "id": "VpNmrXuqNxGS81gZFETWmA%3D%3D",
+    "expediente": "2027/2025",
     "cif": "P3804400D",
     "organo": "Alcaldía del Ayuntamiento de El Tanque",
-    "objeto": "-El arrendamiento mediante el sistema renting de cuatro (4) vehículos para los servicios del Ayuntamiento de El Tanque (Área de Obras y Servicios), en perfectas condiciones técnicas y administrativas para su circulación.\n-Su Mantenimiento mecánico.\n-Su Póliza de seguro a todo riesgo.",
+    "objeto": "Servicios de asesoría laboral y gestión de nominas y seguros sociales del Ayuntamiento de El Tanque.",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "27,061.17",
+    "fecha": "11/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=VpNmrXuqNxGS81gZFETWmA%3D%3D"
+  },
+  {
+    "id": "DG8S5LbSzjPIGlsa0Wad%2Bw%3D%3D",
+    "expediente": "2620/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Contrato de prestación del servicio (gestión, mantenimiento, socorrismo y limpieza) en la piscina municipal del Ayuntamiento de El Tanque",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "111,708.20",
+    "fecha": "10/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=DG8S5LbSzjPIGlsa0Wad%2Bw%3D%3D"
+  },
+  {
+    "id": "nKFg1BS%2BkoZSYrkJkLlFdw%3D%3D",
+    "expediente": "312/2026",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Aprovechamiento de 400 quintales métricos de pinocha de pino canario a riesgo y ventura en el monte Nº. MUPC 13 denominado Pinar en el término Municipal de El Tanque",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "120.00",
+    "fecha": "27/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nKFg1BS%2BkoZSYrkJkLlFdw%3D%3D"
+  },
+  {
+    "id": "Djl24r64iJ2GCFcHcNGIlQ%3D%3D",
+    "expediente": "2770/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Ejecución del proyecto de obras denominado \"Proyecto de reforma y mejora de la plaza de Erjos\"",
+    "tipo": "Obras",
+    "estado": "Adjudicada",
+    "importe": "217,016.45",
+    "fecha": "18/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Djl24r64iJ2GCFcHcNGIlQ%3D%3D"
+  },
+  {
+    "id": "0SrY%2BKMNcV2cTfjQf3USOg%3D%3D",
+    "expediente": "2617/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Contrato de obras del proyecto de rehabilitación y ejecución de nuevos aseos y almacén del Centro Cultural de Barrio Nuevo, en el municipio de El Tanque, Tenerife.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "132,126.55",
+    "fecha": "06/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=0SrY%2BKMNcV2cTfjQf3USOg%3D%3D"
+  },
+  {
+    "id": "xy5X00OQS3PN3k3tjedSGw%3D%3D",
+    "expediente": "1080/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Suministro de equipamiento para la Escuela Comarcal de Hostelería El Tanque",
     "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "75,840.00",
-    "fecha": "",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=eXQovBqutowuf4aBO%2BvQlQ%3D%3D"
+    "estado": "Evaluación",
+    "importe": "18,174.50",
+    "fecha": "09/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xy5X00OQS3PN3k3tjedSGw%3D%3D"
+  },
+  {
+    "id": "dbl0pYk4r%2BgadbH3CysQuQ%3D%3D",
+    "expediente": "1299/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Equipamiento para la Ludoteca Municipal “El Delfín” y para la Casa de la Juventud.",
+    "tipo": "Suministros",
+    "estado": "Adjudicada",
+    "importe": "16,260.33",
+    "fecha": "11/08/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=dbl0pYk4r%2BgadbH3CysQuQ%3D%3D"
+  },
+  {
+    "id": "snuA8lZLwY170UvEyYJSGw%3D%3D",
+    "expediente": "1003/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "El presente pliego tiene por objeto ejecutar obras de acondicionamiento de la pista para footing del Complejo Deportivo La Teja, en el municipio de El Tanque, Tenerife.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "48,756.78",
+    "fecha": "21/05/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=snuA8lZLwY170UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "agh9E4SCdn%2B7JOCXkOhcDg%3D%3D",
+    "expediente": "342/2025",
+    "cif": "P3804400D",
+    "organo": "Alcaldía del Ayuntamiento de El Tanque",
+    "objeto": "Adquisición, por parte de Ayuntamiento de El Tanque del pleno dominio de edificios de viviendas situados en el municipio de El Tanque",
+    "tipo": "Patrimonial",
+    "estado": "Evaluación",
+    "importe": "400,000.00",
+    "fecha": "28/03/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=agh9E4SCdn%2B7JOCXkOhcDg%3D%3D"
   },
   {
     "id": "50IZ8TfZYmX10HRJw8TEnQ%3D%3D",
@@ -318,10 +450,106 @@
     "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
     "objeto": "Contrato mixto de Suministro y servicio para adquisición, soporte y mantenimiento del sistema informático para la gestión de la policía local de Guía de Isora.",
     "tipo": "Suministros",
-    "estado": "Publicada",
+    "estado": "Evaluación",
     "importe": "6,088.00",
     "fecha": "26/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1MXQ1x9cIkN70UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "emea062hoKdxseVhcqrkhw%3D%3D",
+    "expediente": "10992/2025",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Servicio para la organización y desarrollo de un viaje multiaventura para jóvenes durante el verano de 2026,",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "29,566.79",
+    "fecha": "12/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=emea062hoKdxseVhcqrkhw%3D%3D"
+  },
+  {
+    "id": "5eHdzBRuvTDXOjazN1Dw9Q%3D%3D",
+    "expediente": "4260/2025",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "El Contrato Administrativo Mixto de Suministro y Servicio para instalación de software y mantenimiento de una suite de aplicaciones informáticas de gestión municipal, mediante procedimiento abierto sujeto a regulación armonizada y tramitación ordinaria.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "238,523.20",
+    "fecha": "22/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=5eHdzBRuvTDXOjazN1Dw9Q%3D%3D"
+  },
+  {
+    "id": "nx%2BMN%2F0iyZs4NavIWzMcHA%3D%3D",
+    "expediente": "1792/2026",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Desarrollo del programa “Multiactividades Isora Corresponsable”",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "90,000.00",
+    "fecha": "23/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nx%2BMN%2F0iyZs4NavIWzMcHA%3D%3D"
+  },
+  {
+    "id": "R%2FHygOozRVoQyBAnWzHfCg%3D%3D",
+    "expediente": "4399/2026",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "ejecución de las obras comprendidas en el proyecto de obra denominado “proyecto básico y de ejecución de cubierta de pista deportiva”",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "517,280.00",
+    "fecha": "08/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=R%2FHygOozRVoQyBAnWzHfCg%3D%3D"
+  },
+  {
+    "id": "%2FR44VEoQPVn10HRJw8TEnQ%3D%3D",
+    "expediente": "8062/2025",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Suministro y Servicio para instalación y mantenimiento de una aplicación de gestión de expedientes y administración electrónica para el Ayuntamiento de Guía de Isora",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "530,191.40",
+    "fecha": "29/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FR44VEoQPVn10HRJw8TEnQ%3D%3D"
+  },
+  {
+    "id": "JHPdJulxuH75Rey58Yagpg%3D%3D",
+    "expediente": "1373/2026",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Contrato Administrativo Mixto de Servicio y Suministro para organización y producción de los eventos deportivos del Ilustre Ayuntamiento de Guía de Isora para los años 2026 - 2027, mediante procedimiento abierto simplificado sumario y tramitación ordinaria.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "51,812.60",
+    "fecha": "29/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=JHPdJulxuH75Rey58Yagpg%3D%3D"
+  },
+  {
+    "id": "6nONb92gjMwIYE3ZiZ%2BxmQ%3D%3D",
+    "expediente": "1347/2026",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Servicios de arquitectura para el proyecto BIOECO-TUR, enmarcado en el Programa de cooperación territorial INTERREG MAC 2021-2027 del Ayuntamiento de Guía de Isora (2026-2028)",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "16,728.95",
+    "fecha": "08/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6nONb92gjMwIYE3ZiZ%2BxmQ%3D%3D"
+  },
+  {
+    "id": "ulW3YclU3mfs%2BnLj3vAg5A%3D%3D",
+    "expediente": "10171/2025",
+    "cif": "P3801900F",
+    "organo": "Alcaldía del Ayuntamiento de Guía de Isora",
+    "objeto": "Servicio de ejecución, seguimiento y evaluación del PROGRAMA URBANO, destinado a jóvenes isoranos e isoranas con edades comprendidas entre los 12 y los 18 años, anualidad 2026 y 2027.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "57,883.00",
+    "fecha": "20/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ulW3YclU3mfs%2BnLj3vAg5A%3D%3D"
   },
   {
     "id": "l%2FptOv9Nyi3CfVQHDepjGQ%3D%3D",
@@ -348,18 +576,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Ocur0RyDpn3L1rX3q%2FMAPA%3D%3D"
   },
   {
-    "id": "b4qcJz8lrwKGCFcHcNGIlQ%3D%3D",
-    "expediente": "7279/2026",
-    "cif": "P3500900J",
-    "organo": "Alcaldía del Ayuntamiento de Gáldar",
-    "objeto": "Concesión administrativa de uso privativo de bien de dominio público con motivo de la celebración de las Fiestas de Santiago de Gáldar 2026.",
-    "tipo": "Patrimonial",
-    "estado": "Publicada",
-    "importe": "3,346.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=b4qcJz8lrwKGCFcHcNGIlQ%3D%3D"
-  },
-  {
     "id": "46gAPC9M%2BXeAAM7L03kM8A%3D%3D",
     "expediente": "2026000574",
     "cif": "P3501100F",
@@ -384,16 +600,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=98qH1LOL9huKeVWTb9Scog%3D%3D"
   },
   {
-    "id": "7A%2FEzV3KjWCqb7rCcv76BA%3D%3D",
-    "expediente": "5681/2025 PA",
-    "cif": "P3802200J",
-    "organo": "Alcaldía del Ayuntamiento de Icod de los Vinos",
-    "objeto": "servicio de «vigilancia, salvamento, socorrismo, primeros auxilios y atención a personas con diversidad funcional de la Playa de San Marcos en el Municipio de Icod de los Vinos»",
+    "id": "UpbjSkxADhGopEMYCmrbmw%3D%3D",
+    "expediente": "2026/2165",
+    "cif": "P3805100I",
+    "organo": "Alcaldía del Ayuntamiento de La Victoria de Acentejo",
+    "objeto": "Servicio de impartición de los Talleres y Escuelas Culturales municipales de La Victoria de Acentejo",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "208,361.68",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7A%2FEzV3KjWCqb7rCcv76BA%3D%3D"
+    "importe": "203,126.50",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=UpbjSkxADhGopEMYCmrbmw%3D%3D"
   },
   {
     "id": "IeKkagh0LPD%2B3JAijKO%2Bkg%3D%3D",
@@ -420,16 +636,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=JFd0%2F%2FU%2FNSqcTfjQf3USOg%3D%3D"
   },
   {
-    "id": "XkaZOEPPBv9Whbmkna2nXQ%3D%3D",
-    "expediente": "2026/1985",
-    "cif": "P3805100I",
-    "organo": "Alcaldía del Ayuntamiento de La Victoria de Acentejo",
-    "objeto": "Constituye el objeto del presente contrato la prestación íntegra de los servicios postales necesarios para el adecuado funcionamiento del Ayuntamiento de La Victoria de Acentejo y Juzgado de Paz, comprendiendo la recogida, admisión, clasificación, tratamiento, transporte, distribución y entrega de envíos postales.",
-    "tipo": "Servicios",
+    "id": "wt2mR%2Fc4xYicCF8sV%2BqtYA%3D%3D",
+    "expediente": "3431/2026",
+    "cif": "P3800800I",
+    "organo": "Alcaldía del Ayuntamiento de La Villa de Breña Alta",
+    "objeto": "Estructura de cubierta de zona deportiva en calle Benahoare",
+    "tipo": "Obras",
     "estado": "Publicada",
-    "importe": "32,000.00",
-    "fecha": "27/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=XkaZOEPPBv9Whbmkna2nXQ%3D%3D"
+    "importe": "1,261,551.58",
+    "fecha": "16/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wt2mR%2Fc4xYicCF8sV%2BqtYA%3D%3D"
   },
   {
     "id": "5YcR3Da9vqR70UvEyYJSGw%3D%3D",
@@ -564,6 +780,114 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=JKl2lYpYVWUeC9GJQOEBkQ%3D%3D"
   },
   {
+    "id": "U%2FZdN74PDtcXhk1FZxEyvw%3D%3D",
+    "expediente": "2794/2025",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Ejecución de las obras del proyecto \"Asfaltados de distintas calles de la Villa de Moya\"",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "280,373.83",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=U%2FZdN74PDtcXhk1FZxEyvw%3D%3D"
+  },
+  {
+    "id": "xhAboVMpSiAZDGvgaZEVxQ%3D%3D",
+    "expediente": "330/2026",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Realización de las obras del proyecto denominado “Pavimentación de varias calles en el barrio del Frontón”.",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "62,031.14",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xhAboVMpSiAZDGvgaZEVxQ%3D%3D"
+  },
+  {
+    "id": "0cFzvnorxe%2BExvMJXBMHHQ%3D%3D",
+    "expediente": "510/2024",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "La realización de las obras del proyecto \"Rehabilitación y mejora de las instalaciones deportivas de “Cancha La Costa”, “Cancha Trujillo”, y “Cancha Carretería”\"",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "153,055.92",
+    "fecha": "24/09/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=0cFzvnorxe%2BExvMJXBMHHQ%3D%3D"
+  },
+  {
+    "id": "qJZ%2BWJcSj0%2FN3k3tjedSGw%3D%3D",
+    "expediente": "1429/2025",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Realización de las obras del proyecto denominado \"Demolición y reconstrucción de tramo de muro de contención en calle El Altillo\".",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "263,864.47",
+    "fecha": "22/08/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qJZ%2BWJcSj0%2FN3k3tjedSGw%3D%3D"
+  },
+  {
+    "id": "3UkDm3G0WsxWhbmkna2nXQ%3D%3D",
+    "expediente": "125/2025",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Ejecución del proyecto \"Repavimentación de las calles Princesa Guayarmina, Plaza Carretería, Tamarán, Nayra, El Lomo y Tinguaro\".",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "195,502.32",
+    "fecha": "03/06/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3UkDm3G0WsxWhbmkna2nXQ%3D%3D"
+  },
+  {
+    "id": "fiX0OybCeyaP66GS%2BONYvQ%3D%3D",
+    "expediente": "2704/2023",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Realización de la actuación \"Potenciación de la imagen nocturna en la zona comercial abierta de la Villa de Moya \".",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "141,758.97",
+    "fecha": "02/05/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=fiX0OybCeyaP66GS%2BONYvQ%3D%3D"
+  },
+  {
+    "id": "XaxJxocAbFcadbH3CysQuQ%3D%3D",
+    "expediente": "2730/2024",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Ejecución del proyecto de obras \"Mejora y acondicionamiento del recinto ferial y de ocio de La Fragata\"",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "103,478.26",
+    "fecha": "05/05/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=XaxJxocAbFcadbH3CysQuQ%3D%3D"
+  },
+  {
+    "id": "O4Kx8WzlAoVPpzdqOdhuWg%3D%3D",
+    "expediente": "1770/2024",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Ejecución del proyecto \"Reforma y ampliación del centro de formación San Fernando",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "390,070.46",
+    "fecha": "14/02/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=O4Kx8WzlAoVPpzdqOdhuWg%3D%3D"
+  },
+  {
+    "id": "SOueQQADn3msNfRW6APEDw%3D%3D",
+    "expediente": "2643/2023",
+    "cif": "P3501400J",
+    "organo": "Alcaldía del Ayuntamiento de Moya",
+    "objeto": "Ejecución del proyecto de obras:  \"Acondicionamiento y mejoras en el parque de El Frontón\"",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "78,179.32",
+    "fecha": "30/12/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SOueQQADn3msNfRW6APEDw%3D%3D"
+  },
+  {
     "id": "F4QggKjSnyaGCFcHcNGIlQ%3D%3D",
     "expediente": "981/2026",
     "cif": "P3802900E",
@@ -588,16 +912,28 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Z7Pa8AGThSmKeVWTb9Scog%3D%3D"
   },
   {
-    "id": "FB5cM54waVmsNfRW6APEDw%3D%3D",
-    "expediente": "383/2026",
-    "cif": "P3803000C",
-    "organo": "Alcaldía del Ayuntamiento de Puntallana",
-    "objeto": "Gestión del gimnasio municipal",
+    "id": "qxNqU1WoUHVxseVhcqrkhw%3D%3D",
+    "expediente": "GD/2026/CBNE1905282",
+    "cif": "P3501600E",
+    "organo": "Alcaldía del Ayuntamiento de Pájara",
+    "objeto": "14/2026 ser- contrato de de compra de espacios en soportes publicitarios",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "14,385.80",
-    "fecha": "27/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=FB5cM54waVmsNfRW6APEDw%3D%3D"
+    "importe": "31,080.00",
+    "fecha": "09/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qxNqU1WoUHVxseVhcqrkhw%3D%3D"
+  },
+  {
+    "id": "cZtPidGZqykXhk1FZxEyvw%3D%3D",
+    "expediente": "GD/2026/CBNE1906877",
+    "cif": "P3501600E",
+    "organo": "Alcaldía del Ayuntamiento de Pájara",
+    "objeto": "16/2026ser - viaje de los mayores al pirineo aragones",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "146,453.00",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=cZtPidGZqykXhk1FZxEyvw%3D%3D"
   },
   {
     "id": "X6QvJ1eYu5mS81gZFETWmA%3D%3D",
@@ -610,18 +946,6 @@
     "importe": "203,310.47",
     "fecha": "01/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=X6QvJ1eYu5mS81gZFETWmA%3D%3D"
-  },
-  {
-    "id": "mijgiH3SO01t5r0ngvMetA%3D%3D",
-    "expediente": "GD/2026/CBNE1880625",
-    "cif": "P3501600E",
-    "organo": "Alcaldía del Ayuntamiento de Pájara",
-    "objeto": "1/2026 ser - contrato de servicios de actividades de dinamizacion a los centros de la tercera edad",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "377,402.80",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mijgiH3SO01t5r0ngvMetA%3D%3D"
   },
   {
     "id": "0bV%2B2bGzY0f9pbnDwlaUlg%3D%3D",
@@ -708,6 +1032,18 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4GzWBwOD%2BoOIzo3LHNPGcQ%3D%3D"
   },
   {
+    "id": "CUcpbbv%2Fsis4NavIWzMcHA%3D%3D",
+    "expediente": "10267/2025",
+    "cif": "P3501900I",
+    "organo": "Alcaldía del Ayuntamiento de San Bartolomé de Lanzarote",
+    "objeto": "Contratación de empresa de Trabajo Temporal (ETT) para la puesta a disposición de trabajadores con las categorías de \"peón de recogida de residuos\" y \"conductor de camión de recogida de residuos\".",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "59,000.00",
+    "fecha": "10/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=CUcpbbv%2Fsis4NavIWzMcHA%3D%3D"
+  },
+  {
     "id": "lOZTB5VRwVZ9Zh%2FyRJgM8w%3D%3D",
     "expediente": "789/2026",
     "cif": "P3501900I",
@@ -718,6 +1054,18 @@
     "importe": "69,733.66",
     "fecha": "23/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lOZTB5VRwVZ9Zh%2FyRJgM8w%3D%3D"
+  },
+  {
+    "id": "6c9Y9%2FJKHoPECtSnloz%2BZQ%3D%3D",
+    "expediente": "5072/2026",
+    "cif": "P3803700H",
+    "organo": "Alcaldía del Ayuntamiento de Santa Cruz de La Palma",
+    "objeto": "Servicios de limpieza y mantenimiento de los espacios públicos de las urbanizaciones de Benahoare y Mirca en Santa Cruz de La Palma",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "629,210.59",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6c9Y9%2FJKHoPECtSnloz%2BZQ%3D%3D"
   },
   {
     "id": "ZURKWE%2FPMR2ExvMJXBMHHQ%3D%3D",
@@ -754,6 +1102,102 @@
     "importe": "140,694.81",
     "fecha": "13/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=x3QWaRJqZrtJ8Trn0ZPzLw%3D%3D"
+  },
+  {
+    "id": "75QTTHqS2BzzAq95uGTrDQ%3D%3D",
+    "expediente": "20309/2026 (020/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Suministro de productos de farmacia y otros artículos del Ayuntamiento de Santa Lucia de Tirajana",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "58,124.77",
+    "fecha": "10/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=75QTTHqS2BzzAq95uGTrDQ%3D%3D"
+  },
+  {
+    "id": "45VdjPi3SkYXhk1FZxEyvw%3D%3D",
+    "expediente": "18955/2026 (018/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Servicio de Mantenimiento Integral de los Aparatos Elevadores Municipales y sus Inspecciones Obligatorias",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "58,317.44",
+    "fecha": "02/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=45VdjPi3SkYXhk1FZxEyvw%3D%3D"
+  },
+  {
+    "id": "E1KGlBHE0mLgL1BHd3qjQA%3D%3D",
+    "expediente": "14168/2026 (012/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Suministro de equipos informáticos y equipos periféricos.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "27,610.00",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=E1KGlBHE0mLgL1BHd3qjQA%3D%3D"
+  },
+  {
+    "id": "%2FS2slPLw3g9LAIVZdUs8KA%3D%3D",
+    "expediente": "18514/2026 (016/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Cierre del anillo hidráulico de Vecindario",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "1,401,869.16",
+    "fecha": "27/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FS2slPLw3g9LAIVZdUs8KA%3D%3D"
+  },
+  {
+    "id": "RaQYcIhwexT9pbnDwlaUlg%3D%3D",
+    "expediente": "18745/2026 (017/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Feria del Tomate de Santa Lucía de Tirajana",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "56,000.00",
+    "fecha": "04/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=RaQYcIhwexT9pbnDwlaUlg%3D%3D"
+  },
+  {
+    "id": "z6zNB8bB4TWcCF8sV%2BqtYA%3D%3D",
+    "expediente": "14866/2026 (015/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Instalación de Centro de Visitantes en el Yacimiento Arqueológico de La Fortaleza",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "77,874.61",
+    "fecha": "10/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=z6zNB8bB4TWcCF8sV%2BqtYA%3D%3D"
+  },
+  {
+    "id": "AWs7fWAHE84UqXM96WStVA%3D%3D",
+    "expediente": "46714/2025 (051/2025)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Mejora de Alumbrado Campo Municipal de Fútbol de Vecindario",
+    "tipo": "Obras",
+    "estado": "Anulada",
+    "importe": "346,398.08",
+    "fecha": "",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=AWs7fWAHE84UqXM96WStVA%3D%3D"
+  },
+  {
+    "id": "1VLnBvqzHx3kY6rls5tG9A%3D%3D",
+    "expediente": "7878/2026 (005/2026)",
+    "cif": "P3502300A",
+    "organo": "Alcaldía del Ayuntamiento de Santa Lucía de Tirajana",
+    "objeto": "Plan Municipal de Asfalto 2026",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "2,309,698.09",
+    "fecha": "19/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1VLnBvqzHx3kY6rls5tG9A%3D%3D"
   },
   {
     "id": "pc2gnOU%2FAzUl5NjlNci%2BtA%3D%3D",
@@ -810,10 +1254,94 @@
     "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
     "objeto": "Servicios de sonido e iluminación, baños portátiles, ambulancias y seguridad privada para la celebración del Festival Tenerife Vive+ 2026",
     "tipo": "Servicios",
-    "estado": "Publicada",
+    "estado": "Evaluación",
     "importe": "17,601.00",
     "fecha": "26/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=DlsHNkdxgW8Xhk1FZxEyvw%3D%3D"
+  },
+  {
+    "id": "%2FxS%2B53MeDr3VGIpKDxgsAQ%3D%3D",
+    "expediente": "019/2026",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Modernización y digitalización del comercio local de Santiago del Teide (3 Lotes), financiado en el marco del Programa FEDER Canarias 2021-2027.",
+    "tipo": "Servicios",
+    "estado": "Adjudicada",
+    "importe": "137,872.80",
+    "fecha": "22/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FxS%2B53MeDr3VGIpKDxgsAQ%3D%3D"
+  },
+  {
+    "id": "rvrRcP9dbsLECtSnloz%2BZQ%3D%3D",
+    "expediente": "022/2026",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Servicio de actividades extraescolares para alumnos de los centros educativos públicos no universitarios del municipio",
+    "tipo": "Servicios",
+    "estado": "Adjudicada",
+    "importe": "80,000.00",
+    "fecha": "16/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=rvrRcP9dbsLECtSnloz%2BZQ%3D%3D"
+  },
+  {
+    "id": "9Q8UWYtv3wI2wEhQbcAqug%3D%3D",
+    "expediente": "017/2026",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Organización y producción del evento anual de excursión de mayores del municipio.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "63,929.91",
+    "fecha": "07/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9Q8UWYtv3wI2wEhQbcAqug%3D%3D"
+  },
+  {
+    "id": "k0BCpZ1QoZE%2FbjW6njtWLw%3D%3D",
+    "expediente": "114/2025",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Servicios y suministros de un conjunto de soluciones digitales innovadoras (4 Lotes), financiado con Fondos Nextgeneration EU.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "607,476.46",
+    "fecha": "24/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=k0BCpZ1QoZE%2FbjW6njtWLw%3D%3D"
+  },
+  {
+    "id": "3YtVAPGUMkx%2BF6L2uCfUWg%3D%3D",
+    "expediente": "009/2026",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Aprovechamiento forestal mediante subasta de 5000 Qm de pinocha del monte Los Baldíos y Cabezadas año 2026.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "1,500.00",
+    "fecha": "17/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3YtVAPGUMkx%2BF6L2uCfUWg%3D%3D"
+  },
+  {
+    "id": "jgMnKNyl6E%2FL1rX3q%2FMAPA%3D%3D",
+    "expediente": "137/2025",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Adquisición de un Vehículo Ligero Combi compacto de 5 plazas",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "20,700.00",
+    "fecha": "07/02/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jgMnKNyl6E%2FL1rX3q%2FMAPA%3D%3D"
+  },
+  {
+    "id": "%2BqLePie4i48QyBAnWzHfCg%3D%3D",
+    "expediente": "005/2026",
+    "cif": "P3804000B",
+    "organo": "Alcaldía del Ayuntamiento de Santiago del Teide",
+    "objeto": "Servicios de sonido e iluminación, baños portátiles, ambulancias y seguridad privada para la fiesta del carnaval de Acantilados de los Gigantes 2026.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "34,828.00",
+    "fecha": "23/02/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BqLePie4i48QyBAnWzHfCg%3D%3D"
   },
   {
     "id": "6Gf7KIl8RxeOUi78BmzhOQ%3D%3D",
@@ -876,16 +1404,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=H5W6u4Tx1nK2gkLQ8TeYKA%3D%3D"
   },
   {
-    "id": "wkBn1kxbIjU7%2B9FIQYNjeQ%3D%3D",
-    "expediente": "649/2026",
-    "cif": "P3502900H",
-    "organo": "Alcaldía del Ayuntamiento de Tinajo",
-    "objeto": "Servicio de Dinamización, Desarrollo y Evaluación del Plan Estratégico para la Promoción de la participación en el Municipio de Tinajo (PEDEPAT), con especial incidencia en Infancia, Adolescencia y Juventud.",
-    "tipo": "Servicios",
+    "id": "BQsP1vYRTzXgL1BHd3qjQA%3D%3D",
+    "expediente": "633/2026",
+    "cif": "P3804700G",
+    "organo": "Alcaldía del Ayuntamiento de Tijarafe",
+    "objeto": "Mejora Seguridad Espacios Públicos Tijarafe. Entornos Local Social y Plaza de Arecida y Campo Municipal de Fútbol",
+    "tipo": "Obras",
     "estado": "Publicada",
-    "importe": "101,868.10",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wkBn1kxbIjU7%2B9FIQYNjeQ%3D%3D"
+    "importe": "186,915.89",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=BQsP1vYRTzXgL1BHd3qjQA%3D%3D"
   },
   {
     "id": "SGbZ9EkKt4m7JOCXkOhcDg%3D%3D",
@@ -912,18 +1440,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SGSvbHQYPtTIGlsa0Wad%2Bw%3D%3D"
   },
   {
-    "id": "uONTX3oQcN0%2Bk2oCbDosIw%3D%3D",
-    "expediente": "1012/2026",
-    "cif": "P3804900C",
-    "organo": "Alcaldía del Ayuntamiento de Valle Gran Rey",
-    "objeto": "Contrato administrativo de servicio de ejecución de planes de seguridad, atención sanitaria y seguridad privada para eventos organizados por el Iltre. Ayuntamiento de Valle Gran Rey",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "120,296.63",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=uONTX3oQcN0%2Bk2oCbDosIw%3D%3D"
-  },
-  {
     "id": "cXX23FT%2BbvZt5r0ngvMetA%3D%3D",
     "expediente": "1432/2026",
     "cif": "P3503100D",
@@ -946,6 +1462,18 @@
     "importe": "49,765.80",
     "fecha": "09/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=WrrnjccaoLgmMOlAXxDEjw%3D%3D"
+  },
+  {
+    "id": "Ew3yr0VpI9OkU02jNGj1Fw%3D%3D",
+    "expediente": "1796/2026",
+    "cif": "P3503300J",
+    "organo": "Alcaldía del Ayuntamiento de Vega de San Mateo",
+    "objeto": "Modificado núm. 2 del Proyecto de Rehabilitación del Restaurante el Mercado y Aula de Formación de Vega de San Mateo",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "867,279.94",
+    "fecha": "20/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Ew3yr0VpI9OkU02jNGj1Fw%3D%3D"
   },
   {
     "id": "BTzjRnVQfEKTylGzYmBF9Q%3D%3D",
@@ -972,16 +1500,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=PAuZ4l4e0dfs%2BnLj3vAg5A%3D%3D"
   },
   {
-    "id": "d4fMd%2BYanyyS81gZFETWmA%3D%3D",
-    "expediente": "4383/2026",
-    "cif": "P3503400H",
-    "organo": "Alcaldía del Ayuntamiento de Yaiza",
-    "objeto": "Servicio de control, recogida y/o acogida de perros abandonados o extraviados en el municipio de Yaiza.",
+    "id": "%2Fmaus9lC6LUUqXM96WStVA%3D%3D",
+    "expediente": "2026/6963",
+    "cif": "P3803100A",
+    "organo": "Alcaldía del Ayuntamiento de la Histórica Villa de los Realejos",
+    "objeto": "Contrato de servicios de apoyo técnico especializado a la Unidad Responsable de Accesibilidad (URA) del Ayuntamiento de Los Realejos",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "355,243.09",
-    "fecha": "20/07/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=d4fMd%2BYanyyS81gZFETWmA%3D%3D"
+    "importe": "11,000.00",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2Fmaus9lC6LUUqXM96WStVA%3D%3D"
   },
   {
     "id": "XtwEepp67SuAAM7L03kM8A%3D%3D",
@@ -994,30 +1522,6 @@
     "importe": "11,800.00",
     "fecha": "07/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=XtwEepp67SuAAM7L03kM8A%3D%3D"
-  },
-  {
-    "id": "nlhSWapKyR1PpzdqOdhuWg%3D%3D",
-    "expediente": "2026/7228",
-    "cif": "P3803100A",
-    "organo": "Alcaldía del Ayuntamiento de la Histórica Villa de los Realejos",
-    "objeto": "Contrato de suministro en régimen de arrendamiento de alumbrado festivo 2026-2027",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "144,262.00",
-    "fecha": "20/07/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nlhSWapKyR1PpzdqOdhuWg%3D%3D"
-  },
-  {
-    "id": "mFDNZLKIGlZ6nTs9LZ9RhQ%3D%3D",
-    "expediente": "2026/5931",
-    "cif": "P3803100A",
-    "organo": "Alcaldía del Ayuntamiento de la Histórica Villa de los Realejos",
-    "objeto": "Asistencia técnica de apoyo a la intermediación laboral de currículums de la bolsa local de empleo",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "20,698.96",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mFDNZLKIGlZ6nTs9LZ9RhQ%3D%3D"
   },
   {
     "id": "pCu%2FuDu0ycKGCFcHcNGIlQ%3D%3D",
@@ -1248,6 +1752,30 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xxtCtOKEJuXi0Kd8%2Brcp6w%3D%3D"
   },
   {
+    "id": "oHkYYomOTgzXOjazN1Dw9Q%3D%3D",
+    "expediente": "O 33/26",
+    "cif": "P3501800A",
+    "organo": "Concejalía Delegada de Contratación del Ayuntamiento de Puerto del Rosario",
+    "objeto": "Renovación servicios mínimos, asfaltado e instalación de limitadores de velocidad en el Barrio de Las Granadas en Puerto del Rosario",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "1,260,376.95",
+    "fecha": "20/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=oHkYYomOTgzXOjazN1Dw9Q%3D%3D"
+  },
+  {
+    "id": "4nB2kP2X4DAQyBAnWzHfCg%3D%3D",
+    "expediente": "31/26",
+    "cif": "P3501800A",
+    "organo": "Concejalía Delegada de Contratación del Ayuntamiento de Puerto del Rosario",
+    "objeto": "Contrato de servicios que rige los diferentes servicios y suministros para la ejecución de las actividades relacionadas con las Fiestas del Rosario 2026",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "244,952.11",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4nB2kP2X4DAQyBAnWzHfCg%3D%3D"
+  },
+  {
     "id": "fPqj7F25u4h%2FP7lJ7Fu0SA%3D%3D",
     "expediente": "O 13/26",
     "cif": "P3501800A",
@@ -1284,18 +1812,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=u0vJX5tnOJLL1rX3q%2FMAPA%3D%3D"
   },
   {
-    "id": "I9j4gJHqBQt9Zh%2FyRJgM8w%3D%3D",
-    "expediente": "SS 22/26",
-    "cif": "P3501800A",
-    "organo": "Concejalía Delegada de Contratación del Ayuntamiento de Puerto del Rosario",
-    "objeto": "Servicio de gestión de redes sociales para la concejalía de turismo del Ayuntamiento de de Puerto del Rosario",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "72,256.27",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=I9j4gJHqBQt9Zh%2FyRJgM8w%3D%3D"
-  },
-  {
     "id": "YFJluyfQQ9xq1DdmE7eaXg%3D%3D",
     "expediente": "16311/2026",
     "cif": "P3800100D",
@@ -1306,18 +1822,6 @@
     "importe": "556,155.60",
     "fecha": "07/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YFJluyfQQ9xq1DdmE7eaXg%3D%3D"
-  },
-  {
-    "id": "D82uvzvsJN9t5r0ngvMetA%3D%3D",
-    "expediente": "SCT2026000074",
-    "cif": "P3803800F",
-    "organo": "Concejalía Delegada de Recursos Humanos, Tecnología, Transparencia, Prot. de Datos, Organización, At. Ciudadana, Estadística y Dem. Territorial, Consumo, Admin. Interna, Gab. de Prensa, Prot. y Sop. a Distritos del Ayto. de Sta. Cruz de Tenerife",
-    "objeto": "Contrato de servicio de gestión y ejecución de acciones formativas presenciales en materia de consumo responsable  promovidas por la Oficina Municipal de Información al Consumidor de Santa Cruz de Tenerife",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "12,994.80",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=D82uvzvsJN9t5r0ngvMetA%3D%3D"
   },
   {
     "id": "F%2BSUBdhTbQQkJPJS%2BPS9vg%3D%3D",
@@ -1332,6 +1836,66 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=F%2BSUBdhTbQQkJPJS%2BPS9vg%3D%3D"
   },
   {
+    "id": "7khv%2FfakFcJWhbmkna2nXQ%3D%3D",
+    "expediente": "SE4689/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera Insular Delegada de Accesibilidad, Informática, Nuevas Tecnologías y Planificación y Proyectos Estratégicos del Cabildo Insular de Fuerteventura",
+    "objeto": "contrato mantemiento red telecentros",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "43,428.20",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7khv%2FfakFcJWhbmkna2nXQ%3D%3D"
+  },
+  {
+    "id": "ByF6JK%2BtRvjE6P%2FuLemXRw%3D%3D",
+    "expediente": "SE18986/2025",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "servicio de delegado/a de proteccion de datos y registro de actividades de tratamiento del cabildo insular de fuerteventura.",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "7,500.00",
+    "fecha": "15/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ByF6JK%2BtRvjE6P%2FuLemXRw%3D%3D"
+  },
+  {
+    "id": "M044RhAFU%2Ft9PLkba5eRog%3D%3D",
+    "expediente": "SU10850/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "suministro de bandas fotoelectricas para los ascensores de los edificios del cabildo de fuerteventura",
+    "tipo": "Suministros",
+    "estado": "Publicada",
+    "importe": "8,326.41",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=M044RhAFU%2Ft9PLkba5eRog%3D%3D"
+  },
+  {
+    "id": "E31M4uJu7vg4NavIWzMcHA%3D%3D",
+    "expediente": "SU13916/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "suministro con instalacion de equipos de aire acondicionado para el cabildo de fuerteventura",
+    "tipo": "Suministros",
+    "estado": "Publicada",
+    "importe": "15,377.12",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=E31M4uJu7vg4NavIWzMcHA%3D%3D"
+  },
+  {
+    "id": "lGQgtWLSc3w7%2B9FIQYNjeQ%3D%3D",
+    "expediente": "SE504/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "servicio de mantenimiento de los ascensores y aparatos elevadores de los edificios del cabildo de fuerteventura",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "68,457.12",
+    "fecha": "22/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lGQgtWLSc3w7%2B9FIQYNjeQ%3D%3D"
+  },
+  {
     "id": "Ge2OOG%2BfZaPXOjazN1Dw9Q%3D%3D",
     "expediente": "SE27508/2025",
     "cif": "P3500003C",
@@ -1342,6 +1906,66 @@
     "importe": "504,000.00",
     "fecha": "10/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Ge2OOG%2BfZaPXOjazN1Dw9Q%3D%3D"
+  },
+  {
+    "id": "BsmJCFx4AM39pbnDwlaUlg%3D%3D",
+    "expediente": "SU4164/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "estores oficinas de secretaria del cabildo de fuerteventura",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "10,123.20",
+    "fecha": "10/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=BsmJCFx4AM39pbnDwlaUlg%3D%3D"
+  },
+  {
+    "id": "hNDaQVNLoF47%2B9FIQYNjeQ%3D%3D",
+    "expediente": "SU3969/2026",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "suministro de un sistema integral de control horario del personal",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "69,876.72",
+    "fecha": "09/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hNDaQVNLoF47%2B9FIQYNjeQ%3D%3D"
+  },
+  {
+    "id": "TM0yyo1z5EzL1rX3q%2FMAPA%3D%3D",
+    "expediente": "SU8607/2025",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "suministro de 3 plotters",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "27,200.00",
+    "fecha": "14/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=TM0yyo1z5EzL1rX3q%2FMAPA%3D%3D"
+  },
+  {
+    "id": "7UA8MKZtFJm8ebB%2FXTwy0A%3D%3D",
+    "expediente": "SE21541/2025",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "seguro de asistencia sanitaria para el personal al servicio del cabildo de fuerteventura y sus organos autonomos",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "920,400.00",
+    "fecha": "08/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7UA8MKZtFJm8ebB%2FXTwy0A%3D%3D"
+  },
+  {
+    "id": "nvucFJJYN%2FvE6P%2FuLemXRw%3D%3D",
+    "expediente": "SE9522/2025",
+    "cif": "P3500003C",
+    "organo": "Consejera de Área Insular de Hacienda, Promoción Económica, Recursos Humanos, Deportes y Movilidad Sostenible del Cabildo Insular de Fuerteventura",
+    "objeto": "Contratación de un servicio de prevención ajeno para prestar asistencia técnica al Cabildo de Fuerteventura en las especialidades preventivas de seguridad en el trabajo y en ergonomía y psicosociología",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "35,462.97",
+    "fecha": "07/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nvucFJJYN%2FvE6P%2FuLemXRw%3D%3D"
   },
   {
     "id": "%2FDBRQ37HS1OGCFcHcNGIlQ%3D%3D",
@@ -1404,6 +2028,90 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1EWsRg6HywkQK2TEfXGy%2BA%3D%3D"
   },
   {
+    "id": "T5dJUynp4X2kU02jNGj1Fw%3D%3D",
+    "expediente": "OB22467/2025",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "contrato para actuaciones complementarias para la reformas incluidas en la adenda i del convenio entre la comunidad autonoma de canarias, a traves de la consejeria de bienestar social y el cabild",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "61,439.25",
+    "fecha": "03/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=T5dJUynp4X2kU02jNGj1Fw%3D%3D"
+  },
+  {
+    "id": "QcYOxqvmUnweIBJRHQiPkQ%3D%3D",
+    "expediente": "SE19480/2025",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "contrato administrativo de servicio para la prestacion de servicios a personas en situacion de dependencia y trastorno de conducta",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "154,650.50",
+    "fecha": "19/02/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QcYOxqvmUnweIBJRHQiPkQ%3D%3D"
+  },
+  {
+    "id": "mvr%2FZzJOTK25HQrHoP3G5A%3D%3D",
+    "expediente": "2025/14721",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "Concierto Social para la gestión del servicio de Acogimiento residencial para niños, niñas y adolescentes con una medida de amparo en la Isla de Fuerteventura",
+    "tipo": "Servicios",
+    "estado": "Anuncio Previo",
+    "importe": "18,032,246.40",
+    "fecha": "",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mvr%2FZzJOTK25HQrHoP3G5A%3D%3D"
+  },
+  {
+    "id": "10ZeI9g6cmnkY6rls5tG9A%3D%3D",
+    "expediente": "SE17618/2025",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "servicio de organización del encuentro de personas mayores, con motivo de la conmemoración de la festividad en honor a nuestra señora la virgen de la peña 2025",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "14,916.03",
+    "fecha": "15/09/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=10ZeI9g6cmnkY6rls5tG9A%3D%3D"
+  },
+  {
+    "id": "62mMiJtIACPyoM4us5k4vw%3D%3D",
+    "expediente": "2025/6372",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "Concierto Social para la gestión del servicio de promoción de la autonomía personal (SPAP) en la isla de Fuerteventura",
+    "tipo": "Servicios",
+    "estado": "Anuncio Previo",
+    "importe": "1,793,923.40",
+    "fecha": "",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=62mMiJtIACPyoM4us5k4vw%3D%3D"
+  },
+  {
+    "id": "jUQvNnqX2vQaF6cS8TCh%2FA%3D%3D",
+    "expediente": "SE5014/2025",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "contrato administrativo de servicios para la gestión de la residencia y centros de día y programa de alojamiento tutelado de salud mental",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "8,661,688.53",
+    "fecha": "30/10/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jUQvNnqX2vQaF6cS8TCh%2FA%3D%3D"
+  },
+  {
+    "id": "9JT3sKHHUerL1rX3q%2FMAPA%3D%3D",
+    "expediente": "SE3876/2025",
+    "cif": "P3500003C",
+    "organo": "Consejero de Área Insular de Acción Social, Diversidad, LGTBIQ+, Participación Ciudadana y Gobierno Abierto del Cabildo Insular de Fuerteventura",
+    "objeto": "contrato de servicios en la gestión del centro sociosanitario de estancia diurna para personas en situación de dependencia josefina pla",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "1,984,212.60",
+    "fecha": "14/10/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9JT3sKHHUerL1rX3q%2FMAPA%3D%3D"
+  },
+  {
     "id": "M4MsQe%2BoWS2kU02jNGj1Fw%3D%3D",
     "expediente": "SE702/2026",
     "cif": "P3500003C",
@@ -1438,66 +2146,6 @@
     "importe": "3,724,407.53",
     "fecha": "13/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QajCCejmnOQ7%2B9FIQYNjeQ%3D%3D"
-  },
-  {
-    "id": "NNftWNHvu0cadbH3CysQuQ%3D%3D",
-    "expediente": "SE1254/2026",
-    "cif": "P3500003C",
-    "organo": "Consejero de Área Insular de Infraestructuras, Carreteras, Planificación y Cooperación Municipal del Cabildo Insular de Fuerteventura",
-    "objeto": "servicio de mantenimiento (preventivo y correctivo) de la flota de maquinaria especial, de obra publica, agricola, vehiculos pesados e industriales del cabildo de fuerteventura",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "188,785.04",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=NNftWNHvu0cadbH3CysQuQ%3D%3D"
-  },
-  {
-    "id": "kigdRSNsRi%2FLIx6q1oPaMg%3D%3D",
-    "expediente": "22/2026",
-    "cif": "A38299061",
-    "organo": "Consejería Delegada de Spet, Turismo de Tenerife, S.A.",
-    "objeto": "Contratación del servicio de secretaría técnica para el diseño, planificación, organización, coordinación y ejecución del programa “REGENERATe WEEK 20262027”",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "99,746.22",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=kigdRSNsRi%2FLIx6q1oPaMg%3D%3D"
-  },
-  {
-    "id": "rKJK69nCDQwS7pcxhTeWOg%3D%3D",
-    "expediente": "1090-2026",
-    "cif": "P3500005H",
-    "organo": "Consejería Delegada del Consorcio de Abastecimiento de Aguas a Fuerteventura",
-    "objeto": "Suministro mediante renting de carretilla y apiladora elevadoras eléctricas",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "46,000.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=rKJK69nCDQwS7pcxhTeWOg%3D%3D"
-  },
-  {
-    "id": "89DIARqTF267JOCXkOhcDg%3D%3D",
-    "expediente": "1005-2026",
-    "cif": "P3500005H",
-    "organo": "Consejería Delegada del Consorcio de Abastecimiento de Aguas a Fuerteventura",
-    "objeto": "Suministro de repuestos para bombas APP y recuperadores de energía ISAVE70",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "154,808.80",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=89DIARqTF267JOCXkOhcDg%3D%3D"
-  },
-  {
-    "id": "4eAZMFETeCoQyBAnWzHfCg%3D%3D",
-    "expediente": "556-2026",
-    "cif": "P3500005H",
-    "organo": "Consejería Delegada del Consorcio de Abastecimiento de Aguas a Fuerteventura",
-    "objeto": "Enajenación mediante subasta pública de chatarra de las instalaciones del Consorcio de Abastecimiento de Aguas a Fuerteventura.",
-    "tipo": "Patrimonial",
-    "estado": "Publicada",
-    "importe": "37,584.20",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4eAZMFETeCoQyBAnWzHfCg%3D%3D"
   },
   {
     "id": "Rk65ERdBUQ68ebB%2FXTwy0A%3D%3D",
@@ -1536,6 +2184,126 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qvq%2FRhjXiohVYjgxA4nMUw%3D%3D"
   },
   {
+    "id": "hwB2KjNK6HGdkQsA7ROvsg%3D%3D",
+    "expediente": "SUM-04-23  NEGOCIADO RENTING CGPC",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "El objeto del contrato será la realización del suministro de veinte (20) vehículos turismos-patrulleros (tipo SUV) con motor de combustión dotados con kit de detenidos (mamparas) para el Cuerpo General de la Policía Canaria, a través de la modalidad de arrendamiento financiero (renting), mediante procedimiento negociado sin publicidad por imperiosa urgencia y con invitación comomínimo a tres empresas del sector, y que irán destinados a su utilización por los agentes del Cuerpo General de la Policía Canaria, para el correcto desempeño de sus funciones de seguridad ciudadana.",
+    "tipo": "Suministros",
+    "estado": "Adjudicada",
+    "importe": "1,243,200.00",
+    "fecha": "29/09/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hwB2KjNK6HGdkQsA7ROvsg%3D%3D"
+  },
+  {
+    "id": "ylJSC7xXkDk3vLk2DU2Ddg%3D%3D",
+    "expediente": "SUM-02-23 TETRAS PROTECCIÓN CIVIL - REAC EU",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro, programación y puesta en funcionamiento de 700 equipos de radiocomunicaciones Tetras (lote 1) y 140 Estaciones bases (lote 2) para la Dirección General de Seguridad y Emergencias del Gobierno de Canarias, con financiación “Next generation” (REACT-EU) y tramitación urgente, para mejorar en el Servicio de Protección Civil las herramientas de comunicación en la Red TETRA",
+    "tipo": "Suministros",
+    "estado": "Adjudicada",
+    "importe": "886,701.12",
+    "fecha": "13/12/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ylJSC7xXkDk3vLk2DU2Ddg%3D%3D"
+  },
+  {
+    "id": "Cj88jc5PbyASugstABGr5A%3D%3D",
+    "expediente": "DGFP 5/2022",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Servicio de mantenimiento y soporte del sistema de nómina centralizada de la Administración Pública de la Comunidad Autónoma de Canarias.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "2,462,756.04",
+    "fecha": "07/06/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Cj88jc5PbyASugstABGr5A%3D%3D"
+  },
+  {
+    "id": "11nwvczCGLimq21uxhbaVQ%3D%3D",
+    "expediente": "A.M. 13/2018 1_2023 DGTNT",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro para ampliación de la infraestructura de servidores corporativos del Gobierno de Canarias.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "1,859,319.18",
+    "fecha": "29/08/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=11nwvczCGLimq21uxhbaVQ%3D%3D"
+  },
+  {
+    "id": "qK%2B1W%2FiZUGlvYnTkQN0%2FZA%3D%3D",
+    "expediente": "Escrutinio Elecciones Mayo 2023 Negociado sin publ",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Servicio para el sistema de recogida, procesamiento, divulgación y publicación de los resultados de las elecciones al Parlamento de Canarias previstas para el año 2023, así como otros servicios complementarios, que permita un adecuado funcionamiento del operativo del escrutinio.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "1,831,465.62",
+    "fecha": "08/03/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qK%2B1W%2FiZUGlvYnTkQN0%2FZA%3D%3D"
+  },
+  {
+    "id": "NR8z%2F9YzGvnnSoTX3z%2F7wA%3D%3D",
+    "expediente": "REACT EU SU-02-22  VEHICULOS EMERGENCIAS PC",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro de veintiséis (26) vehículos  destinados a coordinación de emergencias y apoyo logístico y técnico  para la Dirección General de Seguridad y Emergencias del Gobierno de Canarias,  mediante procedimiento abierto de adjudicación con financiación “Next Generation” con cargo al fondo de ayuda a la recuperación para la cohesión y los territorios de Europa (REACT-EU)",
+    "tipo": "Suministros",
+    "estado": "Parcialmente Resuelta",
+    "importe": "1,934,579.44",
+    "fecha": "11/05/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=NR8z%2F9YzGvnnSoTX3z%2F7wA%3D%3D"
+  },
+  {
+    "id": "vuWlLbPmj58uf4aBO%2BvQlQ%3D%3D",
+    "expediente": "Papelería Elecciones Mayo 2023.",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro y entrega de los distintos impresos electorales, de hojas informativas, de los distintos sobres que serán utilizados en el proceso electoral y de las papeletas de votación con motivo de la celebración de las elecciones al Parlamento de Canarias que se celebrarán el 28 de mayo de 2023.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "1,106,386.42",
+    "fecha": "02/03/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=vuWlLbPmj58uf4aBO%2BvQlQ%3D%3D"
+  },
+  {
+    "id": "5kdLp3CyYdd7h85%2Fpmmsfw%3D%3D",
+    "expediente": "Escrutinio Elecciones Mayo 2023",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Servicio para el sistema de recogida, procesamiento, divulgación y publicación de los resultados de las elecciones al Parlamento de Canarias previstas para el año 2023, así como otros servicios complementarios, que permita un adecuado funcionamiento del operativo del escrutinio.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "1,831,465.62",
+    "fecha": "10/02/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=5kdLp3CyYdd7h85%2Fpmmsfw%3D%3D"
+  },
+  {
+    "id": "K%2BrcxkCwzmmiEJrVRqloyA%3D%3D",
+    "expediente": "CGPC SUM 02-22 RENTING VEHICULOS",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro de 30 vehículos, Lote 1: Veinte (20) vehículos turismos-patrulleros con motor de combustión dotados con kit de detenidos (mamparas).y Lote 2: Diez (10) vehículos turismos-patrulleros con motor eléctrico, para el Cuerpo General de la Policía Canaria, a través de la modalidad de arrendamiento financiero (renting)",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "1,560,060.00",
+    "fecha": "07/06/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=K%2BrcxkCwzmmiEJrVRqloyA%3D%3D"
+  },
+  {
+    "id": "ADlS8tbxFQUuf4aBO%2BvQlQ%3D%3D",
+    "expediente": "22 019 SM JD AB UP32",
+    "cif": "S3511001D",
+    "organo": "Consejería de Administraciones Públicas, Justicia y Seguridad",
+    "objeto": "Suministro de licencias Microsoft y servicio de mantenimiento y soporte de los productos Microsoft",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "3,207,800.00",
+    "fecha": "26/09/2022",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ADlS8tbxFQUuf4aBO%2BvQlQ%3D%3D"
+  },
+  {
     "id": "XePqlTViexLI8aL3PRS10Q%3D%3D",
     "expediente": "XP0225/2026",
     "cif": "P3500001G",
@@ -1560,18 +2328,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=t2uQ6Znug%2F7yoM4us5k4vw%3D%3D"
   },
   {
-    "id": "wLV06Hn3vEDL1rX3q%2FMAPA%3D%3D",
-    "expediente": "XP0119/2026",
-    "cif": "P3500001G",
-    "organo": "Consejería de Gobierno de Cultura del Cabildo de Gran Canaria",
-    "objeto": "Servicio de montaje, desmontaje y adecuación de las salas expositivas del MUBEA GRAN CANARIA Museo de Bellas Artes (MUBEA).",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "201,800.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wLV06Hn3vEDL1rX3q%2FMAPA%3D%3D"
-  },
-  {
     "id": "26Dttkdb%2Fmo2wEhQbcAqug%3D%3D",
     "expediente": "SUM/2026/0000094128",
     "cif": "S3511001D",
@@ -1582,6 +2338,18 @@
     "importe": "373,831.80",
     "fecha": "16/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=26Dttkdb%2Fmo2wEhQbcAqug%3D%3D"
+  },
+  {
+    "id": "RSKkqXp5djS2gkLQ8TeYKA%3D%3D",
+    "expediente": "SER/2026/0000071837",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "Servicio de mantenimiento de sistemas RIS/PACS de General Electric Healthcare (GEH) de varios centros del Servicio Canario de laSalud",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "3,616,880.64",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=RSKkqXp5djS2gkLQ8TeYKA%3D%3D"
   },
   {
     "id": "RUcBSVOoWME%2Bk2oCbDosIw%3D%3D",
@@ -1620,16 +2388,88 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=8AYizh9kqEwzjChw4z%2FXvw%3D%3D"
   },
   {
-    "id": "jzeALmngN5z%2B3JAijKO%2Bkg%3D%3D",
-    "expediente": "XP0630/2024",
-    "cif": "P3500001G",
-    "organo": "Consejería de Área de Sector Primario, Soberanía Alimentaria y Seguridad Hídrica del Cabildo de Gran Canaria",
-    "objeto": "Visitas educativas: vive el sector primario 2024",
+    "id": "h5oA%2B1fkNZC2gkLQ8TeYKA%3D%3D",
+    "expediente": "SER/2026/0000005922",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "El objeto del contrato es el servicio de soporte de las del software de gestión de base de datos y middleware para el correcto funcionamiento de los distintos aplicativos para el correcto funcionamiento de los distintos aplicativos del SCS",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "1,378,305.38",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=h5oA%2B1fkNZC2gkLQ8TeYKA%3D%3D"
+  },
+  {
+    "id": "oNfxJyqO8v35Rey58Yagpg%3D%3D",
+    "expediente": "SUM/2026/0000004223",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "Suministro de sistemas de estimulación coclear de preservación con electrodos rectos (adultos) y sistemas de estimulación coclear modiolar flexible y de preservación (pediátricos).",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "3,848,500.00",
+    "fecha": "15/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=oNfxJyqO8v35Rey58Yagpg%3D%3D"
+  },
+  {
+    "id": "QZh056MMwPaAAM7L03kM8A%3D%3D",
+    "expediente": "OBR/2026/0000004683",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "El objeto del contrato será la realización de las obras de regualarización y unificación de expedientes de instalaciones deprotección contra incendios del Hospital Universitario D. José Molina Orosa.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "1,244,947.53",
+    "fecha": "20/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QZh056MMwPaAAM7L03kM8A%3D%3D"
+  },
+  {
+    "id": "GjcEYQytEj1rhBlEHQFSKA%3D%3D",
+    "expediente": "14/AM/CONS/DGSP/2026",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "Vacuna frente a Virus del Papiloma Humano (VPH) nonavalente",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "1,776,500.00",
+    "fecha": "30/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=GjcEYQytEj1rhBlEHQFSKA%3D%3D"
+  },
+  {
+    "id": "C5n6nA%2Fc7X836J9Lctlsuw%3D%3D",
+    "expediente": "13/AM/CONS/DGSP/2026",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "LOTE 23 Vacuna frente a Herpes Zoster",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "3,968,250.00",
+    "fecha": "30/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=C5n6nA%2Fc7X836J9Lctlsuw%3D%3D"
+  },
+  {
+    "id": "O6fnySzYLHasNfRW6APEDw%3D%3D",
+    "expediente": "12/AM/CONS/DGSP/2026",
+    "cif": "S3511001D",
+    "organo": "Consejería de Sanidad del Gobierno de Canarias",
+    "objeto": "LOTE 18 Vacuna frente a rotavirus",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "827,400.00",
+    "fecha": "05/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=O6fnySzYLHasNfRW6APEDw%3D%3D"
+  },
+  {
+    "id": "lTgN1h0ffypVq4S9zvaQpQ%3D%3D",
+    "expediente": "9258/2026",
+    "cif": "P3500002E",
+    "organo": "Consejería del Área de Hacienda y Contratación del Cabildo Insular de Lanzarote",
+    "objeto": "Servicio de mediación de seguros privados del Cabildo Insular de Lanzarote.",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "134,462.60",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jzeALmngN5z%2B3JAijKO%2Bkg%3D%3D"
+    "importe": "0.00",
+    "fecha": "15/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lTgN1h0ffypVq4S9zvaQpQ%3D%3D"
   },
   {
     "id": "qNedBooTk%2FW7JOCXkOhcDg%3D%3D",
@@ -1728,18 +2568,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qpAnOLiYNP6OUi78BmzhOQ%3D%3D"
   },
   {
-    "id": "KynlaXN98dktm4eBPtV6eQ%3D%3D",
-    "expediente": "6661/2026",
-    "cif": "P3500002E",
-    "organo": "Consejería del Área de Hacienda y Contratación del Cabildo Insular de Lanzarote",
-    "objeto": "Servicio de reparación y mantenimiento preventivo del sistema solar, sistema ACS, calderas, fontanería y grupos frigoríficos del matadero insular del Cabildo de Lanzarote.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "85,470.63",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=KynlaXN98dktm4eBPtV6eQ%3D%3D"
-  },
-  {
     "id": "OIeJg9uFQYFeKgd8LfVV9g%3D%3D",
     "expediente": "7552/2026",
     "cif": "P3500002E",
@@ -1764,6 +2592,42 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=i2FaRdgnTA0%2B1TMyIiZmzw%3D%3D"
   },
   {
+    "id": "pdX8WTvdS98wYTJJ03sHog%3D%3D",
+    "expediente": "2A 25-22 SAI",
+    "cif": "A38620209",
+    "organo": "Consejo de Administración de Metropolitano de Tenerife, S.A.",
+    "objeto": "Servicios de mantenimiento integral de los Sistemas de Alimentación Interrumpida  y los cargadores de baterías de Metropolitano de Tenerife, S.A..Se trata de mantener en funcionamiento todos estos equipos, en los niveles de seguridad, calidad y medioambiente adecuados hasta el fin de su vida útil, minimizando sus posibles paradas por avería y reduciendo al máximo los tiempos de intervención.",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "430,966.00",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=pdX8WTvdS98wYTJJ03sHog%3D%3D"
+  },
+  {
+    "id": "lxA0fGr%2FDmryoM4us5k4vw%3D%3D",
+    "expediente": "3A 26-04",
+    "cif": "A38620209",
+    "organo": "Consejo de Administración de Metropolitano de Tenerife, S.A.",
+    "objeto": "Suministro de tarjetas de tracción para los tranvías Citadis-302 de Metropolitano de Tenerife, S.A. (en adelante Metrotenerife). En concreto, se contrata el suministro de las tarjetas de tracción de Inversor y de las tarjetas de tracción de Reóstato.",
+    "tipo": "Suministros",
+    "estado": "Publicada",
+    "importe": "364,802.14",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lxA0fGr%2FDmryoM4us5k4vw%3D%3D"
+  },
+  {
+    "id": "3fDiJekk9bjs%2BnLj3vAg5A%3D%3D",
+    "expediente": "3A 26-05",
+    "cif": "A38620209",
+    "organo": "Consejo de Administración de Metropolitano de Tenerife, S.A.",
+    "objeto": "Suministro de cristales frontales y laterales de cabina para los tranvías Citadis-302 de Metropolitano de Tenerife, S.A. (en adelante Metrotenerife).",
+    "tipo": "Suministros",
+    "estado": "Publicada",
+    "importe": "226,527.00",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3fDiJekk9bjs%2BnLj3vAg5A%3D%3D"
+  },
+  {
     "id": "6eyOk8nHp4PN3k3tjedSGw%3D%3D",
     "expediente": "2B 24-18",
     "cif": "A38620209",
@@ -1774,18 +2638,6 @@
     "importe": "50,000.00",
     "fecha": "30/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6eyOk8nHp4PN3k3tjedSGw%3D%3D"
-  },
-  {
-    "id": "6aMZ9ujLsM0kJPJS%2BPS9vg%3D%3D",
-    "expediente": "2B 26-02",
-    "cif": "A38620209",
-    "organo": "Consejo de Administración de Metropolitano de Tenerife, S.A.",
-    "objeto": "Realizar la contratación del servicio de reparación de tarjetas electrónicas de los equipos de las unidades de Tranvía Citadis-302 de Metropolitano de Tenerife S.A.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "150,000.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6aMZ9ujLsM0kJPJS%2BPS9vg%3D%3D"
   },
   {
     "id": "%2BfFNPOyjQABq1DdmE7eaXg%3D%3D",
@@ -1920,6 +2772,18 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=pZHzR58KOD%2FL1rX3q%2FMAPA%3D%3D"
   },
   {
+    "id": "74DYQU2%2BJHq7JOCXkOhcDg%3D%3D",
+    "expediente": "13/26-S",
+    "cif": "P3501700C",
+    "organo": "Coordinador General de Economía, Hacienda, Patrimonio y Contratación del Ayuntamiento de las Las Palmas de Gran Canaria",
+    "objeto": "Soporte y mantenimiento de la aplicación móvil LPGC TU CIUDAD",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "56,500.00",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=74DYQU2%2BJHq7JOCXkOhcDg%3D%3D"
+  },
+  {
     "id": "9nwcvKr%2Fl2Cmq21uxhbaVQ%3D%3D",
     "expediente": "2/20-S",
     "cif": "P3501700C",
@@ -1942,18 +2806,6 @@
     "importe": "207,597.48",
     "fecha": "21/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=cTG6frXbHp56nTs9LZ9RhQ%3D%3D"
-  },
-  {
-    "id": "%2BXmm4I%2FtJXtxseVhcqrkhw%3D%3D",
-    "expediente": "SUM/2026/0000095690",
-    "cif": "S3511001D",
-    "organo": "Dirección General de Formación Profesional y Enseñanzas de Régimen Especial de la Comunidad Autónoma de Canarias",
-    "objeto": "Suministro, transporte, instalación y montaje mobiliario escolar.",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "93,712.74",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BXmm4I%2FtJXtxseVhcqrkhw%3D%3D"
   },
   {
     "id": "x2JUb2K%2F3np%2FP7lJ7Fu0SA%3D%3D",
@@ -2016,18 +2868,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SjyIkSd17ZicTfjQf3USOg%3D%3D"
   },
   {
-    "id": "c4TD4w1BNr%2BHCIsjvJ3rhQ%3D%3D",
-    "expediente": "SER/2026/0000103103",
-    "cif": "S3511001D",
-    "organo": "Dirección General de Modernización y Calidad de los Servicios Públicos",
-    "objeto": "Servicio de realización de un estudio de evaluación de calidad del servicio prestado en las oficinas de atención presencial a laciudadanía",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "43,000.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=c4TD4w1BNr%2BHCIsjvJ3rhQ%3D%3D"
-  },
-  {
     "id": "Luk4JRgSlQ5VYjgxA4nMUw%3D%3D",
     "expediente": "SER/2026/0000101948",
     "cif": "S3511001D",
@@ -2050,18 +2890,6 @@
     "importe": "853,491.78",
     "fecha": "20/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=2J5Q1FMoDIDkY6rls5tG9A%3D%3D"
-  },
-  {
-    "id": "ALj8Ig314EEaF6cS8TCh%2FA%3D%3D",
-    "expediente": "OBR/2026/0000071040",
-    "cif": "S3511001D",
-    "organo": "Dirección General de Patrimonio y Contratación",
-    "objeto": "Realización de las obras necesarias para llevar a cabo la sustitución de la maquinaria de producción de frío y realizar las obras necesarias para su conexión a la instalación interior existente en el Edificio de Servicios Múltiples II de Las Palmas de Gran Canaria.",
-    "tipo": "Obras",
-    "estado": "Publicada",
-    "importe": "1,604,561.58",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ALj8Ig314EEaF6cS8TCh%2FA%3D%3D"
   },
   {
     "id": "SXVUypbFNcacCF8sV%2BqtYA%3D%3D",
@@ -2110,30 +2938,6 @@
     "importe": "325,308.00",
     "fecha": "09/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=HBiB9dsQXR0aF6cS8TCh%2FA%3D%3D"
-  },
-  {
-    "id": "BqMX419DUMnmnwcj%2BxbdTg%3D%3D",
-    "expediente": "SER/2026/0000088615",
-    "cif": "Q8555011I",
-    "organo": "Dirección General de Recursos Económicos del Servicio Canario de la Salud",
-    "objeto": "Para la contratación de dichas obras que cubran la necesidad planteada, es necesaria la redacción de un proyecto que sirva de basepara la licitación.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "89,928.58",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=BqMX419DUMnmnwcj%2BxbdTg%3D%3D"
-  },
-  {
-    "id": "Q6X6CvdfwaWIzo3LHNPGcQ%3D%3D",
-    "expediente": "SUM/2026/0000006055",
-    "cif": "Q8555011I",
-    "organo": "Dirección General de Recursos Económicos del Servicio Canario de la Salud",
-    "objeto": "23/S/26/SU/DG/A/R21 - Suministro con instalación y puesta en funcionamiento, así como el mantenimiento durante el periodo de garantía de 106 ecógrafos  con destino a distintos Centros de Atención Especializada del Servicio Canario de la Salud (SCS). Expediente que se cofinanciará por la Unión Europea en el marco del Programa Canarias FEDER 2021-2027.",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "3,270,170.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Q6X6CvdfwaWIzo3LHNPGcQ%3D%3D"
   },
   {
     "id": "2GZYm6DWJZuGCFcHcNGIlQ%3D%3D",
@@ -2196,6 +3000,138 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=49hQwWgVI%2FHE6P%2FuLemXRw%3D%3D"
   },
   {
+    "id": "qDMZfKxORhecCF8sV%2BqtYA%3D%3D",
+    "expediente": "26 010 OB JD ASS UB11",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Arreglo emplazamiento Radio Femes",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "51,408.00",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=qDMZfKxORhecCF8sV%2BqtYA%3D%3D"
+  },
+  {
+    "id": "njnI%2Buorjm3mnwcj%2BxbdTg%3D%3D",
+    "expediente": "26 014 SR RR NE OB11",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Servicio de mantenimiento correctivo, adaptativo y electrónico del sistema de información PLYCA para la licitación pública electrónica en el ámbito de la Dirección General de Transformación Digital de los Servicios Públicos.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "110,356.00",
+    "fecha": "13/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=njnI%2Buorjm3mnwcj%2BxbdTg%3D%3D"
+  },
+  {
+    "id": "g1wHBjT0KwCS81gZFETWmA%3D%3D",
+    "expediente": "BSDA H.1.S1 Licencias Microsoft",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Licencias Microsoft",
+    "tipo": "Suministros",
+    "estado": "Parcialmente Adjudicada",
+    "importe": "2,259,810.00",
+    "fecha": "02/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=g1wHBjT0KwCS81gZFETWmA%3D%3D"
+  },
+  {
+    "id": "LZ7FhCOWkLF70UvEyYJSGw%3D%3D",
+    "expediente": "26 009 SR JD AS OB31",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Mantenimiento de la Plataforma de Frontales de correo electrónico",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "89,250.00",
+    "fecha": "19/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=LZ7FhCOWkLF70UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "GIBW%2B4d21rB9PLkba5eRog%3D%3D",
+    "expediente": "25 047 OB JD ASS UC11",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Adecuación de la infraestructura del emplazamiento Femés de la red de transporte de radio interinsular de la Dirección General de Transformación Digital de los Servicios Públicos.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "51,408.00",
+    "fecha": "11/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=GIBW%2B4d21rB9PLkba5eRog%3D%3D"
+  },
+  {
+    "id": "hyfXdpzx2%2FdQFSeKCRun4Q%3D%3D",
+    "expediente": "25 045 SR JD NE AB11",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Renovar el mantenimiento de las licencias del gestor de bases de datos Oracle 2026",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "352,962.23",
+    "fecha": "15/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hyfXdpzx2%2FdQFSeKCRun4Q%3D%3D"
+  },
+  {
+    "id": "wRi64Ewv2mfN3k3tjedSGw%3D%3D",
+    "expediente": "25 017 SR RR NE OB21",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Servicio de accesibilidad versión audio de páginas Web “Readspeaker” de la Administración Pública de la Comunidad Autónoma de Canarias.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "16,900.00",
+    "fecha": "10/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wRi64Ewv2mfN3k3tjedSGw%3D%3D"
+  },
+  {
+    "id": "0TT1V%2FZv0nsmMOlAXxDEjw%3D%3D",
+    "expediente": "25 010 SM JD SDA 3",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Establecimiento de un sistema dinámico de adquisición de herramientas software y hardware para uso de la Dirección General de Transformación Digital de los Servicios Públicos del Gobierno de Canarias,",
+    "tipo": "Suministros",
+    "estado": "Evaluación Previa",
+    "importe": "5,350,370.00",
+    "fecha": "18/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=0TT1V%2FZv0nsmMOlAXxDEjw%3D%3D"
+  },
+  {
+    "id": "SybcmWQKKk9%2FP7lJ7Fu0SA%3D%3D",
+    "expediente": "25 031 SM JD EM",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Suministro de equipo de climatización para las distintas localizaciones de la Dirección  General de Transformación Digital de los Servicios Públicos, tramitado por procedimiento de emergencia.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "384,200.00",
+    "fecha": "17/10/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SybcmWQKKk9%2FP7lJ7Fu0SA%3D%3D"
+  },
+  {
+    "id": "6lJ%2FdsTxLHGOUi78BmzhOQ%3D%3D",
+    "expediente": "25 042 SM JD EM",
+    "cif": "S3511001D",
+    "organo": "Dirección General de Transformación Digital de los Servicios Públicos",
+    "objeto": "Suministros de equipos de conmutación de fibras sobre IP para acceso remoto a las cabinas de almacenamiento san corporativa del Gobierno de Canarias, tramitado por procedimiento de emergencia.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "125,000.00",
+    "fecha": "13/10/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6lJ%2FdsTxLHGOUi78BmzhOQ%3D%3D"
+  },
+  {
+    "id": "JXBTcCa%2B1NR9Zh%2FyRJgM8w%3D%3D",
+    "expediente": "OBR/2026/0000106913",
+    "cif": "S3511001D",
+    "organo": "Dirección General del Medio Natural de Canarias",
+    "objeto": "14-2026 - Adecuación de itinerario accesible para personas con movilidad reducida a la sala de proyección del Centro de Visitantesdel Parque Nacional de la Caldera de Taburiente.",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "71,213.55",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=JXBTcCa%2B1NR9Zh%2FyRJgM8w%3D%3D"
+  },
+  {
     "id": "F5Tw3vAySZdxseVhcqrkhw%3D%3D",
     "expediente": "SER/2026/0000070443",
     "cif": "S3511001D",
@@ -2244,18 +3180,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=kFCntVV6z79Vq4S9zvaQpQ%3D%3D"
   },
   {
-    "id": "l8QHW4avkIWFlFRHfEzEaw%3D%3D",
-    "expediente": "SUM/2026/0000072598",
-    "cif": "Q8555011I",
-    "organo": "Dirección Gerencia Hospital Universitario de Gran Canaria Doctor Negrín",
-    "objeto": "Suministro de dos hornos para los centros dependientes de la Dirección Gerencia del Hospital Universitario de Gran Canaria Dr.Negrín.",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "47,000.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=l8QHW4avkIWFlFRHfEzEaw%3D%3D"
-  },
-  {
     "id": "wgnyXlGqSX2FlFRHfEzEaw%3D%3D",
     "expediente": "SUM/2026/0000096494",
     "cif": "Q8555011I",
@@ -2278,18 +3202,6 @@
     "importe": "68,000.00",
     "fecha": "01/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hPVgPRCaBh94zIRvjBVCSw%3D%3D"
-  },
-  {
-    "id": "dzc6Qa%2FfbNN%2BF6L2uCfUWg%3D%3D",
-    "expediente": "SUM/2026/0000095658",
-    "cif": "Q8555011I",
-    "organo": "Dirección Gerencia del Complejo Hospitalario Universitario Insular Materno Infantil",
-    "objeto": "Láser combo SLT/YAG para el Servicio de Oftalmología",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "77,000.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=dzc6Qa%2FfbNN%2BF6L2uCfUWg%3D%3D"
   },
   {
     "id": "k%2BBsH3Kwh%2BfECtSnloz%2BZQ%3D%3D",
@@ -2412,6 +3324,18 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=RVGcKlf0lW9Vq4S9zvaQpQ%3D%3D"
   },
   {
+    "id": "%2BnHqwT7R7pJ6nTs9LZ9RhQ%3D%3D",
+    "expediente": "PA21900269999SVD",
+    "cif": "Q3500326H",
+    "organo": "Dirección de la Agencia Canaria de Protección del Medio Natural",
+    "objeto": "Contratación de un servicio para la gestión de vuelos y documentación de la operadora de la Unidad de Drones de la Agencia Canaria de Protección del Medio Natural",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "15,000.00",
+    "fecha": "11/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BnHqwT7R7pJ6nTs9LZ9RhQ%3D%3D"
+  },
+  {
     "id": "pkmp1j2iuxDN3k3tjedSGw%3D%3D",
     "expediente": "SER/2026/0000006624",
     "cif": "Q3500461C",
@@ -2422,42 +3346,6 @@
     "importe": "49,250.72",
     "fecha": "02/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=pkmp1j2iuxDN3k3tjedSGw%3D%3D"
-  },
-  {
-    "id": "e%2BL2XYtRSGoIYE3ZiZ%2BxmQ%3D%3D",
-    "expediente": "2026/00046051C",
-    "cif": "P8800001C",
-    "organo": "Dirección del Consorcio de Tributos de Tenerife",
-    "objeto": "Contratación de la Ampliación Garantía del entorno de virtualización de servidores",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "14,858.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=e%2BL2XYtRSGoIYE3ZiZ%2BxmQ%3D%3D"
-  },
-  {
-    "id": "1%2FT92bl4PX16nTs9LZ9RhQ%3D%3D",
-    "expediente": "2026/00045385K",
-    "cif": "P8800001C",
-    "organo": "Dirección del Consorcio de Tributos de Tenerife",
-    "objeto": "Contratación del servicio de Depósito, custodia, digitalización y destrucción segura de documentación administrativa en formato papel del Consorcio de Tributos de Tenerife",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "60,562.40",
-    "fecha": "28/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1%2FT92bl4PX16nTs9LZ9RhQ%3D%3D"
-  },
-  {
-    "id": "1apuO0Y9wNjs%2BnLj3vAg5A%3D%3D",
-    "expediente": "66/2026",
-    "cif": "Q3500482I",
-    "organo": "Dirección del Organismo Autónomo Insular de Gestión Tributaria del Cabildo de Lanzarote",
-    "objeto": "Servicios postales de recogida, admisión, clasificación, tratamiento, curso, transporte, distribución y entrega a domicilio de los destinatarios, de las cartas ordinarias emitidas por el por el OAIGT.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "97,320.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1apuO0Y9wNjs%2BnLj3vAg5A%3D%3D"
   },
   {
     "id": "yFbDaFMzajZSYrkJkLlFdw%3D%3D",
@@ -2518,18 +3406,6 @@
     "importe": "230,000.00",
     "fecha": "30/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=zxgvOOqAQzbi0Kd8%2Brcp6w%3D%3D"
-  },
-  {
-    "id": "Lw6hL1t%2F5i%2Fi0Kd8%2Brcp6w%3D%3D",
-    "expediente": "841/2026",
-    "cif": "Q3500356E",
-    "organo": "Entidad Pública Empresarial Local Centros de Arte, Cultura y Turismo de Lanzarote",
-    "objeto": "Servicio de consultoría especializada para la definición y acompañamiento del modelo de las unidades de negocio de las tiendas de los Centros de Arte, Cultura y Turismo de Lanzarote.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "141,485.07",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Lw6hL1t%2F5i%2Fi0Kd8%2Brcp6w%3D%3D"
   },
   {
     "id": "aqPkf0wgOGaGCFcHcNGIlQ%3D%3D",
@@ -2676,40 +3552,136 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ftufRppU7Cr10HRJw8TEnQ%3D%3D"
   },
   {
-    "id": "lKB4MIxjUZ3E6P%2FuLemXRw%3D%3D",
-    "expediente": "1679/2026",
-    "cif": "A38543252",
-    "organo": "Gerencia del Auditorio de Tenerife SAU",
-    "objeto": "Lic 16/1679/2026 -Servicios de mantenimiento integral a todo riesgo (todo incluido) preventivo y correctivo de plataformas elevadoras y ascensores hidráulicos para Auditorio de Tenerife,",
+    "id": "6inj86r%2BL%2FFxseVhcqrkhw%3D%3D",
+    "expediente": "SERV06/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Servicio de auditoría externa de las cuentas anuales del Centro Atlántico de Arte Moderno, S.A.",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "24,500.00",
-    "fecha": "01/07/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lKB4MIxjUZ3E6P%2FuLemXRw%3D%3D"
+    "importe": "26,439.00",
+    "fecha": "20/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=6inj86r%2BL%2FFxseVhcqrkhw%3D%3D"
   },
   {
-    "id": "3v8%2BGYnrGlM7u6%2B%2FR7DUoA%3D%3D",
-    "expediente": "523/2026",
-    "cif": "A38543252",
-    "organo": "Gerencia del Auditorio de Tenerife SAU",
-    "objeto": "LIC 5/523/2026 - Servicios de gestión del sistema de venta de abonos, localidades, visitas y prestaciones complementarias para Auditorio de Tenerife",
-    "tipo": "Servicios",
+    "id": "xH3zQtc2rKAaF6cS8TCh%2FA%3D%3D",
+    "expediente": "SUMT03/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Suministro de cinco (5) licencias de ChatGPT Business o de una solución equivalente",
+    "tipo": "Suministros",
     "estado": "Publicada",
-    "importe": "27,000.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3v8%2BGYnrGlM7u6%2B%2FR7DUoA%3D%3D"
+    "importe": "3,000.00",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xH3zQtc2rKAaF6cS8TCh%2FA%3D%3D"
   },
   {
-    "id": "M05V05EmXRSOUi78BmzhOQ%3D%3D",
-    "expediente": "134/2026-SER",
+    "id": "inizSXqOx%2F2dkQsA7ROvsg%3D%3D",
+    "expediente": "SERV04/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Servicio de mantenimiento integral de las instalaciones, infraestructuras técnicas y edificios gestionados por el Centro Atlántico de Arte Moderno, S.A.",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "63,000.00",
+    "fecha": "22/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=inizSXqOx%2F2dkQsA7ROvsg%3D%3D"
+  },
+  {
+    "id": "JY6lz%2Fx2Ve84NavIWzMcHA%3D%3D",
+    "expediente": "SERV03/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Servicio de prevención ajeno de riesgos laborales y vigilancia de la salud para el Centro Atlántico de Arte Moderno, S.A.",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "5,500.00",
+    "fecha": "08/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=JY6lz%2Fx2Ve84NavIWzMcHA%3D%3D"
+  },
+  {
+    "id": "kqfMPX%2BjXfX%2B3JAijKO%2Bkg%3D%3D",
+    "expediente": "2026/BAS/000598",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de determinados contratos de seguros por la Central de Contratación de la FEMP. Seguro de responsabilidad de los órganos de administración y dirección, así como del personal de las empresas públicas (lote 7).",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "7,632.15",
+    "fecha": "24/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=kqfMPX%2BjXfX%2B3JAijKO%2Bkg%3D%3D"
+  },
+  {
+    "id": "mvcinm3zy4XECtSnloz%2BZQ%3D%3D",
+    "expediente": "2026/BAS/000599.",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de determinados contratos de seguros por la Central de Contratación de la FEMP. Seguro de daños materiales (lote 2).",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "2,414.22",
+    "fecha": "24/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mvcinm3zy4XECtSnloz%2BZQ%3D%3D"
+  },
+  {
+    "id": "hrrO9qidSZUeC9GJQOEBkQ%3D%3D",
+    "expediente": "NEG02/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Servicio de mantenimiento, soporte técnico especializado y actualización del sistema de gestión museográfica MuseumPlus RIA.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "25,500.00",
+    "fecha": "06/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hrrO9qidSZUeC9GJQOEBkQ%3D%3D"
+  },
+  {
+    "id": "cATry2fKqiJxseVhcqrkhw%3D%3D",
+    "expediente": "SERV05/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Servicio de transporte  de las obras de arte integrantes de la exposición “Juan José Gil. Pintura Pintura\" en el CAAM.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "18,000.00",
+    "fecha": "13/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=cATry2fKqiJxseVhcqrkhw%3D%3D"
+  },
+  {
+    "id": "lBeYNOOwifx70UvEyYJSGw%3D%3D",
+    "expediente": "SUMT02/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Suministro, transporte, descarga, montaje, instalación, integración, configuración y puesta en marcha de equipamiento audiovisual profesional destinado al Centro Atlántico de Arte Moderno.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "37,009.13",
+    "fecha": "28/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lBeYNOOwifx70UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "Y68s4UclLhOkU02jNGj1Fw%3D%3D",
+    "expediente": "SUMT01/2026",
+    "cif": "A35204460",
+    "organo": "Gerencia del Centro Atlántico de Arte Moderno SAU",
+    "objeto": "Suministro, transporte, montaje, instalación, integración, configuración y puesta en marcha de equipamiento audiovisual destinado al Museo de Bellas Artes de Gran Canaria (MUBEA).",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "142,445.08",
+    "fecha": "28/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Y68s4UclLhOkU02jNGj1Fw%3D%3D"
+  },
+  {
+    "id": "pQwnuS%2F5otDpxJFXpLZ%2B2A%3D%3D",
+    "expediente": "83/2026",
     "cif": "Q8850004F",
     "organo": "Gerencia del Consejo Insular de Aguas de La Gomera",
-    "objeto": "Contratación de los Servicios de Mantenimiento Integral de los vehículos dependientes del Consejo Insular de Aguas de la isla de La Gomera.",
+    "objeto": "Servicios de colaboración y asistencia técnica y jurídica en materia de contratación pública.",
     "tipo": "Servicios",
     "estado": "Publicada",
     "importe": "14,000.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=M05V05EmXRSOUi78BmzhOQ%3D%3D"
+    "fecha": "10/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=pQwnuS%2F5otDpxJFXpLZ%2B2A%3D%3D"
   },
   {
     "id": "s2HghoXElJZWhbmkna2nXQ%3D%3D",
@@ -2722,6 +3694,114 @@
     "importe": "82,000.00",
     "fecha": "30/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=s2HghoXElJZWhbmkna2nXQ%3D%3D"
+  },
+  {
+    "id": "b40AI2byOrzkY6rls5tG9A%3D%3D",
+    "expediente": "2025/001014",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Suministro e instalación de los componentes necesarios para la reparación de la superestructura de cuatro (4) autoescaleras del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "58,361.39",
+    "fecha": "29/08/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=b40AI2byOrzkY6rls5tG9A%3D%3D"
+  },
+  {
+    "id": "iy1JpWXxDlckJPJS%2BPS9vg%3D%3D",
+    "expediente": "2025/000060",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Suministro de gas propano y butano para los centros del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife.",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "53,040.00",
+    "fecha": "21/05/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=iy1JpWXxDlckJPJS%2BPS9vg%3D%3D"
+  },
+  {
+    "id": "L55Z%2FLOAUKx%2BF6L2uCfUWg%3D%3D",
+    "expediente": "2023/002234",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Mantenimiento integral del sistema de filtración de la descalcificadora ubicada en el Parque de Bomberos de San Miguel de Abona del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "19,316.50",
+    "fecha": "22/04/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=L55Z%2FLOAUKx%2BF6L2uCfUWg%3D%3D"
+  },
+  {
+    "id": "WlFPWOsAhia2gkLQ8TeYKA%3D%3D",
+    "expediente": "2023/001630",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Servicio de conservación, limpieza y mantenimiento de las zonas ajardinadas en los Parques de Bomberos del Consorcio y de la parcela anexa al Parque de Bomberos de La Orotava del Consorcio.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "39,360.00",
+    "fecha": "01/03/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=WlFPWOsAhia2gkLQ8TeYKA%3D%3D"
+  },
+  {
+    "id": "9N3sQ58%2Fu0ezz8fXU2i3eQ%3D%3D",
+    "expediente": "2023/002207",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Servicio de mantenimiento preventivo de dos ascensores ubicados en el Parque de Bomberos de Santa Cruz de Tenerife del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "15,000.00",
+    "fecha": "27/02/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9N3sQ58%2Fu0ezz8fXU2i3eQ%3D%3D"
+  },
+  {
+    "id": "QLuPzFDtXEeFQ%2FlhRK79lA%3D%3D",
+    "expediente": "2023/002252",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Suministro de espumógenos y retardantes para la extinción de incendios para el Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "49,960.00",
+    "fecha": "14/02/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QLuPzFDtXEeFQ%2FlhRK79lA%3D%3D"
+  },
+  {
+    "id": "YZTh5tKcHFOHCIsjvJ3rhQ%3D%3D",
+    "expediente": "2023/002112",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Servicio de desratización, desinsectación y desinfección en los centros de esta Administración, así como la limpieza, desinfección y analíticas de las instalaciones en las que existe riesgo de Legionella en los Parques de Bomberos del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "23,080.00",
+    "fecha": "14/02/2024",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YZTh5tKcHFOHCIsjvJ3rhQ%3D%3D"
+  },
+  {
+    "id": "4laBnHCoMHjCfVQHDepjGQ%3D%3D",
+    "expediente": "2022/000927",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Servicio de prevención ajeno del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "48,320.00",
+    "fecha": "05/10/2023",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4laBnHCoMHjCfVQHDepjGQ%3D%3D"
+  },
+  {
+    "id": "Ks%2BMruJFHKUBPRBxZ4nJ%2Fg%3D%3D",
+    "expediente": "2022/002402",
+    "cif": "P3800022J",
+    "organo": "Gerencia del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "objeto": "Suministro de material y herramientas pequeñas para la extinción de incendios, así como el Suministro e instalación del mobiliario general, menaje y accesorios y electrodomésticos para el equipamiento del Parque de Bomberos de Güímar del Consorcio de Prevención, Extinción de Incendios y Salvamento de la Isla de Tenerife",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "59,195.00",
+    "fecha": "30/12/2022",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Ks%2BMruJFHKUBPRBxZ4nJ%2Fg%3D%3D"
   },
   {
     "id": "Mjsl2ke6CfpvYnTkQN0%2FZA%3D%3D",
@@ -2868,18 +3948,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wEf%2B0%2F6FN0OLAncw3qdZkA%3D%3D"
   },
   {
-    "id": "n4%2BfmmjyjVdJ8Trn0ZPzLw%3D%3D",
-    "expediente": "354/2025",
-    "cif": "A38615191",
-    "organo": "Gestión Insular para el Deporte, la Cultura y el Ocio, SA (IDECO S.A.)",
-    "objeto": "El objeto de esta licitacion es la contratacion del servicio de mantenimiento especializado de las instalaciones electricas de Baja Tension, Centros de Transformación y Grupos electrogenos para los centros gestionados por IDECO S.A",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "99,759.50",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=n4%2BfmmjyjVdJ8Trn0ZPzLw%3D%3D"
-  },
-  {
     "id": "dg8%2FwVUz6L%2BP66GS%2BONYvQ%3D%3D",
     "expediente": "A-41/2025",
     "cif": "Q3800504G",
@@ -3012,16 +4080,112 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mnGXlqUNCcc7%2B9FIQYNjeQ%3D%3D"
   },
   {
-    "id": "KJoUs1%2F026v%2B3JAijKO%2Bkg%3D%3D",
-    "expediente": "2390/2026",
-    "cif": "P3800500E",
-    "organo": "Junta de Gobierno Local del Ayuntamiento de Villa de Arico",
-    "objeto": "Seguridad privada para eventos",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "39,600.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=KJoUs1%2F026v%2B3JAijKO%2Bkg%3D%3D"
+    "id": "Afjx00XxZiuAAM7L03kM8A%3D%3D",
+    "expediente": "113/2026",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Suministro e instalación \"Ejecución y mejora de parques infantiles en el municipio de Valleseco\"",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "52,089.67",
+    "fecha": "03/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Afjx00XxZiuAAM7L03kM8A%3D%3D"
+  },
+  {
+    "id": "%2BH%2BAyA%2FVz0TkY6rls5tG9A%3D%3D",
+    "expediente": "1556/2024",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Compra terrenos con destino a la ejecución de la intervención \"Estrategia de recuperación de 120 hectáreas de laurisilva y pino canario en Valleseco (Gran Canaria)\"",
+    "tipo": "Privado",
+    "estado": "Evaluación",
+    "importe": "200,000.00",
+    "fecha": "30/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BH%2BAyA%2FVz0TkY6rls5tG9A%3D%3D"
+  },
+  {
+    "id": "F6HENyXX82TXOjazN1Dw9Q%3D%3D",
+    "expediente": "112/2026",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Repavimentación y mejora de la señalización vial en la calle Bolivia T.M. de Valleseco",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "161,005.69",
+    "fecha": "26/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=F6HENyXX82TXOjazN1Dw9Q%3D%3D"
+  },
+  {
+    "id": "nJFOt6khUbY%2B1TMyIiZmzw%3D%3D",
+    "expediente": "2028/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Adquisición mediante el procedimiento negociado sin publicidad o de adquisición directa de la escultura \"La Transmisión Oral\" de Félix José Reyes Arencibia",
+    "tipo": "Privado",
+    "estado": "Evaluación",
+    "importe": "60,000.00",
+    "fecha": "06/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nJFOt6khUbY%2B1TMyIiZmzw%3D%3D"
+  },
+  {
+    "id": "kkmebtYBodJ70UvEyYJSGw%3D%3D",
+    "expediente": "2043/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Obras \"Cubiertas de las canchas anexas al pabellón deportivo municipal\"",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "643,411.80",
+    "fecha": "23/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=kkmebtYBodJ70UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "%2FFcGHGhWTWGGCFcHcNGIlQ%3D%3D",
+    "expediente": "2346/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Suministro de equipamiento e instalación  \"Interiorismo para la rehabilitación del edificio denominado Casino Nuevo de Valleseco para destinarlo a Edificio de Formación y Coworking\"",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "202,880.97",
+    "fecha": "20/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FFcGHGhWTWGGCFcHcNGIlQ%3D%3D"
+  },
+  {
+    "id": "nd3YzeFW%2Bd03vLk2DU2Ddg%3D%3D",
+    "expediente": "2027/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Edificio destinado a la implantación y fomento del Cohousing y Viviendas colaborativas en el término municipal de Valleseco",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "1,752,233.10",
+    "fecha": "22/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nd3YzeFW%2Bd03vLk2DU2Ddg%3D%3D"
+  },
+  {
+    "id": "yayiGESU%2BU3pxJFXpLZ%2B2A%3D%3D",
+    "expediente": "173/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Contrato mixto de obras y suministro \"Edificio de Formación y Trabajo colaborativo de Valleseco\"",
+    "tipo": "Obras",
+    "estado": "Parcialmente Resuelta",
+    "importe": "994,647.56",
+    "fecha": "19/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=yayiGESU%2BU3pxJFXpLZ%2B2A%3D%3D"
+  },
+  {
+    "id": "SgrhtUnkMdTI8aL3PRS10Q%3D%3D",
+    "expediente": "1364/2025",
+    "cif": "P3503200B",
+    "organo": "Junta de Gobierno Local del Ayuntamiento de Valleseco",
+    "objeto": "Acondicionamiento y mejora del campo de fútbol de Valleseco.",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "331,016.55",
+    "fecha": "19/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SgrhtUnkMdTI8aL3PRS10Q%3D%3D"
   },
   {
     "id": "ia3OUJjagyoQK2TEfXGy%2BA%3D%3D",
@@ -3072,6 +4236,114 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=WTDqzEMPIT2zz8fXU2i3eQ%3D%3D"
   },
   {
+    "id": "G3hXFuvYNFEeIBJRHQiPkQ%3D%3D",
+    "expediente": "51/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de seguros (Lote 3): Seguro de responsabilidad civil patrimonial para entidades Locales y entes dependientes con rango inferior o igual a 20.000 habitantes, a través de la Central de Contratación de la FEMP",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "19,366.20",
+    "fecha": "27/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=G3hXFuvYNFEeIBJRHQiPkQ%3D%3D"
+  },
+  {
+    "id": "KtbMm82fxNy9Hd5zqvq9cg%3D%3D",
+    "expediente": "3723/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contratación de las obras de acondicionamiento, adaptación e instalaciones del Centro de Ocio y Artesanal del Pino.",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "503,584.93",
+    "fecha": "21/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=KtbMm82fxNy9Hd5zqvq9cg%3D%3D"
+  },
+  {
+    "id": "H4spHAIOEK7i0Kd8%2Brcp6w%3D%3D",
+    "expediente": "1976/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contratación del suministro de material de ferretería",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "95,764.19",
+    "fecha": "13/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=H4spHAIOEK7i0Kd8%2Brcp6w%3D%3D"
+  },
+  {
+    "id": "gjA5mHYC9B07%2B9FIQYNjeQ%3D%3D",
+    "expediente": "3151/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el Acuerdo Marco para el suministro de electricidad en alta y baja tensión a través de la FEMP",
+    "tipo": "Suministros",
+    "estado": "Resuelta",
+    "importe": "180,000.00",
+    "fecha": "04/11/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=gjA5mHYC9B07%2B9FIQYNjeQ%3D%3D"
+  },
+  {
+    "id": "3XIucVXR%2Bbg2wEhQbcAqug%3D%3D",
+    "expediente": "50/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de seguros (Lote 1): Seguro de daños materiales para Entidades Locales y entes dependientes con rango inferior o igual a 10.000 habitantes",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "28,000.00",
+    "fecha": "25/07/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3XIucVXR%2Bbg2wEhQbcAqug%3D%3D"
+  },
+  {
+    "id": "m%2FACl%2Fh6D0YS7pcxhTeWOg%3D%3D",
+    "expediente": "1069/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de seguros (Lote 9): Seguro colectivo de vida para entidades locales y entes dependientes a través de la Central de Contratación de la FEMP",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "28,000.00",
+    "fecha": "13/10/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=m%2FACl%2Fh6D0YS7pcxhTeWOg%3D%3D"
+  },
+  {
+    "id": "ESFAUpyox%2FvIGlsa0Wad%2Bw%3D%3D",
+    "expediente": "723/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el “Acuerdo Marco para la contratación de los servicios postales del Cabildo Insular de Tenerife y Entidades adheridas” (E20240209768)",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "15,831.45",
+    "fecha": "12/05/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ESFAUpyox%2FvIGlsa0Wad%2Bw%3D%3D"
+  },
+  {
+    "id": "q7n4JGb32RMadbH3CysQuQ%3D%3D",
+    "expediente": "53/2025",
+    "cif": "P3800400H",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arafo",
+    "objeto": "Contrato basado en el Acuerdo Marco para la contratación de seguros (Lote 10): Seguro colectivo de accidentes para las entidades locales, organismos autónomos y entes dependientes, a través de la Central de Contratación de la FEMP",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "30,000.00",
+    "fecha": "09/06/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=q7n4JGb32RMadbH3CysQuQ%3D%3D"
+  },
+  {
+    "id": "okClI551CTTL1rX3q%2FMAPA%3D%3D",
+    "expediente": "ABR-SUMIN-2026000008",
+    "cif": "P3800600C",
+    "organo": "Junta de Gobierno del Ayuntamiento de Arona",
+    "objeto": "Contratación del suministro, instalación, traslado, señalización, mantenimiento y verificación de extintores portátiles para el Ayuntamiento de Arona",
+    "tipo": "Suministros",
+    "estado": "Publicada",
+    "importe": "101,353.40",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=okClI551CTTL1rX3q%2FMAPA%3D%3D"
+  },
+  {
     "id": "SsuxBQXPq19LAIVZdUs8KA%3D%3D",
     "expediente": "ABR-SERV-2026000003",
     "cif": "P3800600C",
@@ -3084,64 +4356,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SsuxBQXPq19LAIVZdUs8KA%3D%3D"
   },
   {
-    "id": "pMRpPDkN9SgXhk1FZxEyvw%3D%3D",
-    "expediente": "390/2026",
-    "cif": "P3802100B",
-    "organo": "Junta de Gobierno del Ayuntamiento de Hermigua",
-    "objeto": "El objetivo del proyecto es definir, dimensionar y justificar las obras necesarias para la ejecución de las canchas de Padel con una estructura que sera de facil desmontaje, dotando así al municipio de un nuevo espacio deportivo.",
+    "id": "K6r4Fj%2Bc5vPkY6rls5tG9A%3D%3D",
+    "expediente": "10069/2026",
+    "cif": "P3803200I",
+    "organo": "Junta de Gobierno del Ayuntamiento de El Rosario",
+    "objeto": "Reasfaltado en Camino El Convento, Llano del Moro",
     "tipo": "Obras",
     "estado": "Publicada",
-    "importe": "208,163.19",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=pMRpPDkN9SgXhk1FZxEyvw%3D%3D"
-  },
-  {
-    "id": "LMbZ%2BlF1aD6OUi78BmzhOQ%3D%3D",
-    "expediente": "6058/2026",
-    "cif": "P3501500G",
-    "organo": "Junta de Gobierno del Ayuntamiento de La Oliva",
-    "objeto": "Redacción de proyecto de ejecución, a partir de proyecto básico, y ejecución de las obras de las actuaciones programadas en el ERRP “Corralejo Fase III” en el T.M. de La Oliva del PRTR – Financiado por la UE – NextGenerationEU",
-    "tipo": "Obras",
-    "estado": "Publicada",
-    "importe": "2,342,954.46",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=LMbZ%2BlF1aD6OUi78BmzhOQ%3D%3D"
-  },
-  {
-    "id": "4Hk9WfByKLWdkQsA7ROvsg%3D%3D",
-    "expediente": "7540/2026",
-    "cif": "P3501500G",
-    "organo": "Junta de Gobierno del Ayuntamiento de La Oliva",
-    "objeto": "Instalación solar térmica y reforma de la instalación de la piscina Municipal de Corralejo con cargo Estrategia de Desarrollo Integrado Local (EDIL) Proyecto Motor PM2: Modernización y eficiencia urbana en La Oliva",
-    "tipo": "Obras",
-    "estado": "Publicada",
-    "importe": "1,280,313.94",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4Hk9WfByKLWdkQsA7ROvsg%3D%3D"
-  },
-  {
-    "id": "v3%2BnXRA7eVT%2B3JAijKO%2Bkg%3D%3D",
-    "expediente": "12401/2026",
-    "cif": "P3501500G",
-    "organo": "Junta de Gobierno del Ayuntamiento de La Oliva",
-    "objeto": "El objeto del contrato es la prestación del servicio de mantenimiento de centros educativos, guardería infantil y el Centro de Día Tamonante, en el término municipal de La Oliva.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "3,137,553.27",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=v3%2BnXRA7eVT%2B3JAijKO%2Bkg%3D%3D"
-  },
-  {
-    "id": "uqc%2BfSUD1nA3vLk2DU2Ddg%3D%3D",
-    "expediente": "9089/2026",
-    "cif": "P3501500G",
-    "organo": "Junta de Gobierno del Ayuntamiento de La Oliva",
-    "objeto": "Servicios postales y notificaciones administrativas del Ayuntamiento de La Oliva",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "112,149.53",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=uqc%2BfSUD1nA3vLk2DU2Ddg%3D%3D"
+    "importe": "296,890.11",
+    "fecha": "20/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=K6r4Fj%2Bc5vPkY6rls5tG9A%3D%3D"
   },
   {
     "id": "pB7FfnPqiqrmnwcj%2BxbdTg%3D%3D",
@@ -3252,16 +4476,112 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=06dIXXX%2BM4zmnwcj%2BxbdTg%3D%3D"
   },
   {
-    "id": "gfQA84bSCx4eIBJRHQiPkQ%3D%3D",
-    "expediente": "SERV/CNT/2026000020",
-    "cif": "P3800002B",
-    "organo": "Miembros Corporativos titulares de Áreas del Cabildo Insular de la Palma",
-    "objeto": "Servicio de mantenimiento preventivo y correctivo de marquesinas y paradas preferentes afectas al transporte regular en la isla de La Palma",
+    "id": "lprpaixPhhK2gkLQ8TeYKA%3D%3D",
+    "expediente": "427/2026",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Concesión del uso privativo del inmueble municipal Centro de Artesanía “El Limonero”, para su explotación económica mediante actividades artesanales, culturales y turísticas, conforme al PPTP.",
+    "tipo": "Patrimonial",
+    "estado": "Evaluación",
+    "importe": "140,400.00",
+    "fecha": "16/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=lprpaixPhhK2gkLQ8TeYKA%3D%3D"
+  },
+  {
+    "id": "MOtyFdedziXi0Kd8%2Brcp6w%3D%3D",
+    "expediente": "1894/2026",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Suministro de combustible para maquinaria y para la flota de vehículos del Ayuntamiento de la Villa y Puerto de Garachico.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "75,000.00",
+    "fecha": "05/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=MOtyFdedziXi0Kd8%2Brcp6w%3D%3D"
+  },
+  {
+    "id": "W0eXQQG6e%2F2zz8fXU2i3eQ%3D%3D",
+    "expediente": "1547/2026",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Suministro e instalación de barandillas en la Avenida Adolfo Suárez del municipio de Garachico.",
+    "tipo": "Suministros",
+    "estado": "Evaluación",
+    "importe": "55,930.00",
+    "fecha": "05/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=W0eXQQG6e%2F2zz8fXU2i3eQ%3D%3D"
+  },
+  {
+    "id": "jKvv37BE%2Bft70UvEyYJSGw%3D%3D",
+    "expediente": "4112/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Ejecución de las obras contenidas en el Proyecto denominado “Reparación y mejora del depósito de agua potable de Las Cruces\".",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "593,597.69",
+    "fecha": "03/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jKvv37BE%2Bft70UvEyYJSGw%3D%3D"
+  },
+  {
+    "id": "hTP5TTICKJo%2B1TMyIiZmzw%3D%3D",
+    "expediente": "4234/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Ejecución de las obras contenidas en el Proyecto denominado “Alumbrado ornamental Garachico\".",
+    "tipo": "Obras",
+    "estado": "Evaluación",
+    "importe": "142,383.83",
+    "fecha": "25/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hTP5TTICKJo%2B1TMyIiZmzw%3D%3D"
+  },
+  {
+    "id": "NHuTvX9Yftp%2FR5QFTlaM4A%3D%3D",
+    "expediente": "4262/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Ejecución de las obras contenidas en el Proyecto denominado “Reforma y Adecuación de Aseos Públicos en Garachico\".",
+    "tipo": "Obras",
+    "estado": "Resuelta",
+    "importe": "75,619.68",
+    "fecha": "05/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=NHuTvX9Yftp%2FR5QFTlaM4A%3D%3D"
+  },
+  {
+    "id": "EI2oS%2FnhcMeFlFRHfEzEaw%3D%3D",
+    "expediente": "174/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Contratación de servicio de seguros de Responsabilidad Civil/Patrimonial, de Todo Riesgo Daños Materiales, de Flota de Vehículos y Vida del Ayuntamiento de Garachico.",
     "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "275,204.80",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=gfQA84bSCx4eIBJRHQiPkQ%3D%3D"
+    "estado": "Evaluación",
+    "importe": "73,000.00",
+    "fecha": "05/03/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=EI2oS%2FnhcMeFlFRHfEzEaw%3D%3D"
+  },
+  {
+    "id": "Xbzltz2X4VCcCF8sV%2BqtYA%3D%3D",
+    "expediente": "2844/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Servicio de redacción de Proyecto Básico y de Ejecución de Obra para las obras de intervención en las naves de la FAST y sus\nexteriores para la construcción de un espacio de uso público, cultural y social, para el Ayuntamiento de Garachico.",
+    "tipo": "Servicios",
+    "estado": "Anulada",
+    "importe": "275,500.00",
+    "fecha": "",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Xbzltz2X4VCcCF8sV%2BqtYA%3D%3D"
+  },
+  {
+    "id": "tV2Gesbf2WskJPJS%2BPS9vg%3D%3D",
+    "expediente": "4811/2025",
+    "cif": "P3801500D",
+    "organo": "Junta de Gobierno local del Ayuntamiento de la Villa y Puerto de Garachico",
+    "objeto": "Contratación, organización, producción y ejecución integral de las actuaciones artísticas para el XI CONCIERTO DE AÑO NUEVO 2026 en el municipio de Garachico, incluyendo todas las prestaciones necesarias para garantizar el desarrollo correcto, seguro y continuo del evento.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "22,900.00",
+    "fecha": "09/01/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=tV2Gesbf2WskJPJS%2BPS9vg%3D%3D"
   },
   {
     "id": "rg9kOcArgnoIYE3ZiZ%2BxmQ%3D%3D",
@@ -3324,6 +4644,18 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=T11CtkTZ72AQK2TEfXGy%2BA%3D%3D"
   },
   {
+    "id": "s9IoONtGc2GTylGzYmBF9Q%3D%3D",
+    "expediente": "1119/2026",
+    "cif": "P3801300I",
+    "organo": "Pleno del Ayuntamiento de la Frontera",
+    "objeto": "Modernización y embellecimiento de La Rambla La Corredera",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "1,489,339.80",
+    "fecha": "20/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=s9IoONtGc2GTylGzYmBF9Q%3D%3D"
+  },
+  {
     "id": "5O94ViM%2Fb9p6nTs9LZ9RhQ%3D%3D",
     "expediente": "23/2026",
     "cif": "A38799383",
@@ -3334,6 +4666,30 @@
     "importe": "7,568,400.00",
     "fecha": "21/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=5O94ViM%2Fb9p6nTs9LZ9RhQ%3D%3D"
+  },
+  {
+    "id": "bdFrU9fSO58adbH3CysQuQ%3D%3D",
+    "expediente": "1614/2026",
+    "cif": "P8500008A",
+    "organo": "Presidencia de Turismo de Gran Canaria",
+    "objeto": "Secretaría técnica para la organización, gestión, ejecución y comunicación del XI Foro Nacional de Comunicación Turística 2026, “OVB Gran Canaria & Hosteltur Summit 2026”.",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "92,000.00",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=bdFrU9fSO58adbH3CysQuQ%3D%3D"
+  },
+  {
+    "id": "31EXLEaoWs54zIRvjBVCSw%3D%3D",
+    "expediente": "OBAF5/06/2026",
+    "cif": "G35486059",
+    "organo": "Presidencia de la Fundación Canaria Orquesta Filarmónica de Gran Canaria",
+    "objeto": "Contrato de obra de reforma denominado «Fase 5. Reforma, adecuación y equipamiento de zonas comunes y archivo» de la Sede de la Fundación Canaria Orquesta Filarmónica de Gran Canaria.",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "160,904.16",
+    "fecha": "16/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=31EXLEaoWs54zIRvjBVCSw%3D%3D"
   },
   {
     "id": "w1ljr36zM73%2B3JAijKO%2Bkg%3D%3D",
@@ -3360,16 +4716,28 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=UNxInWHQNfuKeVWTb9Scog%3D%3D"
   },
   {
-    "id": "0g2%2FLT1p3%2Bv10HRJw8TEnQ%3D%3D",
-    "expediente": "03/2026",
-    "cif": "G38592879",
-    "organo": "Presidencia de la Fundación Canaria Tenerife Rural",
-    "objeto": "Servicio de asesoría laboral para la Fundación Canaria Tenerife Rural",
+    "id": "l5t1aEbHkkkmMOlAXxDEjw%3D%3D",
+    "expediente": "PA/03/2026.bis",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "Servicio consistente en la contratación del servicio integral de organización de la Feria de Empleo 2026.",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "9,000.00",
+    "importe": "108,535.65",
     "fecha": "07/07/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=0g2%2FLT1p3%2Bv10HRJw8TEnQ%3D%3D"
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=l5t1aEbHkkkmMOlAXxDEjw%3D%3D"
+  },
+  {
+    "id": "d2XNzj7rVgTIGlsa0Wad%2Bw%3D%3D",
+    "expediente": "PAS/05/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "Servicio de organización y dinamización del encuentro para el personal del proyecto Barrios por el Empleo: Juntos más Fuertes 2026.",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "9,345.79",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=d2XNzj7rVgTIGlsa0Wad%2Bw%3D%3D"
   },
   {
     "id": "jP7bxkhgqOVt5r0ngvMetA%3D%3D",
@@ -3390,10 +4758,82 @@
     "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
     "objeto": "Servicio consistente en la contratación del servicio integral de organización de la Feria de Empleo 2026",
     "tipo": "Servicios",
-    "estado": "Publicada",
+    "estado": "Evaluación",
     "importe": "108,535.65",
     "fecha": "26/06/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=v3%2FfbGPudVK5HQrHoP3G5A%3D%3D"
+  },
+  {
+    "id": "fZlRpzO5c%2F83vLk2DU2Ddg%3D%3D",
+    "expediente": "PASA/04/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "El objeto del contrato es la adjudicación del SERVICIO DE LIMPIEZA PARA FIFEDE, calificado como CONTRATO RESERVADO de conformidad con la Disposición Adicional Cuarta de la LCSP.",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "8,510.92",
+    "fecha": "19/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=fZlRpzO5c%2F83vLk2DU2Ddg%3D%3D"
+  },
+  {
+    "id": "aQQG%2FJulcOnjHF5qKI4aaw%3D%3D",
+    "expediente": "NSP/01/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "Arrendamiento del Centro Internacional de Ferias y Congresos (recinto ferial) para la celebración de la Feria de Empleo 2026.",
+    "tipo": "Patrimonial",
+    "estado": "Evaluación",
+    "importe": "28,963.00",
+    "fecha": "19/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=aQQG%2FJulcOnjHF5qKI4aaw%3D%3D"
+  },
+  {
+    "id": "yDUDIn2s5vd%2BF6L2uCfUWg%3D%3D",
+    "expediente": "PAS/03/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "Servicio de apoyo a la coordinación de prácticas formativas no laborales en el extranjero \"Becas América 2026\".",
+    "tipo": "Servicios",
+    "estado": "Evaluación",
+    "importe": "41,742.37",
+    "fecha": "18/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=yDUDIn2s5vd%2BF6L2uCfUWg%3D%3D"
+  },
+  {
+    "id": "4tm9%2Bjvix9IIYE3ZiZ%2BxmQ%3D%3D",
+    "expediente": "PAS/02/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "El objeto del contrato es la adjudicación del Servicio de desarrollo e implantación de una plataforma de gamificación y simulación virtual para la mejora de competencias blandas y empleabilidad en el marco del proyecto “Barrios por el Empleo: Juntos más Fuertes 2026”",
+    "tipo": "Servicios",
+    "estado": "Adjudicada",
+    "importe": "28,037.38",
+    "fecha": "23/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4tm9%2Bjvix9IIYE3ZiZ%2BxmQ%3D%3D"
+  },
+  {
+    "id": "hB1F86mYDHh%2FP7lJ7Fu0SA%3D%3D",
+    "expediente": "PASA/03/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "El objeto del contrato es la adjudicación del servicio de limpieza para FIFEDE, calificado como contrato reservado de conformidad con la disposición adicional cuarta de la LCSP.",
+    "tipo": "Servicios",
+    "estado": "Anulada",
+    "importe": "15,177.14",
+    "fecha": "",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=hB1F86mYDHh%2FP7lJ7Fu0SA%3D%3D"
+  },
+  {
+    "id": "a1FO816zPxacCF8sV%2BqtYA%3D%3D",
+    "expediente": "PAS/04/2026",
+    "cif": "G38484879",
+    "organo": "Presidencia de la Fundación Insular para la Formación, el Empleo y el Desarrollo Empresarial (FIFEDE)",
+    "objeto": "Servicio para la organización integral del encuentro semestral dirigido al personal del proyecto Barrios por el Empleo: Juntos más Fuertes 2026.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "9,345.79",
+    "fecha": "02/06/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=a1FO816zPxacCF8sV%2BqtYA%3D%3D"
   },
   {
     "id": "dkenJUabuiW5HQrHoP3G5A%3D%3D",
@@ -3432,28 +4872,16 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Gf1ZfYwItf0%2B1TMyIiZmzw%3D%3D"
   },
   {
-    "id": "n%2Bk0NXXbS%2Fc%2B1TMyIiZmzw%3D%3D",
-    "expediente": "1384/2026",
+    "id": "iKrcWvruoVu7JOCXkOhcDg%3D%3D",
+    "expediente": "1450/2026",
     "cif": "P3800004H",
     "organo": "Presidencia del Cabildo Insular de La Gomera",
-    "objeto": "Proyecto Básico y de Ejecución para Instalación de Marquesina Fotovoltaica Junto con Puntos de Recarga en La Residencia de Mayores de Alajeró, T.M. Alajeró",
-    "tipo": "Obras",
-    "estado": "Publicada",
-    "importe": "146,803.46",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=n%2Bk0NXXbS%2Fc%2B1TMyIiZmzw%3D%3D"
-  },
-  {
-    "id": "m0l9pfkG%2BnsZDGvgaZEVxQ%3D%3D",
-    "expediente": "5951/2026",
-    "cif": "P3500002E",
-    "organo": "Presidencia del Cabildo Insular de Lanzarote",
-    "objeto": "Servicio de auditoría que dará soporte al órgano Interventor en las actuaciones de control interno del Excmo. Cabildo Insular de Lanzarote, OOAA y entes dependientes (3 lotes)",
+    "objeto": "Servicio de Vigilancia en Edificio Sede del Excmo. Cabildo Insular de la Gomera",
     "tipo": "Servicios",
     "estado": "Publicada",
-    "importe": "201,200.00",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=m0l9pfkG%2BnsZDGvgaZEVxQ%3D%3D"
+    "importe": "85,670.98",
+    "fecha": "14/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=iKrcWvruoVu7JOCXkOhcDg%3D%3D"
   },
   {
     "id": "j6KBhYN%2Blet%2FR5QFTlaM4A%3D%3D",
@@ -3478,18 +4906,6 @@
     "importe": "91,650.00",
     "fecha": "10/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7nLnhcXInuuKeVWTb9Scog%3D%3D"
-  },
-  {
-    "id": "zh3Muofs4Bjs%2BnLj3vAg5A%3D%3D",
-    "expediente": "CEGC_2025-24",
-    "cif": "P3500018A",
-    "organo": "Presidencia del Consorcio de Emergencias de Gran Canaria",
-    "objeto": "Suministro de equipamiento para las intervenciones de rescate en medio acuático para el Consorcio de Emergencias de Gran Canaria.",
-    "tipo": "Suministros",
-    "estado": "Publicada",
-    "importe": "81,000.00",
-    "fecha": "26/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=zh3Muofs4Bjs%2BnLj3vAg5A%3D%3D"
   },
   {
     "id": "6EY%2BlN89fl7gL1BHd3qjQA%3D%3D",
@@ -3528,18 +4944,6 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=TXMRsLVgmFqzz8fXU2i3eQ%3D%3D"
   },
   {
-    "id": "DwfxZ6l%2FnYiKeVWTb9Scog%3D%3D",
-    "expediente": "97/2026",
-    "cif": "Q8555012G",
-    "organo": "Presidencia del Instituto Insular de Deportes de Gran Canaria",
-    "objeto": "Ampliación y reforma integral del Estadio de Gran Canaria, situado en la ciudad de las Palmas de Gran Canaria",
-    "tipo": "Obras",
-    "estado": "Publicada",
-    "importe": "163,284,306.30",
-    "fecha": "07/07/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=DwfxZ6l%2FnYiKeVWTb9Scog%3D%3D"
-  },
-  {
     "id": "GRt68Mx1uoW8ebB%2FXTwy0A%3D%3D",
     "expediente": "5445/2022",
     "cif": "P8500012C",
@@ -3574,18 +4978,6 @@
     "importe": "294,298.31",
     "fecha": "13/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=wu%2FSYBhBpkf%2Fa9DgO%2BoYKQ%3D%3D"
-  },
-  {
-    "id": "SfUqUCcB6ojmnwcj%2BxbdTg%3D%3D",
-    "expediente": "SERV/SGT/12-2026",
-    "cif": "S3511001D",
-    "organo": "Secretaría General Técnica de la Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria del Gobierno de Canarias",
-    "objeto": "Realización del servicio consistente en la Limpieza de las instalaciones de la Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria, del Servicio de Sanidad Animal y laboratorio y del laboratorio de calidad agroalimentaria sitos en San Cristóbal de La Laguna.",
-    "tipo": "Servicios",
-    "estado": "Publicada",
-    "importe": "63,698.64",
-    "fecha": "29/06/2026",
-    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SfUqUCcB6ojmnwcj%2BxbdTg%3D%3D"
   },
   {
     "id": "%2BrLYtupFCK%2BIzo3LHNPGcQ%3D%3D",
@@ -3816,6 +5208,102 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Qlqb%2F0cr7XbE6P%2FuLemXRw%3D%3D"
   },
   {
+    "id": "xt9CS421iyJVq4S9zvaQpQ%3D%3D",
+    "expediente": "2/03/2026",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Patrocinio publicitario del Festival Musical Chacho Chacho Live - Canarias tiene el flow",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "300,000.00",
+    "fecha": "15/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xt9CS421iyJVq4S9zvaQpQ%3D%3D"
+  },
+  {
+    "id": "CXIhSQTomRi5HQrHoP3G5A%3D%3D",
+    "expediente": "1/03/2026",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Patrocinio Publicitario Festival Sonora 2026",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "150,000.00",
+    "fecha": "28/04/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=CXIhSQTomRi5HQrHoP3G5A%3D%3D"
+  },
+  {
+    "id": "AQetLuAaXjT5Rey58Yagpg%3D%3D",
+    "expediente": "26 005 SM CA AB OA11",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Hardware necesario para la implantación de la infraestructura de datos.",
+    "tipo": "Suministros",
+    "estado": "Anuncio Previo",
+    "importe": "931,796.77",
+    "fecha": "24/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=AQetLuAaXjT5Rey58Yagpg%3D%3D"
+  },
+  {
+    "id": "3pyK6XXzvNQ7%2B9FIQYNjeQ%3D%3D",
+    "expediente": "26 008 SR JD AB UA31",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Soporte y mantenimiento de licencias del servicio de correo electrónico corporativo.",
+    "tipo": "Servicios",
+    "estado": "Resuelta",
+    "importe": "810,000.00",
+    "fecha": "26/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3pyK6XXzvNQ7%2B9FIQYNjeQ%3D%3D"
+  },
+  {
+    "id": "Im3jYBXbzDcmMOlAXxDEjw%3D%3D",
+    "expediente": "26 004 SR CA AB OC31",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Implantación de la infraestructura de datos y de los servicios necesarios para el modelo de gobierno y gestión de datos para fines administrativos en la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos (DataGobCan).",
+    "tipo": "Servicios",
+    "estado": "Anuncio Previo",
+    "importe": "6,188,416.67",
+    "fecha": "24/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Im3jYBXbzDcmMOlAXxDEjw%3D%3D"
+  },
+  {
+    "id": "Pjsr3cZ2rzWS81gZFETWmA%3D%3D",
+    "expediente": "11/03/2025",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Patrocinio publicitario “Gastro Navidad Market Fest\"",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "45,000.00",
+    "fecha": "12/12/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Pjsr3cZ2rzWS81gZFETWmA%3D%3D"
+  },
+  {
+    "id": "Ibgxf9ov%2BIOOUi78BmzhOQ%3D%3D",
+    "expediente": "10/03/2025",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Servicio de asesoramiento y asistencia técnica en materia económica, fiscal, social y política",
+    "tipo": "Servicios",
+    "estado": "Adjudicada",
+    "importe": "107,980.00",
+    "fecha": "21/05/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Ibgxf9ov%2BIOOUi78BmzhOQ%3D%3D"
+  },
+  {
+    "id": "DKKhRQEJdUZLAIVZdUs8KA%3D%3D",
+    "expediente": "9/03/2025",
+    "cif": "S3511001D",
+    "organo": "Viceconsejería de la Presidencia del Gobierno de Canarias",
+    "objeto": "Patrocinio publicitario evento deportivo XI Media Maratón Internacional de Santa Cruz de Tenerife 2025",
+    "tipo": "Privado",
+    "estado": "Resuelta",
+    "importe": "30,000.00",
+    "fecha": "14/11/2025",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=DKKhRQEJdUZLAIVZdUs8KA%3D%3D"
+  },
+  {
     "id": "g9ZC3LJoZmHE6P%2FuLemXRw%3D%3D",
     "expediente": "SER/2026/0000095707",
     "cif": "S3511001D",
@@ -3852,6 +5340,18 @@
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=c46RpisVE6SAAM7L03kM8A%3D%3D"
   },
   {
+    "id": "kwYEPjaolWGP%2Bo96UAV7cQ%3D%3D",
+    "expediente": "128/2026",
+    "cif": "B38316121",
+    "organo": "Vicepresidencia del Consejo de Administración de la Sociedad Insular para la Promoción de las Personas con Discapacidad S.L.",
+    "objeto": "Servicios para la puesta en marcha del proyecto de inclusión y discapacidad en las artes escénicas del Taller Giro-Arte.",
+    "tipo": "Servicios",
+    "estado": "Publicada",
+    "importe": "45,514.02",
+    "fecha": "13/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=kwYEPjaolWGP%2Bo96UAV7cQ%3D%3D"
+  },
+  {
     "id": "MuVqHanfKYLmnwcj%2BxbdTg%3D%3D",
     "expediente": "377/2026",
     "cif": "B38316121",
@@ -3874,6 +5374,18 @@
     "importe": "64,432.01",
     "fecha": "16/07/2026",
     "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=tkZ8kLcfzT22gkLQ8TeYKA%3D%3D"
+  },
+  {
+    "id": "4YVHT%2BLc780IYE3ZiZ%2BxmQ%3D%3D",
+    "expediente": "26OP012",
+    "cif": "P3501700C",
+    "organo": "Área de Gobierno de Planificación, Desarrollo Urbano y Vivienda, Vías y Obras, Alumbrado y Movilidad del Ayuntamiento de Las Palmas de Gran Canaria",
+    "objeto": "Transformación Urbana ctra. del Norte",
+    "tipo": "Obras",
+    "estado": "Publicada",
+    "importe": "3,970,448.39",
+    "fecha": "27/07/2026",
+    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4YVHT%2BLc780IYE3ZiZ%2BxmQ%3D%3D"
   },
   {
     "id": "cV5ZBs4cNuMaF6cS8TCh%2FA%3D%3D",

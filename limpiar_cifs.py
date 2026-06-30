@@ -1,15 +1,15 @@
 """
 Utilidad para limpiar el archivo de CIFs permitidos
 
-Lee el archivo original de CIFs copiados del Excel, elimina duplicados y líneas vacías,
-y genera un archivo limpio ordenado alfabéticamente.
+Lee el archivo original de CIFs copiados del Excel 'cifs_lista_original.txt', elimina duplicados y líneas vacías,
+y genera un archivo limpio ordenado alfabéticamente --> cifs_permitidos.txt.
 
 Archivos usados:
     - datos/cifs_lista_original.txt: archivo original con los CIFs en bruto
     - datos/cifs_permitidos.txt: archivo limpio generado por este script
 """
 
-from src.config import RUTA_ORIGINAL, RUTA_LIMPIO
+from src.config import RUTA_ORIGINAL, RUTA_CIFS
 
 def limpiar_archivo_cifs():
     """
@@ -32,11 +32,11 @@ def limpiar_archivo_cifs():
                 continue
             cifs_unicos.add(cif)
 
-    with open(RUTA_LIMPIO, "w", encoding="utf-8") as f:
+    with open(RUTA_CIFS, "w", encoding="utf-8") as f:
         for cif in sorted(cifs_unicos):
             f.write(cif + "\n")
 
-    print(f"Archivo limpio creado: {RUTA_LIMPIO}")
+    print(f"Archivo limpio creado: {RUTA_CIFS}")
     print(f"   Total CIFs únicos: {len(cifs_unicos)}")
     print(f"   Líneas vacías eliminadas: {lineas_vacias}")
 

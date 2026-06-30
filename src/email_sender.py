@@ -20,16 +20,18 @@ import sys
 import smtplib
 from pathlib import Path
 from email.message import EmailMessage
-
 from dotenv import load_dotenv
+from src.config import (
+    BASE_DIR,
+    EMAIL_REMITENTE,
+    EMAIL_DESTINO,
+    ASUNTO,
+    SMTP_SERVER,
+    SMTP_PORT,
+)
 
-# Buscar .env desde la raíz del proyecto.
-# Así funciona tanto si ejecutamos main.py como si ejecutamos email_sender.py directamente.
-sys.path.append(str(Path(__file__).parent.parent))
-env_path = Path(__file__).parent.parent / ".env"
+env_path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=env_path)
-
-from src.config import EMAIL_REMITENTE, EMAIL_DESTINO, ASUNTO, SMTP_SERVER, SMTP_PORT
 
 
 def acortar_texto(texto, limite=120):

@@ -18,8 +18,7 @@ Archivos usados:
 """
 
 import json
-import os
-
+from pathlib import Path
 from src.config import (
     ARCHIVO_HOY,
     ARCHIVO_VISTOS,
@@ -33,12 +32,13 @@ def cargar_json(ruta):
     Carga un archivo JSON y devuelve su contenido.
     Si el archivo no existe o está corrupto, devuelve una lista vacía.
     """
-    if not os.path.exists(ruta):
+
+    ruta = Path(ruta)
+    if not ruta.exists():
         return []
 
     try:
-        with open(ruta, "r", encoding="utf-8") as archivo:
-            return json.load(archivo)
+        return json.loads(ruta.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, ValueError):
         print(f"Aviso: '{ruta}' no es un JSON válido. Se usará una lista vacía.")
         return []
@@ -49,10 +49,16 @@ def guardar_json(datos, ruta):
     Guarda datos en formato JSON.
     Crea la carpeta si no existe.
     """
-    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    ruta = Path(ruta)
 
-    with open(ruta, "w", encoding="utf-8") as archivo:
-        json.dump(datos, archivo, ensure_ascii=False, indent=2)
+    # crea carpeta si no existe
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+
+    # escribe JSON
+    ruta.write_text(
+        json.dumps(datos, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
 
 def obtener_ids_vistos(expedientes_vistos):

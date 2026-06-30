@@ -1,5 +1,13 @@
 # CONFIGURACIÓN - CONSTANTES
+
+# -----------------------------------------
+# CONFIGURACIÓN DE RUTAS
+# -----------------------------------------
+
 from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "datos"
+
 
 # -----------------------------------------
 # CONFIGURACIÓN DEL SCRAPING
@@ -20,6 +28,7 @@ ID_BOTON_LICITACIONES = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:perfilComp:linkPr
 ESTADO_PUBLICADA = "PUB"
 ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18"
 
+
 # -----------------------------------------
 # CONFIGURACIÓN DEL JSON_parser
 # -----------------------------------------
@@ -27,11 +36,11 @@ ID_BOTON_BUSCAR_LIC = "viewns_Z7_AVEQAI930GRPE02BR764FO30G0_:form1:busReasProc18
 # Clave que identifica de forma única a cada licitación (para evitar duplicados)
 CLAVE_ID = "id"
 
-ARCHIVO_HOY = "datos/licitaciones_hoy.json"
+ARCHIVO_HOY = DATA_DIR / "licitaciones_hoy.json"
 
-ARCHIVO_VISTOS = "datos/expedientes_vistos.json"
+ARCHIVO_VISTOS = DATA_DIR / "expedientes_vistos.json"
 
-ARCHIVO_NUEVAS = "datos/licitaciones_nuevas.json"
+ARCHIVO_NUEVAS = DATA_DIR / "licitaciones_nuevas.json"
 
 
 # -----------------------------------------
@@ -47,7 +56,8 @@ EMAIL_DESTINO = [
     "marketing@islassem.com",
 ]
 
-ASUNTO = "Prueba Licitaciones Canarias"
+ASUNTO = "Licitaciones Canarias"
+
 
 # -----------------------------------------
 # CONFIGURACIÓN DE SMTP
@@ -57,14 +67,13 @@ SMTP_SERVER = "smtp.gmail.com"
 
 SMTP_PORT = 465
 
+
 # -----------------------------------------
 # CONFIGURACIÓN DE CIFS
 # -----------------------------------------
 
-RUTA_ORIGINAL = Path("datos/cifs_lista_original.txt")
-RUTA_LIMPIO = Path("datos/cifs_permitidos.txt")
-# Ruta al archivo con la lista de CIFs permitidos
-RUTA_CIFS = Path(__file__).parent.parent / "datos" / "cifs_permitidos.txt"
+RUTA_ORIGINAL = DATA_DIR / "cifs_lista_original.txt"
+RUTA_CIFS = DATA_DIR / "cifs_permitidos.txt"
 
 
 def cargar_cifs_permitidos():
@@ -76,7 +85,11 @@ def cargar_cifs_permitidos():
     """
     try:
         with open(RUTA_CIFS, "r", encoding="utf-8") as f:
-            cifs = {linea.strip() for linea in f if linea.strip()}
+            cifs = {
+                linea.strip()
+                for linea in RUTA_CIFS.read_text(encoding="utf-8").splitlines()
+                if linea.strip()
+            }
 
         print(f"Cargados {len(cifs)} CIFs desde '{RUTA_CIFS.name}'")
         return cifs
@@ -89,10 +102,3 @@ def cargar_cifs_permitidos():
         print(f"Error al leer el archivo de CIFs: {e}")
         return None
 
-
-# Prueba rápida de carga de CIFs
-if __name__ == "__main__":
-    cifs = cargar_cifs_permitidos()
-    if cifs:
-        print(f"Total: {len(cifs)} CIFs")
-        print(f"Primeros 5: {list(cifs)[:5]}")

@@ -12,10 +12,6 @@ Automatización (pendiente de activar):
     El programa puede programarse para ejecutarse diariamente a las 09:00 (a escoger)
     dependiendo del servidor que tiene el programa - ver cual y como al final de las pruebas
 """
-
-# import schedule
-# import time
-
 from src.scraping import main_scraping
 from src.json_parser import procesar_licitaciones
 from src.email_sender import enviar_email_json
@@ -53,13 +49,3 @@ def ejecutar_programa():
 
 if __name__ == "__main__":
     ejecutar_programa()
-
-    # schedule.every().day.at("09:00").do(ejecutar_programa)
-
-    # print(
-    #     "Automatización activada. El programa revisará licitaciones cada día a las 09:00."
-    # )
-
-    # while True:
-    #     schedule.run_pending()
-    #     time.sleep(60)

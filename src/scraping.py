@@ -16,6 +16,7 @@ Flujo principal:
 # -----------------------------------------------
 
 from selenium import webdriver
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -23,10 +24,10 @@ from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 import time
 import random
 import json
-import os
 
 from src.config import (
     URL_BASE,
@@ -42,6 +43,7 @@ from src.config import (
     ID_FILTRO_ESTADO,
     ESTADO_PUBLICADA,
     ID_BOTON_BUSCAR_LIC,
+    ARCHIVO_HOY,
 )
 
 # -----------------------------------------------
@@ -50,36 +52,49 @@ from src.config import (
 
 def iniciar_navegador():
     print('Inciando navegador...')
-    options = webdriver.ChromeOptions()
-    # Evita que Chrome se cierre solo
-    options.add_experimental_option("detach", True)
 
-    # Español
-    options.add_argument("--lang=es")
-    options.add_experimental_option("prefs", {"intl.accept_languages": "es,es-ES"})
+    try:
+        options = webdriver.ChromeOptions()
 
-    # Hace que parezca un navegador normal
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option("useAutomationExtension", False)
+        # Español
+        options.add_experimental_option("prefs", {"intl.accept_languages": "es,es-ES"})
 
-    # Evita errores de memoria después de muchas páginas
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--headless=new") # Para azure
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
+        # Específico para Azure - Headless
+        options.add_argument("--headless=new")  
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
 
-    # Elimina la detección de webdriver
-    driver.execute_script(
-        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
-    )
-    return driver
+        # Rendimiento
+        options.add_argument("--window-size=1920,1080")
+
+        # User agent (importante)
+        options.add_argument(
+            "user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36"
+        )
+
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+
+        # Espera máximo 30 segundos a que una página/JS cargue completamente
+        driver.set_page_load_timeout(30)
+        driver.set_script_timeout(30)
+
+        print("Navegador iniciado correctamente")
+        return driver
+
+    except WebDriverException as e:
+        print("ERROR al iniciar Chrome:", e)
+        raise
 
 
 def cerrar_navegador(driver):
-    driver.quit()
-    print("Navegador cerrado")
+    try:
+        if driver:
+            driver.quit()
+            print("Navegador cerrado")
+    except Exception as e:
+        print("ERROR al cerrar navegador:", e)
 
 
 # -----------------------------------------------
@@ -96,30 +111,29 @@ def filtrar_pagina_canarias(driver):
     Returns:
         bool: True si el filtro se aplicó correctamente, False en caso de error
     """
-
-    print(f"Aplicando filtro de Canarias...")
-    driver.get(URL_BASE)
-    esperar = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
-
     try:
+        print("Aplicando filtro de Canarias en URL:", URL_BASE)
+        driver.get(URL_BASE)
+        esperar = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
+
         menu = esperar.until(
             EC.presence_of_element_located((By.ID, ID_SELECT_COMUNIDAD))
         )
-        
+
         lista = Select(menu)
         lista.select_by_visible_text(COMUNIDAD)
         buscar_boton = esperar.until(
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR))
         )
         buscar_boton.click()
-        
+
         esperar.until(
             EC.presence_of_element_located((By.CLASS_NAME, CLASE_RESULTADOS))
         )
         return True
 
     except Exception as e:
-        print(f"Error al filtrar por Canarias: {type(e).__name__}")
+        print(f"Error al filtrar por Canarias: {type(e).__name__}: {e}")
         return False
 
 
@@ -146,7 +160,6 @@ def obtener_organos_canarias_con_licitaciones(driver):
             esperar_largo.until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "p.badge.info.m-0"))
             )
-            time.sleep(1)
         except:
             print(f"Sin badges en página {pagina}, continuando...")
 
@@ -154,23 +167,27 @@ def obtener_organos_canarias_con_licitaciones(driver):
         filas = soup.find_all("tr")
 
         for fila in filas:
-            badge = fila.find("p", class_="badge info m-0")
-            if not badge or int(badge.text.strip()) == 0:
+            try: 
+                badge = fila.find("p", class_="badge info m-0")
+                if not badge or int(badge.text.strip()) == 0:
+                    continue
+
+                nombre = fila.find("span", id=lambda i: i and "textoEnlace" in str(i))
+                enlace = fila.find("a", href=lambda h: h and "perfilContratante" in str(h))
+
+                if nombre and enlace:
+                    num_licitaciones = int(badge.text.strip())
+                    organos.append(
+                        {
+                            "nombre": nombre.text.strip(),
+                            "url": enlace["href"],
+                            "licitaciones_abiertas": num_licitaciones,
+                        }
+                    )
+                    print(f"{nombre.text.strip()} - {num_licitaciones} licitaciones")
+            except Exception as e:
+                print(f"Error leyendo fila: {type(e).__name__}: {e}")
                 continue
-
-            nombre = fila.find("span", id=lambda i: i and "textoEnlace" in str(i))
-            enlace = fila.find("a", href=lambda h: h and "perfilContratante" in str(h))
-
-            if nombre and enlace:
-                num_licitaciones = int(badge.text.strip())
-                organos.append(
-                    {
-                        "nombre": nombre.text.strip(),
-                        "url": enlace["href"],
-                        "licitaciones_abiertas": num_licitaciones,
-                    }
-                )
-                print(f"{nombre.text.strip()} - {num_licitaciones} licitaciones")
 
         # Pasar a la siguiente página si existe
         try:
@@ -182,8 +199,8 @@ def obtener_organos_canarias_con_licitaciones(driver):
             )
             pagina += 1
             time.sleep(random.uniform(5, 8))
-        except:
-            print(f"No hay más páginas — total páginas leídas: {pagina}")
+        except Exception as e:
+            print(f"Error al pasar de página: {type(e).__name__}: {e} — total páginas leídas: {pagina}")
             break
 
     print(f"\nTotal órganos con licitaciones abiertas: {len(organos)}")
@@ -201,20 +218,21 @@ def obtener_cif_organo(driver, url):
     Returns:
         str: CIF del órgano, o None si no se pudo leer
     """
-
-    driver.get(url)
-    time.sleep(random.uniform(4, 7))
-
     try:
+        driver.get(url)
+        
         esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+        
         cif_elemento = esperar.until(
-            EC.presence_of_element_located((By.ID, ID_CAMPO_NIF_ORGANO))
+            EC.visibility_of_element_located((By.ID, ID_CAMPO_NIF_ORGANO))
         )
-        cif = cif_elemento.text.strip()
+        
+        cif = cif_elemento.text.strip() or cif_elemento.get_attribute("value")
+        
         return cif
-
+    
     except Exception as e:
-        print(f"Error al leer CIF: {type(e).__name__}")
+        print(f"Error al leer CIF ({url}): {type(e).__name__}: {e}")
         return None
 
 
@@ -229,10 +247,9 @@ def hacer_clic_pestanya_licitaciones(driver):
         bool: True si se hizo clic correctamente, False en caso de error
     """
 
-    esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-    time.sleep(2)
-
     try:
+        esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+        
         pestanya = esperar.until(
             EC.element_to_be_clickable(
                 (By.ID, ID_BOTON_LICITACIONES)
@@ -243,7 +260,9 @@ def hacer_clic_pestanya_licitaciones(driver):
         return True
 
     except Exception as e:
-        print(f"Error al hacer clic en pestaña licitaciones: {type(e).__name__}")
+        print(
+            f"Error al hacer clic en pestaña licitaciones ({driver.current_url}): {type(e).__name__}: {e}"
+        )
         return False
 
 
@@ -258,9 +277,9 @@ def aplicar_filtro_publicada(driver):
         bool: True si hay licitaciones publicadas, False si no hay o hay error
     """
 
-    esperar = WebDriverWait(driver, TIEMPO_ESPERA)    
-
     try:
+        esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+        
         select_estado = esperar.until(
         EC.presence_of_element_located((By.ID, ID_FILTRO_ESTADO))
         )
@@ -272,13 +291,12 @@ def aplicar_filtro_publicada(driver):
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR_LIC))
         )
         boton_buscar.click()
-        time.sleep(2)
 
         esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
         return True
-    
+
     except Exception as e:
-        print(f"Sin licitaciones publicadas: {type(e).__name__}")
+        print(f"Sin licitaciones publicadas: {type(e).__name__}: {e}")
         return False
 
 
@@ -328,13 +346,15 @@ def extraer_licitacion_fila(fila, nombre_organo, cif_organo=""):
         return None
 
     # Número de expediente
-    numero_exp = expediente.find("span").text.strip() if expediente.find("span") else ""
+    span = expediente.find("span")
+    numero_exp = span.text.strip() if span and span.text else ""
 
     # URL
     enlace = expediente.find("a", href=lambda h: h and "detalle_licitacion" in str(h))
     url_licitacion = enlace["href"] if enlace else ""
-    if url_licitacion and not url_licitacion.startswith("http"):
-        url_licitacion = "https://contrataciondelestado.es" + url_licitacion
+
+    if url_licitacion:
+        url_licitacion = urljoin("https://contrataciondelestado.es", url_licitacion)
 
     # ID
     id_licitacion = url_licitacion.split("idEvl=")[-1] if url_licitacion else numero_exp
@@ -376,82 +396,133 @@ def extraer_licitacion_fila(fila, nombre_organo, cif_organo=""):
     }
 
 
+# FUNCIONES GLOBALES SEPARADAS QUE MANEJAN EL FLUJO ANTES DE SER LLAMADAS POR MAIN_SCRAPING:
+def obtener_organos(driver):
+    """
+    Función global 1 de main_scraping()
+    
+    Filtra por Canarias y obtiene todos los órganos con licitaciones abiertas
+    """
+    if not filtrar_pagina_canarias(driver):
+        print("Error filtrando Canarias")
+        return []
+
+    organos = obtener_organos_canarias_con_licitaciones(driver)
+    print(f"Órganos encontrados: {len(organos)}")
+
+    return organos
+
+
+def procesar_organos(driver, organos):
+    """
+    Función global 2 de main_scraping()
+    Por cada órgano, lee su CIF y compara con la lista permitida
+    Si el CIF está en la lista, extrae sus licitaciones publicadas
+    """
+
+    from src.config import cargar_cifs_permitidos
+
+    cifs_permitidos = set(cargar_cifs_permitidos())
+    todas_licitaciones = []
+
+    print(f"Procesando {len(organos)} órganos...")
+
+    for i, organo in enumerate(organos, 1):
+        print(f"[{i}/{len(organos)}] {organo['nombre']}")
+
+        try:
+            cif = obtener_cif_organo(driver, organo["url"])
+
+        except Exception as e:
+            print(f"Error obteniendo CIF en {organo['nombre']}: {type(e).__name__}")
+            continue
+
+        if not cif:
+            print("CIF no encontrado, saltando")
+            continue
+
+        if cif not in cifs_permitidos:
+            print(f"CIF {cif} no permitido, saltando")
+            continue
+
+        print(f"CIF válido ({cif}), extrayendo licitaciones")
+
+        if not hacer_clic_pestanya_licitaciones(driver):
+            print("No se pudo abrir pestaña licitaciones, saltando")
+            continue
+
+        try:
+            if aplicar_filtro_publicada(driver):
+                licitaciones = extraer_licitaciones_pagina(
+                    driver,
+                    organo["nombre"],
+                    cif
+                )
+                num = len(licitaciones)
+                todas_licitaciones.extend(licitaciones)
+                print(f"{num} licitaciones extraídas")
+
+        except Exception as e:
+            print(f"Error extrayendo licitaciones en órgano {organo['nombre']}: {type(e).__name__}")
+            try:
+                driver.quit()
+            except:
+                pass
+
+            driver = iniciar_navegador()
+            filtrar_pagina_canarias(driver)
+            continue
+
+        time.sleep(random.uniform(5, 10))
+
+    print(f"\nTOTAL FINAL: {len(todas_licitaciones)} licitaciones")
+    return todas_licitaciones
+
+
+def guardar_resultados_scraping(licitaciones):
+    """Guarda licitaciones en JSON"""
+
+    with open(ARCHIVO_HOY, "w", encoding="utf-8") as f:
+        json.dump(licitaciones, f, ensure_ascii=False, indent=2)
+
+    print(f"Guardado JSON con {len(licitaciones)} licitaciones")
+
+
 def main_scraping():
     """
     Flujo principal del scraping
-    
-    1. Filtra por Canarias y obtiene todos los órganos con licitaciones abiertas
-    2. Por cada órgano, lee su CIF y compara con la lista permitida
-    3. Si el CIF está en la lista, extrae sus licitaciones publicadas
-    4. Guarda progresivamente en JSON
+
+    1. Obtiene órganos con licitaciones
+    2. Procesa órganos (CIF + licitaciones)
+    3. Guarda resultados en JSON
 
     Returns:
-        list: Lista de todas las licitaciones extraídas
+        bool: True si el scraping se ejecutó correctamente, False si falló
     """
 
     print("Iniciando scraping...")
     driver = iniciar_navegador()
-    todas_licitaciones = []
 
     try:
-        from src.config import cargar_cifs_permitidos
-        cifs_permitidos = set(cargar_cifs_permitidos())
+        organos = obtener_organos(driver)
 
-        # PASO 1: Filtrar Canarias y obtener órganos con licitaciones abiertas
-        if not filtrar_pagina_canarias(driver):
-            print("Error al filtrar por Canarias. Abortando.")
-            return []
+        if not organos:
+            print("No se encontraron órganos")
+            return False
 
-        organos = obtener_organos_canarias_con_licitaciones(driver)
-        print(f"\nTotal órganos con licitaciones abiertas: {len(organos)}")
+        licitaciones = procesar_organos(driver, organos)
 
-        # PASO 2: Por cada órgano, leer CIF y comparar con lista
-        for i, organo in enumerate(organos, 1):
-            print(f"\n[{i}/{len(organos)}] {organo['nombre']}")
+        if licitaciones is None:
+            licitaciones = []
 
-            cif = obtener_cif_organo(driver, organo["url"])
-
-            if not cif:
-                print("No se pudo leer el CIF, saltando...")
-                continue
-
-            if cif not in cifs_permitidos:
-                print(f"CIF {cif} no está en la lista, saltando...")
-                continue
-
-            print(f"CIF {cif} está en la lista, extrayendo licitaciones...")
-
-            # PASO 3: Extraer licitaciones + guardar en JSON
-            if not hacer_clic_pestanya_licitaciones(driver):
-                print(f"No se encontró pestaña licitaciones")
-                continue
-
-            try:
-                if aplicar_filtro_publicada(driver):
-                    licitaciones = extraer_licitaciones_pagina(driver, organo["nombre"], cif)
-                    todas_licitaciones.extend(licitaciones)
-                    os.makedirs("datos", exist_ok=True)
-                    with open("datos/licitaciones_hoy.json", "w", encoding="utf-8") as f:
-                        json.dump(todas_licitaciones, f, ensure_ascii=False, indent=2)
-                    print(
-                        f"Progreso guardado: {len(todas_licitaciones)} licitaciones"
-                    )
-            except Exception as e:
-                print(
-                    f"Error extrayendo licitaciones de {organo['nombre']}: {type(e).__name__}"
-                )
-                continue
-
-            time.sleep(random.uniform(5, 10))
-
-        print(
-            f"\nSCRAPPING COMPLETADO — {len(todas_licitaciones)} licitaciones extraídas"
-        )
+        guardar_resultados_scraping(licitaciones)
+        print(f"¡Scraping completado con éxito!")
         return True
-
+    
     except Exception as e:
         print(f"Error en scraping: {type(e).__name__}: {e}")
-        return []
+        return False
+
     finally:
         cerrar_navegador(driver)
 
