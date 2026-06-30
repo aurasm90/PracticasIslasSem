@@ -15,3 +15,4 @@ expedientes_vistos.json
 # JSON temporales
 datos/licitaciones_hoy.json
 datos/licitaciones_nuevas.json
+logs/licitaciones.log

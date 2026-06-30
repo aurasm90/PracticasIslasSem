@@ -194,6 +194,13 @@ def obtener_organos_canarias_con_licitaciones(driver):
 
         # Pasar a la siguiente página si existe
         try:
+            btn_siguiente = driver.find_elements(By.ID, ID_BOTON_SIGUIENTE)
+            if not btn_siguiente:
+                logger.info(
+                    f"Última página alcanzada ({pagina}). Total órganos: {len(organos)}"
+                )
+                break
+            
             esperar.until(
                 EC.element_to_be_clickable((By.ID, ID_BOTON_SIGUIENTE))
             ).click()
@@ -202,6 +209,7 @@ def obtener_organos_canarias_con_licitaciones(driver):
             )
             pagina += 1
             time.sleep(random.uniform(5, 8))
+            
         except Exception as e:
             logger.exception(
                 f"Error al pasar de página — total páginas leídas: {pagina}"
@@ -290,12 +298,38 @@ def aplicar_filtro_publicada(driver):
         )
 
         lista_estados = Select(select_estado)
-        lista_estados.select_by_value(ESTADO_PUBLICADA)      
+        lista_estados.select_by_value(ESTADO_PUBLICADA)
+
+        time.sleep(5)
+
+        select_estado = Select(driver.find_element(By.ID, ID_FILTRO_ESTADO))
+        logger.info(f"Estado seleccionado: {select_estado.first_selected_option.text}")
+
+        #  Guardamos referencia a una fila ya presente (si la hay) para
+        # detectar que la tabla se ha refrescado tras aplicar el filtro
+        filas_previas = driver.find_elements(By.CLASS_NAME, "tdExpediente")
 
         boton_buscar = esperar.until(
             EC.element_to_be_clickable((By.ID, ID_BOTON_BUSCAR_LIC))
         )
         boton_buscar.click()
+
+        if filas_previas:
+            esperar.until(EC.staleness_of(filas_previas[0]))
+
+        # Esperar a que termine la carga
+        esperar.until(
+            lambda d: d.execute_script("return document.readyState") == "complete"
+        )
+
+        time.sleep(2)
+
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+
+        for fila in soup.find_all("tr", class_=lambda c: c in ["par", "impar"]):
+            estado = fila.find("td", class_="tdEstado")
+            if estado:
+                logger.info(f"Estado encontrado: {estado.text.strip()}")
 
         esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
         return True
@@ -305,9 +339,82 @@ def aplicar_filtro_publicada(driver):
         return False
 
 
+def obtener_pagina_actual_y_total(driver):
+    """
+    Lee el número de página actual y el total de páginas del paginador de licitaciones.
+    Devuelve (pagina_actual, total_paginas) o (1, 1) si no encuentra el paginador.
+    """
+    try:
+        pagina_actual = driver.find_element(
+            By.CSS_SELECTOR, "span[id$='textNumPagasdasd']"
+        ).text.strip()
+
+        total_paginas = driver.find_element(
+            By.CSS_SELECTOR, "span[id$='textTotalPaginaasdasd']"
+        ).text.strip()
+
+        return int(pagina_actual), int(total_paginas)
+
+    except Exception:
+        return 1, 1
+
+
+def extraer_todas_licitaciones_organo(driver, nombre_organo, cif_organo=""):
+    """
+    Extrae todas las licitaciones publicadas de un órgano,
+    recorriendo todas las páginas de resultados.
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver
+        nombre_organo (str): Nombre del órgano contratante
+        cif_organo (str): CIF del órgano contratante
+
+    Returns:
+        list: Lista de todas las licitaciones extraídas
+    """
+    todas = []
+    esperar = WebDriverWait(driver, TIEMPO_ESPERA)
+
+    while True:
+        pagina_actual, total_paginas = obtener_pagina_actual_y_total(driver)
+        logger.info(f"  Página {pagina_actual}/{total_paginas} — {nombre_organo}")
+
+        todas.extend(extraer_licitaciones_pagina(driver, nombre_organo, cif_organo))
+
+        if pagina_actual >= total_paginas:
+            logger.info(f"  Última página alcanzada ({pagina_actual})")
+            break
+
+        try:
+            filas_previas = driver.find_elements(By.CLASS_NAME, "tdExpediente")
+
+            boton_siguiente = driver.find_element(
+                By.CSS_SELECTOR, "input[id$='siguienteLink']"
+            )
+            driver.execute_script("arguments[0].click();", boton_siguiente)
+
+            if filas_previas:
+                esperar.until(EC.staleness_of(filas_previas[0]))
+
+            esperar.until(
+                EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente"))
+            )
+
+            time.sleep(random.uniform(2, 4))
+
+        except Exception:
+            logger.warning(
+                f"  Error al pasar de página en {nombre_organo}, parando aquí"
+            )
+            break
+
+    logger.info(f"  Total extraídas de {nombre_organo}: {len(todas)}")
+    return todas
+
+
 def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
     """
-    Extrae todas las licitaciones de la página actual
+    Extrae todas las licitaciones publicadas de un órgano
     
     Args:
         driver (webdriver): Instancia del navegador WebDriver
@@ -375,6 +482,9 @@ def extraer_licitacion_fila(fila, nombre_organo, cif_organo=""):
     # Estado
     estado = fila.find("td", class_="tdEstado")
     estado = estado.text.strip() if estado else ""
+    if estado.lower() != "publicada":
+        logger.info(f"Descartando expediente {numero_exp}: estado = {estado}")
+        return None
 
     # Importe
     importe = fila.find("td", class_="tdImporte")
@@ -447,10 +557,12 @@ def procesar_organos(driver, organos):
 
         if not cif:
             logger.warning("CIF no encontrado, saltando")
+            time.sleep(random.uniform(1, 3))
             continue
 
         if cif not in cifs_permitidos:
             logger.warning(f"CIF {cif} no permitido, saltando")
+            time.sleep(random.uniform(1, 3))
             continue
 
         logger.info(f"CIF válido ({cif}), extrayendo licitaciones")
@@ -459,16 +571,17 @@ def procesar_organos(driver, organos):
             logger.warning("No se pudo abrir pestaña licitaciones, saltando")
             continue
 
-        try:
-            if aplicar_filtro_publicada(driver):
-                licitaciones = extraer_licitaciones_pagina(
-                    driver,
-                    organo["nombre"],
-                    cif
-                )
-                num = len(licitaciones)
-                todas_licitaciones.extend(licitaciones)
-                logger.info(f"{num} licitaciones extraídas")
+        try: 
+            if not aplicar_filtro_publicada(driver):
+                logger.warning("No se pudo aplicar el filtro Publicada")
+                continue     
+
+            licitaciones = extraer_todas_licitaciones_organo(
+                driver, organo["nombre"], cif
+            )
+            num = len(licitaciones)
+            todas_licitaciones.extend(licitaciones)
+            logger.info(f"{num} licitaciones extraídas")
 
         except Exception as e:
             logger.exception(
@@ -485,12 +598,24 @@ def procesar_organos(driver, organos):
 def guardar_resultados_scraping(licitaciones):
     """
     Función global 2 de main_scraping()
-    Guarda licitaciones en JSON"""
+    Guarda licitaciones en JSON, descartando cualquiera que no esté en estado 'Publicada'
+    """
+    licitaciones_validas = [
+        lic
+        for lic in licitaciones
+        if lic.get("estado", "").strip().lower() == "publicada"
+    ]
+
+    descartadas = len(licitaciones) - len(licitaciones_validas)
+    if descartadas:
+        logger.warning(
+            f"Descartadas {descartadas} licitaciones sin estado 'Publicada' antes de guardar"
+        )
 
     with open(ARCHIVO_HOY, "w", encoding="utf-8") as f:
-        json.dump(licitaciones, f, ensure_ascii=False, indent=2)
+        json.dump(licitaciones_validas, f, ensure_ascii=False, indent=2)
 
-    logger.info(f"Guardado JSON con {len(licitaciones)} licitaciones")
+    logger.info(f"Guardado JSON con {len(licitaciones_validas)} licitaciones")
 
 
 def main_scraping():

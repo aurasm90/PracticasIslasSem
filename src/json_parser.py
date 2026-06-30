@@ -129,6 +129,20 @@ def procesar_licitaciones():
 
     # 1. Cargar licitaciones de hoy generadas por el scraping
     licitaciones_hoy = cargar_json(ARCHIVO_HOY)
+
+    # Filtro de seguridad: solo procesar licitaciones en estado 'Publicada'
+    antes = len(licitaciones_hoy)
+    licitaciones_hoy = [
+        lic
+        for lic in licitaciones_hoy
+        if lic.get("estado", "").strip().lower() == "publicada"
+    ]
+    descartadas = antes - len(licitaciones_hoy)
+    if descartadas:
+        logger.warning(
+            f"Descartadas {descartadas} licitaciones sin estado 'Publicada' en el JSON parser"
+        )
+        
     if not licitaciones_hoy:
         logger.info("No hay licitaciones de hoy para procesar.")
         return []
