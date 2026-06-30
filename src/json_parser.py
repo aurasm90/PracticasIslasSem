@@ -19,6 +19,7 @@ Archivos usados:
 
 import json
 from pathlib import Path
+from src.logger_config import logger
 from src.config import (
     ARCHIVO_HOY,
     ARCHIVO_VISTOS,
@@ -40,7 +41,7 @@ def cargar_json(ruta):
     try:
         return json.loads(ruta.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, ValueError):
-        print(f"Aviso: '{ruta}' no es un JSON válido. Se usará una lista vacía.")
+        logger.warning(f"'{ruta}' no es un JSON válido. Se usará una lista vacía.")
         return []
 
 
@@ -129,7 +130,7 @@ def procesar_licitaciones():
     # 1. Cargar licitaciones de hoy generadas por el scraping
     licitaciones_hoy = cargar_json(ARCHIVO_HOY)
     if not licitaciones_hoy:
-        print("No hay licitaciones de hoy para procesar.")
+        logger.info("No hay licitaciones de hoy para procesar.")
         return []
 
     # 2. Cargar histórico
@@ -149,9 +150,9 @@ def procesar_licitaciones():
             licitaciones_nuevas
         )
         guardar_json(expedientes_vistos, ARCHIVO_VISTOS)
-        print(f"{len(licitaciones_nuevas)} licitaciones nuevas guardadas.")
+        logger.info(f"{len(licitaciones_nuevas)} licitaciones nuevas guardadas.")
     else:
-        print("No hay licitaciones nuevas.")
+        logger.info("No hay licitaciones nuevas.")
 
     return licitaciones_nuevas
 

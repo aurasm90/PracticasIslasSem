@@ -16,11 +16,11 @@ Configuración necesaria en config.py:
 """
 
 import os
-import sys
 import smtplib
 from pathlib import Path
 from email.message import EmailMessage
 from dotenv import load_dotenv
+from src.logger_config import logger
 from src.config import (
     BASE_DIR,
     EMAIL_REMITENTE,
@@ -181,7 +181,7 @@ def enviar_email_json(licitaciones_json):
         smtp.login(EMAIL_REMITENTE, password)
         smtp.send_message(mensaje)
 
-    print("Email enviado correctamente")
+    logger.info("Email enviado correctamente")
 
 
 if __name__ == "__main__":

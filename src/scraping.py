@@ -25,6 +25,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from src.logger_config import logger
 import time
 import random
 import json
@@ -51,7 +52,7 @@ from src.config import (
 # -----------------------------------------------
 
 def iniciar_navegador():
-    print('Inciando navegador...')
+    logger.info("Iniciando navegador...")
 
     try:
         options = webdriver.ChromeOptions()
@@ -80,11 +81,11 @@ def iniciar_navegador():
         driver.set_page_load_timeout(30)
         driver.set_script_timeout(30)
 
-        print("Navegador iniciado correctamente")
+        logger.info("Navegador iniciado correctamente")
         return driver
 
     except WebDriverException as e:
-        print("ERROR al iniciar Chrome:", e)
+        logger.exception("ERROR al iniciar Chrome")
         raise
 
 
@@ -92,9 +93,9 @@ def cerrar_navegador(driver):
     try:
         if driver:
             driver.quit()
-            print("Navegador cerrado")
+            logger.info("Navegador cerrado")
     except Exception as e:
-        print("ERROR al cerrar navegador:", e)
+        logger.exception("ERROR al cerrar navegador")
 
 
 # -----------------------------------------------
@@ -112,7 +113,7 @@ def filtrar_pagina_canarias(driver):
         bool: True si el filtro se aplicó correctamente, False en caso de error
     """
     try:
-        print("Aplicando filtro de Canarias en URL:", URL_BASE)
+        logger.info(f"Aplicando filtro de Canarias en URL: {URL_BASE}")
         driver.get(URL_BASE)
         esperar = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
 
@@ -133,7 +134,7 @@ def filtrar_pagina_canarias(driver):
         return True
 
     except Exception as e:
-        print(f"Error al filtrar por Canarias: {type(e).__name__}: {e}")
+        logger.exception("Error al filtrar por Canarias")
         return False
 
 
@@ -154,14 +155,14 @@ def obtener_organos_canarias_con_licitaciones(driver):
     esperar_largo = WebDriverWait(driver, TIEMPO_ESPERA_LARGO)
 
     while True:
-        print(f"Leyendo página {pagina}...")
+        logger.info(f"Leyendo página {pagina}...")
 
         try:
             esperar_largo.until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "p.badge.info.m-0"))
             )
         except:
-            print(f"Sin badges en página {pagina}, continuando...")
+            logger.warning(f"Sin badges en página {pagina}, continuando...")
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         filas = soup.find_all("tr")
@@ -184,9 +185,11 @@ def obtener_organos_canarias_con_licitaciones(driver):
                             "licitaciones_abiertas": num_licitaciones,
                         }
                     )
-                    print(f"{nombre.text.strip()} - {num_licitaciones} licitaciones")
+                    logger.info(
+                        f"{nombre.text.strip()} - {num_licitaciones} licitaciones"
+                    )
             except Exception as e:
-                print(f"Error leyendo fila: {type(e).__name__}: {e}")
+                logger.warning("Error leyendo fila")
                 continue
 
         # Pasar a la siguiente página si existe
@@ -200,10 +203,12 @@ def obtener_organos_canarias_con_licitaciones(driver):
             pagina += 1
             time.sleep(random.uniform(5, 8))
         except Exception as e:
-            print(f"Error al pasar de página: {type(e).__name__}: {e} — total páginas leídas: {pagina}")
+            logger.exception(
+                f"Error al pasar de página — total páginas leídas: {pagina}"
+            )
             break
 
-    print(f"\nTotal órganos con licitaciones abiertas: {len(organos)}")
+    logger.info(f"\nTotal órganos con licitaciones abiertas: {len(organos)}")
     return organos
 
 
@@ -220,19 +225,19 @@ def obtener_cif_organo(driver, url):
     """
     try:
         driver.get(url)
-        
+
         esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-        
+
         cif_elemento = esperar.until(
             EC.visibility_of_element_located((By.ID, ID_CAMPO_NIF_ORGANO))
         )
-        
+
         cif = cif_elemento.text.strip() or cif_elemento.get_attribute("value")
-        
+
         return cif
-    
+
     except Exception as e:
-        print(f"Error al leer CIF ({url}): {type(e).__name__}: {e}")
+        logger.exception("Error al leer CIF")
         return None
 
 
@@ -249,7 +254,7 @@ def hacer_clic_pestanya_licitaciones(driver):
 
     try:
         esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-        
+
         pestanya = esperar.until(
             EC.element_to_be_clickable(
                 (By.ID, ID_BOTON_LICITACIONES)
@@ -260,8 +265,8 @@ def hacer_clic_pestanya_licitaciones(driver):
         return True
 
     except Exception as e:
-        print(
-            f"Error al hacer clic en pestaña licitaciones ({driver.current_url}): {type(e).__name__}: {e}"
+        logger.exception(
+            f"Error al hacer clic en pestaña licitaciones ({driver.current_url})"
         )
         return False
 
@@ -279,7 +284,7 @@ def aplicar_filtro_publicada(driver):
 
     try:
         esperar = WebDriverWait(driver, TIEMPO_ESPERA)
-        
+
         select_estado = esperar.until(
         EC.presence_of_element_located((By.ID, ID_FILTRO_ESTADO))
         )
@@ -295,8 +300,8 @@ def aplicar_filtro_publicada(driver):
         esperar.until(EC.presence_of_element_located((By.CLASS_NAME, "tdExpediente")))
         return True
 
-    except Exception as e:
-        print(f"Sin licitaciones publicadas: {type(e).__name__}: {e}")
+    except Exception:
+        logger.info("Sin licitaciones publicadas")
         return False
 
 
@@ -313,7 +318,7 @@ def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
         list: Lista de licitaciones extraídas de la página
 
     """
-    
+
     licitaciones = []
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -324,7 +329,7 @@ def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
         if licitacion:
             licitaciones.append(licitacion)
 
-    print(f"{len(licitaciones)} licitaciones publicadas encontradas")
+    logger.info(f"{len(licitaciones)} licitaciones publicadas encontradas")
     return licitaciones
 
 
@@ -404,11 +409,11 @@ def obtener_organos(driver):
     Filtra por Canarias y obtiene todos los órganos con licitaciones abiertas
     """
     if not filtrar_pagina_canarias(driver):
-        print("Error filtrando Canarias")
+        logger.warning("Error filtrando Canarias")
         return []
 
     organos = obtener_organos_canarias_con_licitaciones(driver)
-    print(f"Órganos encontrados: {len(organos)}")
+    logger.info(f"Órganos encontrados: {len(organos)}")
 
     return organos
 
@@ -426,30 +431,32 @@ def procesar_organos(driver, organos):
     cifs_permitidos = set(cargar_cifs_permitidos())
     todas_licitaciones = []
 
-    print(f"Procesando {len(organos)} órganos...")
+    logger.info(f"Procesando {len(organos)} órganos...")
 
     for i, organo in enumerate(organos, 1):
-        print(f"[{i}/{len(organos)}] {organo['nombre']}")
+        logger.info(f"[{i}/{len(organos)}] {organo['nombre']}")
 
         try:
             cif = obtener_cif_organo(driver, organo["url"])
 
         except Exception as e:
-            print(f"Error obteniendo CIF en {organo['nombre']}: {type(e).__name__}")
+            logger.exception(
+                f"Error obteniendo CIF en {organo['nombre']}"
+            )
             continue
 
         if not cif:
-            print("CIF no encontrado, saltando")
+            logger.warning("CIF no encontrado, saltando")
             continue
 
         if cif not in cifs_permitidos:
-            print(f"CIF {cif} no permitido, saltando")
+            logger.warning(f"CIF {cif} no permitido, saltando")
             continue
 
-        print(f"CIF válido ({cif}), extrayendo licitaciones")
+        logger.info(f"CIF válido ({cif}), extrayendo licitaciones")
 
         if not hacer_clic_pestanya_licitaciones(driver):
-            print("No se pudo abrir pestaña licitaciones, saltando")
+            logger.warning("No se pudo abrir pestaña licitaciones, saltando")
             continue
 
         try:
@@ -461,22 +468,17 @@ def procesar_organos(driver, organos):
                 )
                 num = len(licitaciones)
                 todas_licitaciones.extend(licitaciones)
-                print(f"{num} licitaciones extraídas")
+                logger.info(f"{num} licitaciones extraídas")
 
         except Exception as e:
-            print(f"Error extrayendo licitaciones en órgano {organo['nombre']}: {type(e).__name__}")
-            try:
-                driver.quit()
-            except:
-                pass
-
-            driver = iniciar_navegador()
-            filtrar_pagina_canarias(driver)
+            logger.exception(
+                f"Error extrayendo licitaciones en órgano {organo['nombre']}"
+            )
             continue
 
         time.sleep(random.uniform(5, 10))
 
-    print(f"\nTOTAL FINAL: {len(todas_licitaciones)} licitaciones")
+    logger.info(f"\nTOTAL FINAL: {len(todas_licitaciones)} licitaciones")
     return todas_licitaciones
 
 
@@ -488,7 +490,7 @@ def guardar_resultados_scraping(licitaciones):
     with open(ARCHIVO_HOY, "w", encoding="utf-8") as f:
         json.dump(licitaciones, f, ensure_ascii=False, indent=2)
 
-    print(f"Guardado JSON con {len(licitaciones)} licitaciones")
+    logger.info(f"Guardado JSON con {len(licitaciones)} licitaciones")
 
 
 def main_scraping():
@@ -503,14 +505,14 @@ def main_scraping():
         bool: True si el scraping se ejecutó correctamente, False si falló
     """
 
-    print("Iniciando scraping...")
+    logger.info("Iniciando scraping...")
     driver = iniciar_navegador()
 
     try:
         organos = obtener_organos(driver)
 
         if not organos:
-            print("No se encontraron órganos")
+            logger.warning("No se encontraron órganos")
             return False
 
         licitaciones = procesar_organos(driver, organos)
@@ -519,11 +521,11 @@ def main_scraping():
             licitaciones = []
 
         guardar_resultados_scraping(licitaciones)
-        print(f"¡Scraping completado con éxito!")
+        logger.info(f"¡Scraping completado con éxito!")
         return True
-    
+
     except Exception as e:
-        print(f"Error en scraping: {type(e).__name__}: {e}")
+        logger.exception("Error en main_scraping")
         return False
 
     finally:

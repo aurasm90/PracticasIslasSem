@@ -10,6 +10,7 @@ Archivos usados:
 """
 
 from src.config import RUTA_ORIGINAL, RUTA_CIFS
+from src.logger_config import logger
 
 def limpiar_archivo_cifs():
     """
@@ -18,7 +19,7 @@ def limpiar_archivo_cifs():
     """
 
     if not RUTA_ORIGINAL.exists():
-        print(f"No se encontró {RUTA_ORIGINAL}")
+        logger.error(f"No se encontró {RUTA_ORIGINAL}")
         return
 
     with open(RUTA_ORIGINAL, "r", encoding="utf-8") as f:
@@ -36,9 +37,9 @@ def limpiar_archivo_cifs():
         for cif in sorted(cifs_unicos):
             f.write(cif + "\n")
 
-    print(f"Archivo limpio creado: {RUTA_CIFS}")
-    print(f"   Total CIFs únicos: {len(cifs_unicos)}")
-    print(f"   Líneas vacías eliminadas: {lineas_vacias}")
+    logger.info(f"Archivo limpio creado: {RUTA_CIFS}")
+    logger.info(f"   Total CIFs únicos: {len(cifs_unicos)}")
+    logger.info(f"   Líneas vacías eliminadas: {lineas_vacias}")
 
 if __name__ == "__main__":
     limpiar_archivo_cifs()
