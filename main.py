@@ -11,13 +11,23 @@ Flujo principal:
 Automatización:
     El programa puede programarse para ejecutarse diariamente a las 06:00am con un cron en el servidor
 """
+
 from src.scraping import main_scraping
 from src.json_parser import procesar_licitaciones
 from src.email_sender import enviar_email_json
 from src.logger_config import logger
 
+
 def ejecutar_programa():
-    """Función principal que orquesta todo el proceso"""
+    """
+    Función principal que orquesta todo el proceso en tres pasos secuenciales:
+
+        1. Scraping: extrae las licitaciones publicadas en la web y las guarda en JSON.
+        2. JSON parser: compara con el histórico y filtra las licitaciones nuevas.
+        3. Email: envía las licitaciones nuevas si las hay.
+
+    Si el scraping falla, se detiene la ejecución sin continuar con los pasos siguientes.
+    """
 
     try:
 
@@ -59,7 +69,7 @@ def ejecutar_programa():
         return
 
     except Exception:
-        logger.exception(f"Error inesperado")
+        logger.exception("Error inesperado")
 
 
 if __name__ == "__main__":

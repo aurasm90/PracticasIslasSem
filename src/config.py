@@ -1,4 +1,13 @@
 # CONFIGURACIÓN - CONSTANTES
+"""
+Configuración central del proyecto: rutas, constantes del scraping,
+archivos de datos, credenciales de email y lista de CIFs permitidos.
+
+Todos los módulos importan sus constantes desde aquí para evitar
+valores hardcodeados dispersos por el código.
+"""
+
+from src.logger_config import logger
 
 # -----------------------------------------
 # CONFIGURACIÓN DE RUTAS
@@ -81,26 +90,26 @@ RUTA_CIFS = DATA_DIR / "cifs_permitidos.txt"
 
 def cargar_cifs_permitidos():
     """
-    Carga la lista de CIFs permitidos ordenados ABC desde un archivo de texto.
+    Carga la lista de CIFs permitidos desde el archivo de texto activo.
 
     Returns:
-        set: Conjunto de CIFs permitidos
+        set: Conjunto de CIFs permitidos, o None si el archivo no se encuentra o hay error
     """
-    try:
-        with open(RUTA_CIFS, "r", encoding="utf-8") as f:
-            cifs = {
-                linea.strip()
-                for linea in RUTA_CIFS.read_text(encoding="utf-8").splitlines()
-                if linea.strip()
-            }
 
-        print(f"Cargados {len(cifs)} CIFs desde '{RUTA_CIFS.name}'")
+    try:
+        cifs = {
+            linea.strip()
+            for linea in RUTA_CIFS.read_text(encoding="utf-8").splitlines()
+            if linea.strip()
+        }
+
+        logger.info(f"Cargados {len(cifs)} CIFs desde '{RUTA_CIFS.name}'")
         return cifs
 
     except FileNotFoundError:
-        print(f"No se encontró el archivo '{RUTA_CIFS}'")
+        logger.exception(f"No se encontró el archivo '{RUTA_CIFS}'")
         return None
 
     except Exception as e:
-        print(f"Error al leer el archivo de CIFs: {e}")
+        logger.error(f"Error al leer el archivo de CIFs: {e}")
         return None

@@ -231,6 +231,7 @@ def obtener_cif_organo(driver, url):
     Returns:
         str: CIF del órgano, o None si no se pudo leer
     """
+    
     try:
         driver.get(url)
 
@@ -344,6 +345,7 @@ def obtener_pagina_actual_y_total(driver):
     Lee el número de página actual y el total de páginas del paginador de licitaciones.
     Devuelve (pagina_actual, total_paginas) o (1, 1) si no encuentra el paginador.
     """
+    
     try:
         pagina_actual = driver.find_element(
             By.CSS_SELECTOR, "span[id$='textNumPagasdasd']"
@@ -372,14 +374,15 @@ def extraer_todas_licitaciones_organo(driver, nombre_organo, cif_organo=""):
     Returns:
         list: Lista de todas las licitaciones extraídas
     """
-    todas = []
+    
+    todas_extraidas = []
     esperar = WebDriverWait(driver, TIEMPO_ESPERA)
 
     while True:
         pagina_actual, total_paginas = obtener_pagina_actual_y_total(driver)
         logger.info(f"  Página {pagina_actual}/{total_paginas} — {nombre_organo}")
 
-        todas.extend(extraer_licitaciones_pagina(driver, nombre_organo, cif_organo))
+        todas_extraidas.extend(extraer_licitaciones_pagina(driver, nombre_organo, cif_organo))
 
         if pagina_actual >= total_paginas:
             logger.info(f"  Última página alcanzada ({pagina_actual})")
@@ -408,8 +411,8 @@ def extraer_todas_licitaciones_organo(driver, nombre_organo, cif_organo=""):
             )
             break
 
-    logger.info(f"  Total extraídas de {nombre_organo}: {len(todas)}")
-    return todas
+    logger.info(f"  Total extraídas de {nombre_organo}: {len(todas_extraidas)}")
+    return todas_extraidas
 
 
 def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
@@ -423,7 +426,6 @@ def extraer_licitaciones_pagina(driver, nombre_organo, cif_organo=""):
 
     Returns:
         list: Lista de licitaciones extraídas de la página
-
     """
 
     licitaciones = []
@@ -511,13 +513,22 @@ def extraer_licitacion_fila(fila, nombre_organo, cif_organo=""):
     }
 
 
-# FUNCIONES GLOBALES SEPARADAS QUE MANEJAN EL FLUJO ANTES DE SER LLAMADAS POR MAIN_SCRAPING:
+# -----------------------------------------------
+# GRUPO 3 - Funciones de Manejo del flujo
+# -----------------------------------------------
+
 def obtener_organos(driver):
     """
-    Función global 1 de main_scraping()
-    
-    Filtra por Canarias y obtiene todos los órganos con licitaciones abiertas
+    Filtra la plataforma por Canarias y devuelve todos los órganos
+    con al menos una licitación abierta (badge > 0).
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver
+
+    Returns:
+        list: Lista de órganos encontrados, o lista vacía si el filtro falla
     """
+    
     if not filtrar_pagina_canarias(driver):
         logger.warning("Error filtrando Canarias")
         return []
@@ -530,10 +541,16 @@ def obtener_organos(driver):
 
 def procesar_organos(driver, organos):
     """
-    Función global 2 de main_scraping()
-    
-    Por cada órgano, lee su CIF y compara con la lista permitida
-    Si el CIF está en la lista, extrae sus licitaciones publicadas
+    Por cada órgano, navega a su perfil, lee su CIF y lo compara
+    con la lista de organismos permitidos. Si el CIF está en la lista,
+    extrae todas sus licitaciones en estado 'Publicada'.
+
+    Args:
+        driver (webdriver): Instancia del navegador WebDriver
+        organos (list): Lista de órganos obtenida por obtener_organos()
+
+    Returns:
+        list: Lista de todas las licitaciones publicadas encontradas
     """
 
     from src.config import cargar_cifs_permitidos
@@ -597,9 +614,16 @@ def procesar_organos(driver, organos):
 
 def guardar_resultados_scraping(licitaciones):
     """
-    Función global 2 de main_scraping()
-    Guarda licitaciones en JSON, descartando cualquiera que no esté en estado 'Publicada'
+    Filtra las licitaciones recibidas para conservar solo las que están
+    en estado 'Publicada' y guarda el resultado en datos/licitaciones_hoy.json.
+
+    Si se descarta alguna licitación en este paso, se registra un aviso en el log
+    como señal de que alguna capa anterior del filtro no funcionó correctamente.
+
+    Args:
+        licitaciones (list): Lista de licitaciones extraídas por procesar_organos()
     """
+
     licitaciones_validas = [
         lic
         for lic in licitaciones

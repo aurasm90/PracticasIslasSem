@@ -33,7 +33,6 @@ def cargar_json(ruta):
     Carga un archivo JSON y devuelve su contenido.
     Si el archivo no existe o está corrupto, devuelve una lista vacía.
     """
-
     ruta = Path(ruta)
     if not ruta.exists():
         return []
@@ -66,7 +65,6 @@ def obtener_ids_vistos(expedientes_vistos):
     """
     Obtiene un conjunto con los IDs ya enviados.
     """
-
     ids_vistos = set()
 
     for licitacion in expedientes_vistos:
@@ -121,7 +119,7 @@ def procesar_licitaciones():
 
     1. Carga las licitaciones de hoy desde licitaciones_hoy.json (generado por el scraping).
     2. Carga el histórico expedientes_vistos.json.
-    3. Compara por ID para detectar licitaciones nuevas.
+    3. Compara por ID para detectar licitaciones nuevas + filtra por Publicadas
     4. Guarda las nuevas en licitaciones_nuevas.json.
     5. Actualiza expedientes_vistos.json añadiendo las licitaciones completas.
     6. Devuelve las licitaciones nuevas para enviarlas por email.
@@ -172,19 +170,19 @@ def procesar_licitaciones():
 
 
 if __name__ == "__main__":
-    # licitaciones_prueba = [
-    #     {
-    #         "id": "ABC123",
-    #         "expediente": "EXP-2024-001",
-    #         "cif": "P3803700H",
-    #         "organo": "Órgano de ejemplo",
-    #         "objeto": "Objeto de ejemplo",
-    #         "tipo": "Servicios",
-    #         "estado": "Publicada",
-    #         "importe": "10.000,00 €",
-    #         "fecha": "19/06/2026",
-    #         "url": "https://contrataciondelestado.es/",
-    #     }
-    # ]
+    licitaciones_prueba = [
+        {
+            "id": "ABC123",
+            "expediente": "EXP-2024-001",
+            "cif": "PR800000H",
+            "organo": "Órgano de ejemplo",
+            "objeto": "Objeto de ejemplo",
+            "tipo": "Servicios",
+            "estado": "Publicada",
+            "importe": "10.000,00 €",
+            "fecha": "01/07/2026",
+            "url": "https://contrataciondelestado.es/",
+        }
+    ]
 
     procesar_licitaciones()
