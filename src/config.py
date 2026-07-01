@@ -7,8 +7,6 @@ Todos los módulos importan sus constantes desde aquí para evitar
 valores hardcodeados dispersos por el código.
 """
 
-from src.logger_config import logger
-
 # -----------------------------------------
 # CONFIGURACIÓN DE RUTAS
 # -----------------------------------------
@@ -95,6 +93,7 @@ def cargar_cifs_permitidos():
     Returns:
         set: Conjunto de CIFs permitidos, o None si el archivo no se encuentra o hay error
     """
+    from src.logger_config import logger
 
     try:
         cifs = {
